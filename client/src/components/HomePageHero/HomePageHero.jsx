@@ -1,5 +1,6 @@
 import "./HomePageHero.scss";
-// import { washroom } from "../../assets/images/washroom.jpg"
+
+import LocationSearch from "../LocationSearch/LocationSearch";
 
 function HomePageHero() {
 	return (
@@ -8,9 +9,15 @@ function HomePageHero() {
 				<div className="hero__overlay">
 					<h1 className="hero__header">Find the right <span className="hero__washroom">washroom</span> for you</h1>
 					<input placeholder="Search your area or scroll below" className="hero__input"></input>
-                    <div className="hero__location-section">
-                        <p>hello world</p>
+                    <div className="locations">
+                        <LocationSearch />
+                        <LocationSearch />
+                        <LocationSearch />
+                        <LocationSearch />
+                        <LocationSearch />
+                        <LocationSearch />
                     </div>
+                    <h4 className="hero__search-link">Or search for a washroom that meets your criteria</h4>
 				</div>
 			</section>
 		</div>
