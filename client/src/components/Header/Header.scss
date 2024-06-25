@@ -5,6 +5,7 @@
     @include flex(column, null, center);
     padding: 1rem;
     gap: 1rem;
+    max-width: 1280px;
     @include tablet {
         @include flex(row, space-between, center);
     }
