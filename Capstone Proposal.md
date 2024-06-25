@@ -32,7 +32,24 @@ While working for Uber Eats for a bit, I found it difficult to find the right pl
 
 ### Tech Stack
 
-List technologies that will be used in your app, including any libraries to save time or provide more functionality. Be sure to research any potential limitations.
+- React
+- MySQL
+- Express
+- Client libraries: 
+    - react
+    - react-router
+    - react-router-dom
+    - axios
+    - sass
+    - CORS
+    - Dotenv
+- Server libraries:
+    - Knex
+    - Express
+    - CORS
+    - Dotenv
+    - fs
+    - UUID
 
 ### APIs
 
