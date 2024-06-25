@@ -22,7 +22,11 @@ While working for Uber Eats for a bit, I found it difficult to find the right pl
 
 ### Features
 
-List the functionality that your app will include. These can be written as user stories or descriptions with related details. Do not describe _how_ these features are implemented, only _what_ needs to be implemented.
+- As a user, I want to be able to find the closest washrooms near me
+- As a user, I want navigation tips to be able to access these washrooms with ease
+- As a user, I want to be able to review washrooms, providing helpful information to other potential users of these washrooms
+- As a user, I want to view a list of all washrooms in a certain area that meet my criteria/preferences (cleanliness, accessibility, size, urinal, handicapped friendly, temperature etc.)
+- As a user, I want to see the washrooms I've visited in the past and how much I enjoyed them
 
 ## Implementation
 
