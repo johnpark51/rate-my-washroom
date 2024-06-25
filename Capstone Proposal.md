@@ -1,8 +1,10 @@
 # Project Title
 
+Rate My Washroom
+
 ## Overview
 
-What is your app? Brief description in a couple of sentences.
+Rate My Washroom is a website for users to explore the accessible washrooms in a certain area, giving them the capability of utilizing a filtration system to find washrooms that fit their needs/preferences (cleanliness, accessibility, handicap-friendly) and browse through reviews from users of the washrooms themselves.
 
 ### Problem
 
