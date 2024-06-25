@@ -298,7 +298,11 @@ Response:
 
 ### Auth
 
-Does your project include any login or user profile functionality? If so, describe how authentication/authorization will be implemented.
+- JWT Authorization & Authentication
+    - Added as an additional feature after primary features have been implemented
+    - Before added, all API requests made with same user id
+    - Store JWT in the browser storage and remove when user is logged out
+    - Plan to use state to display different components to users whether they are logged in or not
 
 ## Roadmap
 
