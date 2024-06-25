@@ -67,7 +67,17 @@ Potential: https://opendata.vancouver.ca/explore/dataset/public-washrooms/api/
 
 ### Mockups
 
-Provide visuals of your app's screens. You can use tools like Figma or pictures of hand-drawn sketches.
+#### Home Page
+![](/images/home.jpg)
+
+#### Register/Login Page
+![](/images/register:login.jpg)
+
+#### Washroom Details Page
+![](/images/individual-washroom.jpg)
+
+#### Location Washrooms Page
+![](/images/view-location-washrooms.jpg)
 
 ### Data
 
