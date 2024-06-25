@@ -8,7 +8,7 @@ Rate My Washroom is a website for users to explore the accessible washrooms in a
 
 ### Problem
 
-Why is your app needed? Background information around any pain points or other reasons.
+While working for Uber Eats for a bit, I found it difficult to find the right place to do my deeds. Certain locations only offered washrooms to customers, while others were almost impossible to navigate to or clean enough to use. While talking to other drivers, I found there a wide spectrum of individuals with similar pain points, even coming to terms that there were others, such as tourists, that found a need for this type of application. With washrooms being needed by every individual, this type of app fit the need of many, and for a variety of reasons.
 
 ### User Profile
 
