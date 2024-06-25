@@ -12,7 +12,13 @@ While working for Uber Eats for a bit, I found it difficult to find the right pl
 
 ### User Profile
 
-Who will use your app? How will they use it? Any special considerations that your app must take into account.
+- Individuals in unfamiliar areas needing to handle their business
+    - Delivery drivers looking for an accessible washroom
+    - Tourists while exploring a new city 
+    - Individuals that want to save the location of a washroom they found enjoyable
+    - Those that want to help people avoid dirty, dangerous, and inaccessible washrooms for any other applicable reason
+    - In an urgent situation looking for the closest washroom
+    - Special considerations may include those with special needs for their washroom (example: physically impaired individuals needing to access washrooms without the usage of stairs)
 
 ### Features
 
