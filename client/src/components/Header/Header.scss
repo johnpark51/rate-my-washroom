@@ -4,6 +4,7 @@
 .header {
     @include flex(column, null, center);
     padding: 1rem;
+    gap: 1rem;
     @include tablet {
         @include flex(row, space-between, center);
     }
