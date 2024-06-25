@@ -71,7 +71,22 @@ Provide visuals of your app's screens. You can use tools like Figma or pictures 
 
 ### Data
 
-Describe your data and the relationships between them. You can show this visually using diagrams, or write it out. 
+User table: 
+- ID
+- Username
+- Email 
+- Password
+
+Washrooms:
+- ID
+- Washroom Name
+- Location
+
+Washroom Reviews: 
+- ID
+- User ID
+- Washroom ID
+- Rating
 
 ### Endpoints
 
