@@ -4,10 +4,10 @@ function Header() {
 	return (
 		<div id="container">
 			<header className="header">
-				<h2 className="header__title">Rate My Washroom</h2>
+				<h2 className="header__title">RateMy<span className="header__washroom">Washroom</span></h2>
 				<nav className="header__right">
-					<button className="header__button header__button--signup">Sign up</button>
-					<button className="header__button header__button--login">Login</button>
+					<button className="button button--login">Login</button>
+					<button className="button button--signup">Sign up</button>
 				</nav>
 			</header>
 		</div>

@@ -2,6 +2,13 @@
 @use "../../styles/partials/mixins" as *;
 
 .header {
-    @include flex(row, space-between, center);
+    @include flex(column, null, center);
     padding: 1rem;
+    @include tablet {
+        @include flex(row, space-between, center);
+    }
+
+    &__washroom {
+        color: $green;
+    }
 }
