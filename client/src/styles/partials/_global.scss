@@ -1,4 +1,10 @@
 @use './variables' as *;
+@use './mixins' as *;
+
+.link {
+    text-decoration: none;
+    color: black;
+}
 
 .button {
     background-color: $light-green;
@@ -7,7 +13,11 @@
     border: 0;
     border-radius: 20px;
     padding: 0.6rem 1rem;
+    width: 50%;
     cursor: pointer;
+    @include tablet {
+        width: auto;
+    }
     &:hover {
         background-color: $green;
     }
