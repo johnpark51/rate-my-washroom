@@ -90,7 +90,211 @@ Washroom Reviews:
 
 ### Endpoints
 
-List endpoints that your server will implement, including HTTP methods, parameters, and example responses.
+**GET /washrooms**
+
+- Get washrooms, with an optional "visited" if the user is logged in or not
+
+Parameters:
+- longitude: User-provided location as a number
+- latitude: User-provided location as a number
+- token (optional): JWT used to add "visited" boolean
+
+Response:
+```
+[
+         {
+            "name": "Adanac Park",
+            "address": "1025 Boundary Road",
+            "type": "Public Toilet in Park",
+            "location": "East side, fieldhouse",
+            "summer_hours": "Dawn to Dusk",
+            "winter_hours": "Dawn to Dusk",
+            "wheel_access": "No",
+            "maintainer": "Parks & Recreation",
+            "note": "Caretaker on site",
+            "geom": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -123.024071960319,
+                        49.2758809677686
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_local_area": "Hastings-Sunrise",
+            "primaryind": "1",
+            "geo_point_2d": {
+                "lon": -123.024071960319,
+                "lat": 49.2758809677686
+            }
+        },
+    ...
+]
+```
+
+**GET /washrooms/:id**
+
+- Get washroom by id, with an optional "userRating" if the user is logged in or not
+
+Parameters:
+- id: Washroom id as number
+- token (optional):  JWT used to add user rating
+
+Response:
+```
+[
+         {
+            "name": "Adanac Park",
+            "address": "1025 Boundary Road",
+            "type": "Public Toilet in Park",
+            "location": "East side, fieldhouse",
+            "summer_hours": "Dawn to Dusk",
+            "winter_hours": "Dawn to Dusk",
+            "wheel_access": "No",
+            "maintainer": "Parks & Recreation",
+            "note": "Caretaker on site",
+            "geom": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -123.024071960319,
+                        49.2758809677686
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_local_area": "Hastings-Sunrise",
+            "primaryind": "1",
+            "geo_point_2d": {
+                "lon": -123.024071960319,
+                "lat": 49.2758809677686
+            }
+        },
+    ...
+]
+```
+
+**POST /washrooms/:id/rating**
+
+- Logged in user can add their rating of a café
+
+Parameters:
+- id: Washroom id
+- token: JWT of the logged in user
+- rating: Number Rating out of 5 in 0.5 increments
+
+Response:
+```
+[
+         {
+            "name": "Adanac Park",
+            "address": "1025 Boundary Road",
+            "type": "Public Toilet in Park",
+            "location": "East side, fieldhouse",
+            "summer_hours": "Dawn to Dusk",
+            "winter_hours": "Dawn to Dusk",
+            "wheel_access": "No",
+            "maintainer": "Parks & Recreation",
+            "note": "Caretaker on site",
+            "geom": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -123.024071960319,
+                        49.2758809677686
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_local_area": "Hastings-Sunrise",
+            "primaryind": "1",
+            "geo_point_2d": {
+                "lon": -123.024071960319,
+                "lat": 49.2758809677686
+            }
+        },
+    ...
+]
+```
+
+**PUT /washrooms/:id/rating**
+
+- Logged in user can update their rating of a washroom
+
+Parameters:
+- id: Washroom id
+- token: JWT of the logged in user
+- rating: Number Rating out of 5 in 0.5 increments
+
+Response:
+```
+[
+         {
+            "name": "Adanac Park",
+            "address": "1025 Boundary Road",
+            "type": "Public Toilet in Park",
+            "location": "East side, fieldhouse",
+            "summer_hours": "Dawn to Dusk",
+            "winter_hours": "Dawn to Dusk",
+            "wheel_access": "No",
+            "maintainer": "Parks & Recreation",
+            "note": "Caretaker on site",
+            "geom": {
+                "type": "Feature",
+                "geometry": {
+                    "coordinates": [
+                        -123.024071960319,
+                        49.2758809677686
+                    ],
+                    "type": "Point"
+                },
+                "properties": {}
+            },
+            "geo_local_area": "Hastings-Sunrise",
+            "primaryind": "1",
+            "geo_point_2d": {
+                "lon": -123.024071960319,
+                "lat": 49.2758809677686
+            }
+        },
+    ...
+]
+```
+
+**POST /users/register**
+
+- Add a user account
+
+Parameters:
+
+- email: User's email
+- password: User's provided password
+
+Response:
+```
+{
+    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
+}
+```
+
+**POST /users/login**
+
+- Login a user
+
+Parameters:
+- email: User's email
+- password: User's provided password
+
+Response:
+```
+{
+    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
+}
+```
 
 ### Auth
 
