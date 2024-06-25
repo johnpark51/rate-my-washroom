@@ -57,7 +57,13 @@ Potential: https://opendata.vancouver.ca/explore/dataset/public-washrooms/api/
 
 ### Sitemap
 
-List the pages of your app with brief descriptions. You can show this visually, or write it out.
+- Home Page
+- List of washrooms
+    - Map of washrooms nearby
+- View + Rate Washroom
+- Register 
+- Login
+- Personal washrooms
 
 ### Mockups
 
