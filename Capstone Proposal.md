@@ -306,7 +306,50 @@ Response:
 
 ## Roadmap
 
-Scope your project as a sprint. Break down the tasks that will need to be completed and map out timeframes for implementation. Think about what you can reasonably complete before the due date. The more detail you provide, the easier it will be to build.
+- Create client
+    - React app using create vite (javascript) including routes and mock-pages
+
+- Create server
+    - Express folder with simple routing and appropriate responses
+
+- Use Vancouver web API to gather information regarding public washrooms in Vancouver
+
+- Create database and migrations with tables and appropriate information
+
+- Create seeds with api washroom data
+
+- Make appropriate repositories for client and server folders to reflect all commits in progress
+
+- Feature: Home page
+
+- Feature: List washrooms for an area
+    - Create frontend page for list of washrooms including a form that indicates where you are. 
+    - Store given location in sessionStorage
+    - Make axios GET request to API /washrooms endpoint - create appropriate backend endpoint
+
+- Feature: View washroom
+    - Create individual washroom page, displaying necesssary information
+    -  Make axios GET request to API /washrooms/:id endpoint - create appropriate backend endpoint
+
+- Feature: Rate washroom
+    - Create form with inputs that rate individual aspects of the wasroom
+    - Make axios POST request to API /ratings - create appropriate backend endpoint
+
+- Feature: Implement JWT tokens
+    - Server: Update expected requests / responses on protected endpoints
+    - Client: Store JWT in local storage, include JWT on axios calls
+
+- Feature: Create account 
+    - Create register account page/modal 
+    - Make axios POST request to users/register endpoint
+
+- Feature: Login to account
+    - Create account login page/modal 
+    - Make axios POST request to users/login endpoint
+
+- Testing & last-minute bug fixes
+
+- Presentations at Demo Day
 
 ## Nice-to-haves
 
