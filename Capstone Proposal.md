@@ -68,16 +68,16 @@ Potential: https://opendata.vancouver.ca/explore/dataset/public-washrooms/api/
 ### Mockups
 
 #### Home Page
-![](/images/home.jpg)
+![](/mockups/home.jpg)
 
 #### Register/Login Page
-![](/images/register:login.jpg)
+![](/mockups/register:login.jpg)
 
 #### Washroom Details Page
-![](/images/individual-washroom.jpg)
+![](/mockups/individual-washroom.jpg)
 
 #### Location Washrooms Page
-![](/images/view-location-washrooms.jpg)
+![](/mockups/view-location-washrooms.jpg)
 
 ### Data
 
