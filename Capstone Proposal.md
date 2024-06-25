@@ -353,4 +353,8 @@ Response:
 
 ## Nice-to-haves
 
-Your project will be marked based on what you committed to in the above document. Under nice-to-haves, you can list any additional features you may complete if you have extra time, or after finishing.
+- Implement Google Places / Maps
+    - View more details about a washroom
+    - Visual radius functionality
+- Forgot password component/functionality
+- Badges for accounts that have given trusty and numerous reviews - possible component that displays more information about them (favourite washroom could be funny(?))
