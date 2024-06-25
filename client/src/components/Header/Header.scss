@@ -2,7 +2,6 @@
 @use "../../styles/partials/mixins" as *;
 
 .header {
-    display: flex;
-    justify-content: space-between;
+    @include flex(row, space-between, center);
     padding: 1rem;
 }
