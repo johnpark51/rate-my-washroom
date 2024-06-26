@@ -19,10 +19,11 @@ export function up(knex) {
 			table.string("type").notNullable();
       table.string("location").notNullable();
       table.string("hours").notNullable();
-      table.string("public_access").notNullable();
-      table.string("wheelchair_accessible").notNullable();
+      table.boolean("public_access").notNullable();
+      table.boolean("wheelchair_accessible").notNullable();
       table.integer("cleanliness").notNullable();
       table.specificType('coordinates', 'POINT');
+      table.integer("likes").notNullable().defaultTo(0);
 			table
 				.integer("location_id")
 				.unsigned()
@@ -38,7 +39,6 @@ export function up(knex) {
 			table.increments("id").primary();
 			table.string("name").notNullable();
 			table.string("content", 1000).notNullable();
-			table.integer("likes").notNullable().defaultTo(0);
 			table
 				.integer("washroom_id")
 				.unsigned()
