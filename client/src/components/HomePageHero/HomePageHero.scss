@@ -6,10 +6,10 @@
     height: 13rem;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 
     @include tablet {
         height: 30rem;
-        background-position: center;
     }
     @include desktop {
         height: 50rem;
@@ -40,8 +40,14 @@
         border: 0;
         background: url("../../assets/images/search.svg") no-repeat scroll 7px 7px;
         background-color: white;
+        &::placeholder {
+            font-size: 0.6rem
+        }
         @include tablet {
             width: 17rem;
+            &::placeholder {
+                font-size: 0.8rem;
+            }
         }
     }
     &__search-link {
@@ -70,5 +76,4 @@
         height: 12rem;
         width: 17rem;
     }
-
 }
