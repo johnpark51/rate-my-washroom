@@ -12,7 +12,7 @@ export function up(knex) {
 		table.boolean("public_access").notNullable();
 		table.boolean("wheelchair_accessible").notNullable();
 		table.integer("cleanliness").notNullable();
-		table.specificType("coordinates", "POINT");
+		// table.specificType("coordinates", "POINT");
 		table.integer("likes").notNullable().defaultTo(0);
 		table
 			.integer("location_id")
