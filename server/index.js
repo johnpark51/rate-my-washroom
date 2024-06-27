@@ -1,17 +1,25 @@
 import "dotenv/config";
 import express from "express";
-const app = express();
+import cors from "cors";
+
+import locationRoutes from "./routes/locationRoutes.js";
 
 const PORT = process.env.PORT || 5050;
+const app = express();
 
-import routes from "./routes/routes.js"
-app.use("/", routes);
+/* MIDDLEWARE */
+app.use(
+	cors({
+		origin: process.env.CORS_URL,
+		methods: "GET,PUT,PATCH,POST,DELETE",
+		credentials: true,
+	})
+);
+app.use(express.json());
 
-// basic home route
-app.get("/", (req, res) => {
-  res.send("Welcome to my API");
-});
+/* ROUTES */
+app.use("/locations", locationRoutes);
 
 app.listen(PORT, () => {
-  console.log(`Running at http://localhost:${PORT}`);
+	console.log(`Running at http://localhost:${PORT}`);
 });
