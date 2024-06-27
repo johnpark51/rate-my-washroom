@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed:run": "knex seed:run"
+    "seed:run": "knex seed:run",
+    "start": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
@@ -16,5 +17,8 @@
     "express": "^4.19.2",
     "knex": "^3.1.0",
     "mysql2": "^3.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }
