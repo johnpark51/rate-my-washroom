@@ -7,11 +7,13 @@ export function up(knex) {
 		table.increments("id").primary();
 		table.string("name").notNullable();
 		table.string("content", 1000).notNullable();
+        table.integer("rating").notNullable();
 		table
 			.integer("washroom_id")
 			.unsigned()
 			.references("id")
 			.inTable("washrooms");
+		table.timestamp("timestamp").notNullable();
 		table.timestamp("created_at").defaultTo(knex.fn.now());
 		table
 			.timestamp("updated_at")

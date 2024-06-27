@@ -49,4 +49,104 @@ export default [
 		name: "Harbourfront",
 		city: "Toronto",
 	},
-];
+    {
+        id: 11,
+        name: "Chinatown",
+        city: "Toronto",
+    },
+    {
+        id: 12,
+        name: "High Park",
+        city: "Toronto",
+    },
+    {
+        id: 13,
+        name: "Distillery District",
+        city: "Toronto",
+    },
+    {
+        id: 14,
+        name: "Leslieville",
+        city: "Toronto",
+    },
+    {
+        id: 15,
+        name: "Queen Street West",
+        city: "Toronto",
+    },
+    {
+        id: 16,
+        name: "King Street West",
+        city: "Toronto",
+    },
+    {
+        id: 17,
+        name: "Entertainment District",
+        city: "Toronto",
+    },
+    {
+        id: 18,
+        name: "The Annex",
+        city: "Toronto",
+    },
+    {
+        id: 19,
+        name: "Roncesvalles Village",
+        city: "Toronto",
+    },
+    {
+        id: 20,
+        name: "Bloor West Village",
+        city: "Toronto",
+    },
+    {
+        id: 21,
+        name: "St. Lawrence Market",
+        city: "Toronto",
+    },
+    {
+        id: 22,
+        name: "York University Heights",
+        city: "Toronto",
+    },
+    {
+        id: 23,
+        name: "Bayview Village",
+        city: "Toronto",
+    },
+    {
+        id: 24,
+        name: "The Beaches",
+        city: "Toronto",
+    },
+    {
+        id: 25,
+        name: "Parkdale",
+        city: "Toronto",
+    },
+    {
+        id: 26,
+        name: "Cabbagetown",
+        city: "Toronto",
+    },
+    {
+        id: 27,
+        name: "Davisville Village",
+        city: "Toronto",
+    },
+    {
+        id: 28,
+        name: "Willowdale",
+        city: "Toronto",
+    },
+    {
+        id: 29,
+        name: "Scarborough Village",
+        city: "Toronto",
+    },
+    {
+        id: 30,
+        name: "Downsview",
+        city: "Toronto",
+    },
+]
