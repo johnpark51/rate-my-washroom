@@ -1,9 +1,7 @@
-// import initKnex from "knex";
-// import configuration from "../knexfile.js";
-// const knex = initKnex(configuration);
 import express from "express";
 import {
-    fetchOne
+    fetchOne,
+    getLocationWashrooms
 } from "../controllers/locationController.js"
 const router = express.Router();
 
@@ -11,5 +9,10 @@ const router = express.Router();
 router
   .route("/:id")
   .get(fetchOne);
+
+/* LOCATIONS WASHROOMS BY ID */
+router
+  .route("/:id/washrooms")
+  .get(getLocationWashrooms);
 
 export default router;

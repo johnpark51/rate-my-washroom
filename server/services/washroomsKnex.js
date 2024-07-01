@@ -34,7 +34,7 @@ export const getWashroomById = async (id) => {
 	}
 };
 
-/* GET WASHROOM + REVIEWS */
+/* GET WASHROOM + THEIR REVIEWS */
 export const getWashroomReviews = async (id) => {
     try {
       const washroomId = id;

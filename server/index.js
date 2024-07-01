@@ -18,7 +18,7 @@ app.use(
 app.use(express.json());
 
 /* ROUTES */
-app.use("/locations", locationRoutes);
+app.use("/api/locations", locationRoutes);
 
 app.listen(PORT, () => {
 	console.log(`Running at http://localhost:${PORT}`);
