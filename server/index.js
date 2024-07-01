@@ -4,6 +4,7 @@ import cors from "cors";
 
 import locationRoutes from "./routes/locationRoutes.js";
 import washroomRoutes from "./routes/washroomRoutes.js";
+import reviewRoutes from "./routes/reviewRoutes.js";
 
 const PORT = process.env.PORT || 5050;
 const app = express();
@@ -21,6 +22,7 @@ app.use(express.json());
 /* ROUTES */
 app.use("/api/locations", locationRoutes);
 app.use("/api/washrooms", washroomRoutes);
+app.use("/api/reviews", reviewRoutes);
 
 app.listen(PORT, () => {
 	console.log(`Running at http://localhost:${PORT}`);

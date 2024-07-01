@@ -10,7 +10,7 @@ router
   .route("/")
   .get(getLocations);
 
-/* WAREHOUSE BY ID */
+/* LOCATION BY ID */
 router
   .route("/:id")
   .get(fetchOne);
