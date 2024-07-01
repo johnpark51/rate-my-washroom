@@ -2,7 +2,7 @@ import initKnex from "knex";
 import config from "../knexfile.js";
 const knex = initKnex(config);
 
-/* GET WASHROOMS */
+/* GET ALL WASHROOMS */
 export const getWashrooms = async () => {
 	try {
 		const washrooms = await knex.select("*").from("washrooms");

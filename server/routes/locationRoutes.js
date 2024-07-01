@@ -12,6 +12,4 @@ router
   .route("/:id")
   .get(fetchOne);
 
-
-
 export default router;
