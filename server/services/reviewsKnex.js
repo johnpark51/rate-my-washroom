@@ -16,7 +16,7 @@ export const getReviews = async () => {
   };
 
   /* GET REVIEWS BY ID */
-export const fetchOneReviews = async (id) => {
+export const fetchOneReview = async (id) => {
     try {
       const one = await knex("reviews").where({ id: id }).first();
       if (!one) {
