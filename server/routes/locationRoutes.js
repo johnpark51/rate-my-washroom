@@ -1,9 +1,14 @@
 import express from "express";
 import {
     fetchOne,
-    getLocationWashrooms
+    getLocationWashrooms,
+    getLocations
 } from "../controllers/locationController.js"
 const router = express.Router();
+
+router
+  .route("/")
+  .get(getLocations);
 
 /* WAREHOUSE BY ID */
 router

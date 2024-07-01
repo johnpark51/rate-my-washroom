@@ -24,3 +24,13 @@ export const getLocationWashrooms = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+/*GET ALL LOCATIONS*/
+export const getLocations = async (_req, res) => {
+  try {
+    let locations = await getLocationsService();
+    return res.status(200).json(locations)
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+}

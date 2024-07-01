@@ -9,7 +9,7 @@ export const getLocations = async () => {
       if (!locations) {
         throw new Error("Location not found");
       }
-      return warehouses;
+      return locations;
     } catch (error) {
       throw new Error(error);
     }
