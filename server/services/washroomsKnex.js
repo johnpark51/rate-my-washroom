@@ -38,7 +38,7 @@ export const getWashroomById = async (id) => {
 export const getWashroomReviews = async (id) => {
     try {
       const washroomId = id;
-      const washroom = await knex("washroom")
+      const washroom = await knex("washrooms")
         .where({ id: washroomId })
         .first();
       if (!washroom) {
