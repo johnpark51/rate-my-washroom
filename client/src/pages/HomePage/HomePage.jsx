@@ -25,8 +25,10 @@ function HomePage() {
 	return (
 		<>
 			<main>
-				<HomePageHero />
+				<HomePageHero locations={locations} />
 				<LocationList locations={locations} />
+				<img src="http://localhost:8080/images/stock1.jpg"/>
+				<p>Hello world</p>
 			</main>
 		</>
 	);

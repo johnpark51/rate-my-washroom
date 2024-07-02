@@ -1,10 +1,14 @@
 import "./LocationSearch.scss";
 
-function LocationSearch() {
+function LocationSearch({ location }) {
+	const { name, city } = location;
+	if (!location) {
+		return <h1>Loading...</h1>;
+	}
 	return (
 		<section className="location">
-            <h3 className="location__name">Union Station</h3>
-            <p className="location__city">Toronto</p>
+			<h3 className="location__name">{name}</h3>
+			<p className="location__city">{city}</p>
 		</section>
 	);
 }

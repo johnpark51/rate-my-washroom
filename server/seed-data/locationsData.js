@@ -184,7 +184,7 @@ export default [
     {
         id: 27,
         name: "Davisville Village",
-        city: "https://cdn.juliekinnear.com/imagesall/2018/11/davisville-village-south-china.jpg",
+        city: "Toronto",
         description: "Davisville Village is a residential neighborhood known for its family-friendly environment, local amenities, and green spaces. Located midtown, it offers a mix of single-family homes, apartments, and condominiums. The area is served by the TTC subway and boasts parks, schools, and community centers. Davisville Village combines urban convenience with a suburban feel, making it popular among young professionals and families seeking a balanced lifestyle.",
         image: "https://upload.wikimedia.org/wikipedia/commons/0/09/DavisvilleToronto.JPG"
     },
