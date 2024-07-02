@@ -207,7 +207,7 @@ export default [
 		location_id: 15,
 		likes: 5,
         gender_neutral: false,
-        family_friendly: true,
+        family_friendly: false,
 	},
 	{
 		id: 16,
@@ -221,7 +221,7 @@ export default [
 		location_id: 1,
 		likes: 6,
         gender_neutral: false,
-        family_friendly: true,
+        family_friendly: false,
 	},
 	{
 		id: 17,
@@ -235,7 +235,7 @@ export default [
 		location_id: 2,
 		likes: 8,
         gender_neutral: false,
-        family_friendly: true,
+        family_friendly: false,
 	},
 	{
 		id: 18,
@@ -249,7 +249,7 @@ export default [
 		location_id: 3,
 		likes: 3,
         gender_neutral: false,
-        family_friendly: true,
+        family_friendly: false,
 	},
 	{
 		id: 19,
@@ -263,7 +263,7 @@ export default [
 		location_id: 4,
 		likes: 10,
         gender_neutral: false,
-        family_friendly: true,
+        family_friendly: false,
 	},
 	{
 		id: 20,
@@ -277,7 +277,7 @@ export default [
 		location_id: 5,
 		likes: 4,
         gender_neutral: false,
-        family_friendly: true,
+        family_friendly: false,
 	},
 	{
 		id: 21,
@@ -291,7 +291,7 @@ export default [
 		location_id: 6,
 		likes: 7,
         gender_neutral: false,
-        family_friendly: true,
+        family_friendly: false,
 	},
 	{
 		id: 22,
@@ -305,7 +305,7 @@ export default [
         location_id: 7,
         likes: 12,
         gender_neutral: false,
-        family_friendly: true,
+        family_friendly: false,
     },
     {
         id: 23,
@@ -319,7 +319,7 @@ export default [
         location_id: 8,
         likes: 5,
         gender_neutral: false,
-        family_friendly: true,
+        family_friendly: false,
     },
     {
         id: 24,
@@ -333,7 +333,7 @@ export default [
         location_id: 9,
         likes: 9,
         gender_neutral: false,
-        family_friendly: true,
+        family_friendly: false,
     },
     {
         id: 25,
@@ -347,7 +347,7 @@ export default [
         location_id: 10,
         likes: 2,
         gender_neutral: false,
-        family_friendly: true,
+        family_friendly: false,
     },
     {
         id: 26,
@@ -361,7 +361,7 @@ export default [
         location_id: 11,
         likes: 6,
         gender_neutral: false,
-        family_friendly: true,
+        family_friendly: false,
     },
     {
         id: 27,
@@ -375,7 +375,7 @@ export default [
         location_id: 12,
         likes: 8,
         gender_neutral: false,
-        family_friendly: true,
+        family_friendly: false,
     },
     {
         id: 28,
@@ -389,7 +389,7 @@ export default [
         location_id: 13,
         likes: 5,
         gender_neutral: false,
-        family_friendly: true,
+        family_friendly: false,
     },
     {
         id: 29,
@@ -403,7 +403,7 @@ export default [
         location_id: 14,
         likes: 3,
         gender_neutral: false,
-        family_friendly: true,
+        family_friendly: false,
     },
     {
         id: 30,
@@ -416,8 +416,8 @@ export default [
         cleanliness: 3,
         location_id: 15,
         likes: 11,
-        gender_neutral: false,
-        family_friendly: true,
+        gender_neutral: true,
+        family_friendly: false,
     },
     {
         id: 31,
@@ -430,7 +430,7 @@ export default [
         cleanliness: 4,
         location_id: 1,
         likes: 7,
-        gender_neutral: false,
+        gender_neutral: true,
         family_friendly: false,
     },
     {
@@ -444,7 +444,7 @@ export default [
         cleanliness: 5,
         location_id: 2,
         likes: 4,
-        gender_neutral: false,
+        gender_neutral: true,
         family_friendly: true,
     },
     {
@@ -458,7 +458,7 @@ export default [
         cleanliness: 4,
         location_id: 3,
         likes: 9,
-        gender_neutral: false,
+        gender_neutral: true,
         family_friendly: true,
     },
     {
@@ -472,7 +472,7 @@ export default [
         cleanliness: 5,
         location_id: 4,
         likes: 5,
-        gender_neutral: false,
+        gender_neutral: true,
         family_friendly: true,
     },
     {
@@ -486,7 +486,7 @@ export default [
         cleanliness: 3,
         location_id: 5,
         likes: 10,
-        gender_neutral: false,
+        gender_neutral: true,
         family_friendly: true,
     },
     {
@@ -500,7 +500,7 @@ export default [
         cleanliness: 4,
         location_id: 6,
         likes: 8,
-        gender_neutral: false,
+        gender_neutral: true,
         family_friendly: true,
     },
     {
@@ -514,7 +514,7 @@ export default [
         cleanliness: 5,
         location_id: 7,
         likes: 2,
-        gender_neutral: false,
+        gender_neutral: true,
         family_friendly: true,
     },
     {
