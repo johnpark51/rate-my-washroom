@@ -3,17 +3,11 @@
  * @returns { Promise<void> }
  */
 export function up(knex) {
-	return knex.schema.createTable("reviews", (table) => {
+	return knex.schema.createTable("locations", (table) => {
 		table.increments("id").primary();
 		table.string("name").notNullable();
-		table.string("content", 1000).notNullable();
-        table.integer("rating").notNullable();
-		table
-			.integer("washroom_id")
-			.unsigned()
-			.references("id")
-			.inTable("washrooms");
-		table.timestamp("timestamp").notNullable();
+		table.string("city").notNullable();
+        table.string("description").notNullable();
 		table.timestamp("created_at").defaultTo(knex.fn.now());
 		table
 			.timestamp("updated_at")
@@ -26,5 +20,5 @@ export function up(knex) {
  * @returns { Promise<void> }
  */
 export function down(knex) {
-	return knex.schema.dropTable("reviews");
+	return knex.schema.dropTable("locations");
 }

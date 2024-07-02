@@ -11,6 +11,8 @@ export function up(knex) {
 		table.string("hours").notNullable();
 		table.boolean("public_access").notNullable();
 		table.boolean("wheelchair_accessible").notNullable();
+        table.boolean("gender_neutral").notNullable();
+        table.boolean("family_friendly").notNullable();
 		table.integer("cleanliness").notNullable();
 		table.specificType("coordinates", "POINT");
 		table.integer("likes").notNullable().defaultTo(0);
