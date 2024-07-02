@@ -28,8 +28,8 @@ function HomePage() {
 			<main>
 				<HomePageHero locations={locations} />
 				<LocationList locations={locations} />
-				{/* <img src="http://localhost:8080/images/stock1.jpg"/>
-				<p>Hello world</p> */}
+				{/* <img src="http://localhost:8080/images/stock1.jpg"/> */}
+				{/* <p>Hello world</p> */}
 				<About />
 			</main>
 		</>

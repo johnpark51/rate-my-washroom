@@ -1,0 +1,25 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.text-right {
+    text-align: right;
+}
+
+.about {
+    width: 50%;
+    margin: 0 auto;
+    &__sections {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &--right {
+            text-align: right;
+        }
+    }
+    &__img {
+        width: 20rem;
+    }
+    &__text {
+        width: 50%;
+    }
+}
