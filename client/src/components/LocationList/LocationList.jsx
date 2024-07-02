@@ -3,7 +3,7 @@ import "./LocationList.scss"
 
 function LocationList({locations}) {
     return (
-        <div>
+        <div className="location-list">
             {locations.map((location) => {
 					return (
 						<LocationCard location={location}/>

@@ -1,2 +1,30 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.location-card {
+    width: 31%;
+    height: 20rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
+    overflow: hidden;
+    
+    &__img {
+        height: 130%;
+        width: auto;
+        margin: 0 auto;
+        &-container {
+            overflow: hidden;
+            width: 25rem;
+            height: 15rem;
+        }
+    }
+
+    &__name {
+        &-container {
+            padding: 1rem;
+        }
+    }
+    &__city {
+        font-weight: 400;
+    }
+}

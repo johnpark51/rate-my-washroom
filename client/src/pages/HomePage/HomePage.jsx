@@ -12,7 +12,6 @@ function HomePage() {
 	const getLocations = async () => {
 		try {
 			const response = await axios.get(`${baseURL}/api/locations`);
-			// console.log(response.data);
 			setLocations(response.data);
 		} catch (error) {
 			console.error(error);
