@@ -3,6 +3,7 @@ import HomePageHero from "../../components/HomePageHero/HomePageHero";
 import "./HomePage.scss";
 import axios from "axios";
 import LocationList from "../../components/LocationList/LocationList";
+import About from "../../components/About/About";
 
 function HomePage() {
 	const [locations, setLocations] = useState([]);
@@ -29,6 +30,7 @@ function HomePage() {
 				<LocationList locations={locations} />
 				{/* <img src="http://localhost:8080/images/stock1.jpg"/>
 				<p>Hello world</p> */}
+				<About />
 			</main>
 		</>
 	);
