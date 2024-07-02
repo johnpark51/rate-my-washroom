@@ -1,0 +1,9 @@
+.img {
+    height: 120%;
+    margin: 0 auto;
+    &__container {
+        overflow: hidden;
+        height: 30vh;
+        width: 30vw;
+    }
+}

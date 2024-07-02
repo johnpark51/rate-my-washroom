@@ -8,6 +8,7 @@ export function up(knex) {
 		table.string("name").notNullable();
 		table.string("city").notNullable();
         table.string("description", 1000).notNullable();
+        table.string("image").notNullable();
 		table.timestamp("created_at").defaultTo(knex.fn.now());
 		table
 			.timestamp("updated_at")

@@ -6,7 +6,7 @@ import locationRoutes from "./routes/locationRoutes.js";
 import washroomRoutes from "./routes/washroomRoutes.js";
 import reviewRoutes from "./routes/reviewRoutes.js";
 
-const PORT = process.env.PORT || 5050;
+const PORT = process.env.PORT || 8080;
 const app = express();
 
 /* MIDDLEWARE */
