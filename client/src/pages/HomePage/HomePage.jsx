@@ -4,14 +4,10 @@ import "./HomePage.scss";
 import axios from "axios";
 import LocationList from "../../components/LocationList/LocationList";
 import About from "../../components/About/About";
-import { FaStar } from "react-icons/fa";
-import NewStar from "../../components/NewStar/NewStar";
-import Star from "../../components/Star/Star";
+import MapComponent from "../../components/MapComponent/MapComponent";
 
 function HomePage() {
 	const [locations, setLocations] = useState([]);
-	const [rating, setRating] = useState(null);
-	const [hover, setHover] = useState(null);
 
 	const baseURL = import.meta.env.VITE_API_URL;
 
@@ -34,6 +30,7 @@ function HomePage() {
 				<HomePageHero locations={locations} />
 				<LocationList locations={locations} />
 				<About />
+				<MapComponent />
 			</main>
 		</>
 	);

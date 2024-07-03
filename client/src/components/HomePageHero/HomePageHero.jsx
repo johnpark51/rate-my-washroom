@@ -16,7 +16,7 @@ function HomePageHero({ locations }) {
 						className="hero__input"></input>
 					<div className="locations">
 						{locations.map((location) => {
-							return <LocationSearch key={location.id} location={location}/>;
+							return <LocationSearch key={location.id} location={location} />;
 						})}
 					</div>
 					{/* <h4 className="hero__search-link">

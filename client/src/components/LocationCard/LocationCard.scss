@@ -2,36 +2,83 @@
 @use "../../styles/partials/mixins" as *;
 
 .location-card {
-    width: 31%;
-    max-width: 25rem;
-    height: 15vh;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    border-radius: 20px;
-    overflow: hidden;
-    
-    &__img {
-        height: 130%;
-        width: auto;
-        margin: 0 auto;
-        &-container {
-            overflow: hidden;
-            width: 25rem;
-            height: 15rem;
-        }
-    }
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	border-radius: 20px;
+	overflow: hidden;
+	cursor: pointer;
+	min-width: 50%;
+    height: 8rem;
+    margin-right: 0.5rem;
+	@include tablet {
+        min-width: 1rem;
+		width: 21rem;
+		height: 16rem;
+	}
+	@include desktop {
+		width: 24rem;
+		height: 20rem;
+	}
 
-    &__name {
-        &-container {
-            padding: 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-    }
-    &__city {
-        font-weight: 400;
-    }
-    &__washrooms {
-        font-weight: 500;
-    }
+	&__img {
+		height: 6rem;
+		margin: 0 auto;
+		@include tablet {
+			height: 130%;
+			width: auto;
+		}
+
+		&-container {
+			overflow: hidden;
+			@include tablet {
+				width: 100%;
+				height: 12rem;
+			}
+			@include desktop {
+				height: 15rem;
+			}
+		}
+	}
+
+	&__name {
+		font-size: 0.6rem;
+		@include tablet {
+			font-size: 1.2rem;
+		}
+		@include desktop {
+			font-size: 1.5rem;
+		}
+		&-container {
+			padding: 0.1rem 0.6rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			@include tablet {
+				padding: 0.6rem 1rem;
+			}
+			@include desktop {
+				padding: 1rem;
+			}
+		}
+	}
+	&__city {
+		font-weight: 400;
+        font-size: 0.5rem;
+		@include tablet {
+			font-size: 0.8rem;
+		}
+		@include desktop {
+			font-size: 1rem;
+		}
+	}
+	&__washrooms {
+		font-weight: 500;
+        font-size: 0.5rem;
+		@include tablet {
+			font-size: 0.8rem;
+		}
+		@include desktop {
+			font-size: 1rem;
+		}
+	}
 }
