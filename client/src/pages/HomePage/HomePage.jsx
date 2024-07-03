@@ -5,6 +5,7 @@ import axios from "axios";
 import LocationList from "../../components/LocationList/LocationList";
 import About from "../../components/About/About";
 import { FaStar } from "react-icons/fa";
+import Star from "../../components/NewStar/NewStar";
 
 function HomePage() {
 	const [locations, setLocations] = useState([]);
@@ -24,7 +25,6 @@ function HomePage() {
 
 	useEffect(() => {
 		getLocations();
-		setRating(3)
 	}, []);
 
 	return (
@@ -33,30 +33,8 @@ function HomePage() {
 				<HomePageHero locations={locations} />
 				<LocationList locations={locations} />
 				<About />
-				{[...Array(5)].map((star, index) => {
-					const currentRating = index + 1;
-					return (
-						<label>
-							<input
-								type="radio"
-								name="rating"
-								value={currentRating}
-								onClick={() => setRating(currentRating)}
-							/>
-							<FaStar
-								className="star"
-								size={50}
-								color={
-									currentRating <= (hover || rating) ? "ffc107" : "#e4e5e9"
-								}
-								onMouseEnter={() => setHover(currentRating)}
-								onMouseLeave={() => setHover(null)}
-							/>
-						</label>
-					);
-				})}
-				<p>Your rating is {rating}</p>
-				{[...Array(5)].map((star, index) => {
+				<Star />
+				{/* {[...Array(5)].map((star, index) => {
 					const currentRating = index + 1;
 					return (
 						<label>
@@ -75,7 +53,7 @@ function HomePage() {
 						</label>
 					);
 				})}
-				<p>consistent rating</p>
+				<p>consistent rating</p> */}
 			</main>
 		</>
 	);
