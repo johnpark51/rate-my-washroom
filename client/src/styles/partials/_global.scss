@@ -30,3 +30,11 @@
         }
     }
 }
+
+.star {
+    cursor: pointer;
+    width: 1rem;
+    &-input {
+        display:none;
+    }
+}

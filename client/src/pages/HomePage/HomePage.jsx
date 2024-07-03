@@ -5,7 +5,8 @@ import axios from "axios";
 import LocationList from "../../components/LocationList/LocationList";
 import About from "../../components/About/About";
 import { FaStar } from "react-icons/fa";
-import Star from "../../components/NewStar/NewStar";
+import NewStar from "../../components/NewStar/NewStar";
+import Star from "../../components/Star/Star";
 
 function HomePage() {
 	const [locations, setLocations] = useState([]);
@@ -33,27 +34,6 @@ function HomePage() {
 				<HomePageHero locations={locations} />
 				<LocationList locations={locations} />
 				<About />
-				<Star />
-				{[...Array(5)].map((star, index) => {
-					const currentRating = index + 1;
-					return (
-						<label>
-							<input
-								type="radio"
-								name="rating"
-								value={currentRating}
-							/>
-							<FaStar
-								className="star"
-								size={50}
-								color={
-									currentRating <= (rating) ? "ffc107" : "#e4e5e9"
-								}
-							/>
-						</label>
-					);
-				})}
-				<p>consistent rating</p>
 			</main>
 		</>
 	);

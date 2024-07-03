@@ -2,7 +2,7 @@ import "./NewStar.scss";
 import { FaStar } from "react-icons/fa";
 import { useState } from "react";
 
-export default function Star() {
+export default function NewStar() {
 	const [rating, setRating] = useState(null);
 	const [hover, setHover] = useState(null);
 	return (
