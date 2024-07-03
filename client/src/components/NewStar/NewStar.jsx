@@ -14,7 +14,7 @@ export default function Star() {
 						<input
 							type="radio"
 							name="rating"
-                            className="input"
+                            className="star-input"
 							value={currentRating}
 							onClick={() => setRating(currentRating)}
 						/>

@@ -34,7 +34,7 @@ function HomePage() {
 				<LocationList locations={locations} />
 				<About />
 				<Star />
-				{/* {[...Array(5)].map((star, index) => {
+				{[...Array(5)].map((star, index) => {
 					const currentRating = index + 1;
 					return (
 						<label>
@@ -53,7 +53,7 @@ function HomePage() {
 						</label>
 					);
 				})}
-				<p>consistent rating</p> */}
+				<p>consistent rating</p>
 			</main>
 		</>
 	);

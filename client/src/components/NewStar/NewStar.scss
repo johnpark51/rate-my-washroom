@@ -1,7 +1,6 @@
-.input {
-    display:none;
-}
-
 .star {
     cursor: pointer;
+    &-input {
+        display:none;
+    }
 }
