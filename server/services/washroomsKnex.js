@@ -36,17 +36,6 @@ export const getWashrooms = async () => {
 /* GET WASHROOMS BY ID */
 export const getWashroomById = async (id) => {
 	try {
-		// const locationId = id;
-		// const washroom = await knex("washrooms").where({ location_id: locationId });
-		// const locations = await knex("locations").where({ id: id }).first();
-
-		// if (!locations) {
-		// 	throw new Error("Location does not exist");
-		// }
-		// if (!washroom) {
-		// 	throw new Error("Washroom not found");
-		// }
-		// return washroom;
 		const one = await knex("washrooms")
 			.where({ "washrooms.id": id })
 			.join("locations", "locations.id", "washrooms.location_id")

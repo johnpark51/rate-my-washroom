@@ -5,9 +5,21 @@ const knex = initKnex(config);
 /* GET ALL REVIEWS */
 export const getReviews = async () => {
     try {
-      const reviews = await knex.select("*").from("reviews");
+      const reviews = await knex
+      .join("washrooms", "washrooms.id", "reviews.washroom_id")
+      .select(
+        "reviews.id", 
+        "reviews.name", 
+        "reviews.content",
+        "reviews.washroom_id", 
+        "reviews.timestamp",
+        "reviews.rating",
+        "washrooms.address",
+        "washrooms.location"
+      )
+      .from("reviews");
       if (!reviews) {
-        throw new Error("Location not found");
+        throw new Error("Review not found");
       }
       return reviews;
     } catch (error) {
@@ -27,23 +39,3 @@ export const fetchOneReview = async (id) => {
       throw new Error(error);
     }
   };
-
-  /* GET WASHROOM + REVIEWS */
-//   export const getWashroomReviews = async (id) => {
-//     try {
-//       const washroomId = id;
-//       const washroom = await knex("washrooms")
-//         .where({ id: washroomId })
-//         .first();
-//       if (!washroom) {
-//         throw new Error("Washroom not found");
-//       }
-//       const reviews = await knex("reviews").where({
-//         washroom_id: washroomId,
-//       });
-//       const result = reviews
-//       return result;
-//     } catch (error) {
-//       throw new Error(error);
-//     }
-//   };
