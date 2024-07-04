@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "./LocationPage.scss";
 import axios from "axios";
+import LocationWashrooms from "../../components/LocationWashrooms/LocationWashrooms";
 
 export default function LocationPage() {
 	const [locationDetails, setLocationDetails] = useState(null);
@@ -20,7 +21,7 @@ export default function LocationPage() {
 			console.error(error);
 		}
 	};
-    const getLocationWashrooms = async () => {
+	const getLocationWashrooms = async () => {
 		try {
 			const response = await axios.get(
 				`${baseURL}/api/locations/${locationId}/washrooms`
@@ -33,21 +34,24 @@ export default function LocationPage() {
 
 	useEffect(() => {
 		getLocationDetails();
-        getLocationWashrooms();
+		getLocationWashrooms();
 	}, []);
-    console.log(washrooms)
-    
+
 	if (!locationDetails || !washrooms) {
-        return <p>Loading...</p>;
+		return <p>Loading...</p>;
 	}
-    const { name, city, description, image, lat, lng } = locationDetails;
+	const { name, city, description, image, lat, lng } = locationDetails;
 
 	return (
 		<>
 			<h1>{name}</h1>
-            {/* <img src={image} /> */}
+			<p>{description}</p>
+			{/* <img src={image} /> */}
 			<p>finally focking working mate!!</p>
-            <p>{washrooms.length} Washrooms recorded in this area</p>
+			<p>{washrooms.length} Washrooms recorded in this area</p>
+			{washrooms.map((washroom) => {
+				return <LocationWashrooms key={washroom.id} washroom={washroom}/>;
+			})}
 		</>
 	);
 }
