@@ -9,6 +9,7 @@ import MapComponent from "../../components/MapComponent/MapComponent";
 function HomePage() {
 	const [locations, setLocations] = useState([]);
 	const [washrooms, setWashrooms] = useState([]);
+	const [reviews, setReviews] = useState([]);
 
 	const baseURL = import.meta.env.VITE_API_URL;
 
@@ -28,10 +29,22 @@ function HomePage() {
 			console.error(error);
 		}
 	};
+	const getReviews = async () => {
+		try {
+			const response = await axios.get(`${baseURL}/api/reviews`);
+			const reviewArray = response.data
+			const reversedReviews = reviewArray.reverse();
+			const latestReviews = reversedReviews.slice(0, 5)
+			setReviews(latestReviews);
+		} catch (error) {
+			console.error(error);
+		}
+	};
 
 	useEffect(() => {
 		getLocations();
 		getWashrooms();
+		getReviews();
 	}, []);
 
 	return (
@@ -41,6 +54,9 @@ function HomePage() {
 				<LocationList locations={locations} />
 				<About />
 				<MapComponent washrooms={washrooms}/>
+				{reviews.map((review) => {
+					return <p>{review.name}</p>
+				})}
 			</main>
 		</>
 	);
