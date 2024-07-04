@@ -39,3 +39,24 @@ export const fetchOneReview = async (id) => {
       throw new Error(error);
     }
   };
+
+  /* POST REVIEW */
+  export const postReview = async (review) => {
+    try {
+      const reviewIds = await knex("reviews").insert(review);
+      const reviewArray = await knex("reviews").where({
+        id: reviewIds[0],
+      });
+      const returnReview = reviewArray[0];
+      return {
+        id: returnReview.id,
+        name: returnReview.name,
+        content: returnReview.content,
+        washroom_id: returnReview.washroom_id,
+        timestamp: returnReview.timestamp,
+        rating: returnReview.rating
+      };
+    } catch (error) {
+      throw new Error(error);
+    }
+  }

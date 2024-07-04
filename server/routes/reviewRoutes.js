@@ -1,13 +1,15 @@
 import express from "express";
 import {
     getReviews,
-    fetchOne
+    fetchOne,
+    postReview,
 } from "../controllers/reviewController.js"
 const router = express.Router();
 
 router
   .route("/")
-  .get(getReviews);
+  .get(getReviews)
+  .post(postReview)
 
 /* REVIEW BY ID */
 router

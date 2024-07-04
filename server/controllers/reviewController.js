@@ -1,6 +1,7 @@
 import {
 	getReviews as getReviewsService,
 	fetchOneReview as fetchOneReviewService,
+	postReview as postReviewService,
 } from "../services/reviewsKnex.js";
 
 /*GET ALL REVIEWS*/
@@ -22,4 +23,16 @@ export const fetchOne = async (req, res) => {
 		res.status(500).json({ message: error.message });
 	}
 };
+
+/* POST REVIEW */
+export const postReview = async(req,res) => {
+	try {
+		const data = req.body;
+		const result = await postReviewService(data);
+		return res.status(201).json(result);
+	} catch (error) {
+		res.status(500).json({ message: error.message})
+	}
+}
+
 
