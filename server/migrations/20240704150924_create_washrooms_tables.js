@@ -16,6 +16,8 @@ export function up(knex) {
 		table.integer("cleanliness").notNullable();
 		table.specificType("coordinates", "POINT");
 		table.integer("likes").notNullable().defaultTo(0);
+		table.float("lat").notNullable();
+		table.float("lng").notNullable();
 		table
 			.integer("location_id")
 			.unsigned()
@@ -37,3 +39,4 @@ export function up(knex) {
 export function down(knex) {
 	return knex.schema.dropTable("washrooms");
 }
+

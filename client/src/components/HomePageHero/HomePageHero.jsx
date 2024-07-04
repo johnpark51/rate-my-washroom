@@ -2,7 +2,7 @@ import "./HomePageHero.scss";
 
 import LocationSearch from "../LocationSearch/LocationSearch";
 
-function HomePageHero({ locations }) {
+function HomePageHero({ washrooms }) {
 	return (
 		<div id="container">
 			<section className="hero">
@@ -15,8 +15,8 @@ function HomePageHero({ locations }) {
 						placeholder="Search your area or scroll below"
 						className="hero__input"></input>
 					<div className="locations">
-						{locations.map((location) => {
-							return <LocationSearch key={location.id} location={location} />;
+						{washrooms.map((washroom) => {
+							return <LocationSearch key={location.id} washroom={washroom} />;
 						})}
 					</div>
 					{/* <h4 className="hero__search-link">

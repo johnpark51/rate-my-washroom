@@ -1,14 +1,14 @@
 import "./LocationSearch.scss";
 
-function LocationSearch({ location }) {
-	const { name, city } = location;
-	if (!location) {
+function LocationSearch({ washroom }) {
+	const { address } = washroom;
+	if (!washroom) {
 		return <h1>Loading...</h1>;
 	}
 	return (
 		<section className="location">
-			<h3 className="location__name">{name}</h3>
-			<p className="location__city">{city}</p>
+			<h3 className="location__name">{address}</h3>
+			<p className="location__city"></p>
 		</section>
 	);
 }

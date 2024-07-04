@@ -8,6 +8,7 @@ import MapComponent from "../../components/MapComponent/MapComponent";
 
 function HomePage() {
 	const [locations, setLocations] = useState([]);
+	const [washrooms, setWashrooms] = useState([]);
 
 	const baseURL = import.meta.env.VITE_API_URL;
 
@@ -19,15 +20,24 @@ function HomePage() {
 			console.error(error);
 		}
 	};
+	const getWashrooms = async () => {
+		try {
+			const response = await axios.get(`${baseURL}/api/washrooms`);
+			setWashrooms(response.data);
+		} catch (error) {
+			console.error(error);
+		}
+	};
 
 	useEffect(() => {
 		getLocations();
+		getWashrooms();
 	}, []);
 
 	return (
 		<>
 			<main>
-				<HomePageHero locations={locations} />
+				<HomePageHero washrooms={washrooms} />
 				<LocationList locations={locations} />
 				<About />
 				<MapComponent />
