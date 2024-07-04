@@ -69,15 +69,31 @@ export const getWashroomById = async (id) => {
 export const getWashroomReviews = async (id) => {
 	try {
 		const washroomId = id;
+
 		const washroom = await knex("washrooms").where({ id: washroomId }).first();
 		if (!washroom) {
 			throw new Error("Washroom not found");
 		}
+
 		const reviews = await knex("reviews").where({
 			washroom_id: washroomId,
 		});
-		const result = reviews;
-		return result;
+
+		let totalRating = 0;
+		reviews.forEach(review => {
+			totalRating += review.rating;
+		})
+		const averageRating = totalRating / reviews.length;
+		const roundedRating = Math.round(averageRating);
+		const finalRating = Math.min(Math.max(roundedRating, 1), 5);
+
+		// const result = reviews;
+		// return result;
+		const response = {
+			reviews: reviews,
+			averageRating: finalRating
+		}
+		return response;
 	} catch (error) {
 		throw new Error(error);
 	}
