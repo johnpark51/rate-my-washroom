@@ -1,3 +1,4 @@
+import Star from "../Star/Star";
 import "./HomeReviews.scss";
 
 export default function HomeReviews({ review }) {
@@ -5,8 +6,8 @@ export default function HomeReviews({ review }) {
 	return (
 		<>
 			<h3>{name}</h3>
-			<h3>{content}</h3>
-			<h3>{rating}</h3>
+			<p>{content}</p>
+			<Star rating={rating}/>
 		</>
 	);
 }

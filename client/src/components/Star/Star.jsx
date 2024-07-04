@@ -2,8 +2,8 @@ import "./Star.scss";
 import { FaStar } from "react-icons/fa";
 import { useState } from "react";
 
-export default function Star() {
-	const rating = 4;
+export default function Star({rating}) {
+	
 	return (
 		<>
 			{[...Array(5)].map((star, index) => {
@@ -19,7 +19,6 @@ export default function Star() {
 					</label>
 				);
 			})}
-			<p>Your consistent rating is {rating}</p>
 		</>
 	);
 }
