@@ -5,6 +5,7 @@ import axios from "axios";
 import LocationList from "../../components/LocationList/LocationList";
 import About from "../../components/About/About";
 import MapComponent from "../../components/MapComponent/MapComponent";
+import HomeReviews from "../../components/HomeReviews/HomeReviews";
 
 function HomePage() {
 	const [locations, setLocations] = useState([]);
@@ -55,7 +56,7 @@ function HomePage() {
 				<About />
 				<MapComponent washrooms={washrooms}/>
 				{reviews.map((review) => {
-					return <p>{review.name}</p>
+					return <HomeReviews review={review}/>
 				})}
 			</main>
 		</>
