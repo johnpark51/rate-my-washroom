@@ -4,6 +4,7 @@ import { AdvancedMarker, Pin, InfoWindow } from "@vis.gl/react-google-maps";
 
 export default function Marker({ position }) {
 	const [open, setOpen] = useState(false);
+	const { address } = position;
 	return (
 		<>
 			<AdvancedMarker position={position} onClick={() => setOpen(true)}>
@@ -11,7 +12,7 @@ export default function Marker({ position }) {
 			</AdvancedMarker>
 			{open && (
 				<InfoWindow position={position} onCloseClick={() => setOpen(false)}>
-					<p>I'm in here</p>
+					<p>Washroom @ {address}</p>
 				</InfoWindow>
 			)}
 		</>

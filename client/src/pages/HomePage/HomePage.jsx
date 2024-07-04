@@ -40,7 +40,7 @@ function HomePage() {
 				<HomePageHero washrooms={washrooms} />
 				<LocationList locations={locations} />
 				<About />
-				<MapComponent />
+				<MapComponent washrooms={washrooms}/>
 			</main>
 		</>
 	);
