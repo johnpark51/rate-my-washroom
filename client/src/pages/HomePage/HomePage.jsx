@@ -54,7 +54,7 @@ function HomePage() {
 				<HomePageHero washrooms={washrooms} />
 				<LocationList locations={locations} />
 				<About />
-				<MapComponent washrooms={washrooms}/>
+				<MapComponent washrooms={washrooms}  zoom={12.5}/>
 				{reviews.map((review) => {
 					return <HomeReviews review={review}/>
 				})}

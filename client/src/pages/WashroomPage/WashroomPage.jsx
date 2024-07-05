@@ -9,7 +9,7 @@ export default function WashroomPage() {
 	const [washroomDetails, setWashroomDetails] = useState(null);
 	const [reviews, setReviews] = useState(null);
 	const { washroomId } = useParams();
-    const navigate = useNavigate();
+	const navigate = useNavigate();
 
 	const baseURL = import.meta.env.VITE_API_URL;
 
@@ -54,7 +54,7 @@ export default function WashroomPage() {
 				timestamp: formattedDate,
 				rating: e.target.rating.value,
 			};
-            axios.post(`${baseURL}/api/reviews`, newReview)
+			axios.post(`${baseURL}/api/reviews`, newReview);
 		} catch (error) {}
 	};
 	useEffect(() => {
@@ -65,13 +65,35 @@ export default function WashroomPage() {
 	if (!washroomDetails || !reviews) {
 		return <p>Loading...</p>;
 	}
-	const { address, public_access } = washroomDetails;
+	const { cleanliness, address, public_access, wheelchair_accessible, gender_neutral, family_friendly, averageRating } = washroomDetails;
+    console.log(washroomDetails)
 
 	return (
 		<>
-             <button onClick={() => navigate(-1)}>go back</button>
+			<button onClick={() => navigate(-1)}>go back</button>
 			<h1>{address}</h1>
-			{public_access ? <p>Impaired individuals can use</p> : <p>Impaired individuals cannot use</p>}
+			{wheelchair_accessible ? (
+				<p className="demo-green">Impaired individuals can use</p>
+			) : (
+				<p className="demo-red">Impaired individuals cannot use</p>
+			)}
+			{public_access ? (
+				<p className="demo-green">Publicly Accessible</p>
+			) : (
+				<p className="demo-red">Publicly Accessible</p>
+			)}
+			{gender_neutral ? (
+				<p className="demo-green">Gender Neutral</p>
+			) : (
+				<p className="demo-red">Gender Neutral</p>
+			)}
+			{family_friendly ? (
+				<p className="demo-green">Family Friendly - diaper changing spot</p>
+			) : (
+				<p className="demo-red">Family Friendly - diaper changing spot</p>
+			)}
+            <h3>This washroom has an average rating of <Star rating={reviews.averageRating}/></h3>
+            
 			<form onSubmit={postReview}>
 				<label>
 					name

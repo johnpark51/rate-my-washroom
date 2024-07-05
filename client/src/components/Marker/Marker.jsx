@@ -8,7 +8,7 @@ export default function Marker({ position }) {
 	return (
 		<>
 			<AdvancedMarker position={position} onClick={() => setOpen(true)}>
-				<Pin />
+				<span className="poop-emoji">&#128169;</span>
 			</AdvancedMarker>
 			{open && (
 				<InfoWindow position={position} onCloseClick={() => setOpen(false)}>

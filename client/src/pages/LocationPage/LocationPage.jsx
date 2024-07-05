@@ -3,6 +3,8 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import "./LocationPage.scss";
 import axios from "axios";
 import LocationWashrooms from "../../components/LocationWashrooms/LocationWashrooms";
+import MapComponent from "../../components/MapComponent/MapComponent";
+import LocationMap from "../../components/LocationMap/LocationMap";
 
 export default function LocationPage() {
 	const [locationDetails, setLocationDetails] = useState(null);
@@ -57,6 +59,7 @@ export default function LocationPage() {
 					</>
 				);
 			})}
+			<LocationMap locationDetails={locationDetails} washrooms={washrooms} zoom={16}/>
 		</>
 	);
 }

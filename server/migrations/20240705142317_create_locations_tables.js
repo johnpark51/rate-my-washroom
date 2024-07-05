@@ -7,10 +7,10 @@ export function up(knex) {
 		table.increments("id").primary();
 		table.string("name").notNullable();
 		table.string("city").notNullable();
-        table.string("description", 1000).notNullable();
-        table.string("image").notNullable();
-		table.float("lat").notNullable();
-		table.float("lng").notNullable();
+		table.string("description", 1000).notNullable();
+		table.string("image").notNullable();
+		table.text("lat").notNullable();
+		table.text("lng").notNullable();
 		table.timestamp("created_at").defaultTo(knex.fn.now());
 		table
 			.timestamp("updated_at")
