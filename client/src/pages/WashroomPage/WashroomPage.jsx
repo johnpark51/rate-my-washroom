@@ -1,7 +1,7 @@
 import "./WashroomPage.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import Star from "../../components/Star/Star";
 import NewStar from "../../components/NewStar/NewStar";
 
@@ -9,6 +9,7 @@ export default function WashroomPage() {
 	const [washroomDetails, setWashroomDetails] = useState(null);
 	const [reviews, setReviews] = useState(null);
 	const { washroomId } = useParams();
+    const navigate = useNavigate();
 
 	const baseURL = import.meta.env.VITE_API_URL;
 
@@ -33,18 +34,8 @@ export default function WashroomPage() {
 		}
 	};
 
-	// {
-	//     "id": 0,
-	//     "name": "emploleon124",
-	//     "content": "hello world",
-	//     "washroom_id": 1,
-	//     "timestamp": "2024-01-02 12:45:00",
-	//     "rating": 2
-	//   }
-
 	const postReview = async (e) => {
 		try {
-			// e.preventDefault();
 			const date = new Date();
 			const year = date.getFullYear();
 			const month = String(date.getMonth() + 1).padStart(2, "0"); // January is 0
@@ -64,7 +55,6 @@ export default function WashroomPage() {
 				rating: e.target.rating.value,
 			};
             axios.post(`${baseURL}/api/reviews`, newReview)
-            console.log(newReview)
 		} catch (error) {}
 	};
 	useEffect(() => {
@@ -76,12 +66,12 @@ export default function WashroomPage() {
 		return <p>Loading...</p>;
 	}
 	const { address, public_access } = washroomDetails;
-	// console.log(washroomDetails.id);
 
 	return (
 		<>
+             <button onClick={() => navigate(-1)}>go back</button>
 			<h1>{address}</h1>
-			{public_access && <p>Impaired individuals can use</p>}
+			{public_access ? <p>Impaired individuals can use</p> : <p>Impaired individuals cannot use</p>}
 			<form onSubmit={postReview}>
 				<label>
 					name
