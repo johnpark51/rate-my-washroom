@@ -1,0 +1,11 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.location-washrooms {
+    background-color: $light-green;
+    border: 1px solid black;
+    width: auto;
+    @include desktop {
+        width: 40%;
+    }
+}

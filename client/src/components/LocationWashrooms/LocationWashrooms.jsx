@@ -26,9 +26,9 @@ export default function LocationWashrooms({ washroom }) {
 	if (!washroomDetails || !washroomDetails.averageRating) {
 		return <p>Loading ...</p>;
 	}
-	console.log(washroomDetails.reviews.length);
+
 	return (
-		<section>
+		<section className="location-washrooms">
 			<h3>{location}</h3>
 			<p>Average Rating:</p>
 			<Star rating={washroomDetails.averageRating} />

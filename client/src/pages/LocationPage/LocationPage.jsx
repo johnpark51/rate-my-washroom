@@ -46,7 +46,6 @@ export default function LocationPage() {
 		<>
 			<h1>{name}</h1>
 			<p>{description}</p>
-			{/* <img src={image} /> */}
 			<p>finally focking working mate!!</p>
 			<p>{washrooms.length} Washrooms recorded in this area</p>
 			{washrooms.map((washroom) => {
