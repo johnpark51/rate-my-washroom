@@ -6,6 +6,7 @@ import LocationList from "../../components/LocationList/LocationList";
 import About from "../../components/About/About";
 import MapComponent from "../../components/MapComponent/MapComponent";
 import HomeReviews from "../../components/HomeReviews/HomeReviews";
+import WashroomList from "../../components/WashroomList/WashroomList";
 
 function HomePage() {
 	const [locations, setLocations] = useState([]);
@@ -54,10 +55,11 @@ function HomePage() {
 				<HomePageHero washrooms={washrooms} />
 				<LocationList locations={locations} />
 				<About />
-				<MapComponent washrooms={washrooms}  zoom={12.5}/>
+				{/* <MapComponent washrooms={washrooms}  zoom={12.5}/> */}
 				{reviews.map((review) => {
 					return <HomeReviews review={review}/>
 				})}
+				<WashroomList washrooms={washrooms}/>
 			</main>
 		</>
 	);

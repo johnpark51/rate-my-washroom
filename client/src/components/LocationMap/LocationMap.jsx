@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./LocationMap.scss";
 import { APIProvider, Map } from "@vis.gl/react-google-maps";
-import Marker from "../Marker/Marker";
+import Point from "../Point/Point";
 
 export default function LocationMap({ washrooms, zoom, locationDetails }) {
 	const markerData = washrooms.map((washroom) => {
@@ -14,16 +14,6 @@ export default function LocationMap({ washrooms, zoom, locationDetails }) {
 		};
 	});
 
-	// let locationLatFloat = parseFloat(locationDetails.lat)
-	// let locationLngFloat = parseFloat(locationDetails.lng)
-
-	// const locationPosition = {
-	// 	lat: locationLatFloat,
-	// 	lng: locationLngFloat,
-	// };
-
-	// const torontoPosition = { lat: 43.6532, lng: -79.3832 };
-
 	if (!washrooms) {
 		return <p>Loading...</p>;
 	}
@@ -35,7 +25,7 @@ export default function LocationMap({ washrooms, zoom, locationDetails }) {
 			<div className="map-div">
 				<Map defaultZoom={zoom} defaultCenter={markerData[0]} mapId={"8e6688f3b9182873"}>
 					{markerData.map((position) => {
-						return <Marker position={position} />;
+						return <Point position={position} />;
 					})}
 				</Map>
 			</div>

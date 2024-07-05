@@ -65,13 +65,24 @@ export default function WashroomPage() {
 	if (!washroomDetails || !reviews) {
 		return <p>Loading...</p>;
 	}
-	const { cleanliness, address, public_access, wheelchair_accessible, gender_neutral, family_friendly, averageRating } = washroomDetails;
-    console.log(washroomDetails)
+	const {
+		cleanliness,
+		address,
+		public_access,
+		wheelchair_accessible,
+		gender_neutral,
+		family_friendly,
+		averageRating,
+		hours,
+		type,
+	} = washroomDetails;
 
 	return (
 		<>
 			<button onClick={() => navigate(-1)}>go back</button>
 			<h1>{address}</h1>
+			<h3>{type}</h3>
+			<h4>{hours}</h4>
 			{wheelchair_accessible ? (
 				<p className="demo-green">Impaired individuals can use</p>
 			) : (
@@ -92,8 +103,11 @@ export default function WashroomPage() {
 			) : (
 				<p className="demo-red">Family Friendly - diaper changing spot</p>
 			)}
-            <h3>This washroom has an average rating of <Star rating={reviews.averageRating}/></h3>
-            
+			<h3>This washroom has an average rating of </h3>
+			<Star rating={reviews.averageRating} />
+			<h3>Washroom cleanliness: </h3>
+			<Star rating={cleanliness} />
+
 			<form onSubmit={postReview}>
 				<label>
 					name
@@ -108,10 +122,18 @@ export default function WashroomPage() {
 			</form>
 
 			{reviews.reviews.map((review) => {
+				const date = new Date(review.timestamp);
+				const options = {
+					year: "numeric",
+					month: "short",
+					day: "numeric",
+				};
+				const formattedDate = date.toLocaleDateString("en-US", options);
 				return (
 					<>
 						<h3>{review.name}</h3>
 						<p>{review.content}</p>
+						<p>{formattedDate}</p>
 						<Star rating={review.rating} />
 					</>
 				);

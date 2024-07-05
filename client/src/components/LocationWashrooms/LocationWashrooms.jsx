@@ -23,7 +23,7 @@ export default function LocationWashrooms({ washroom }) {
 		getWashroomDetails();
 	}, []);
 
-	if (!washroomDetails || !washroomDetails.averageRating) {
+	if (!washroomDetails || !washroom) {
 		return <p>Loading ...</p>;
 	}
 
