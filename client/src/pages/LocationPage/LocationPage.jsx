@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import "./LocationPage.scss";
 import axios from "axios";
 import LocationWashrooms from "../../components/LocationWashrooms/LocationWashrooms";
@@ -49,7 +49,13 @@ export default function LocationPage() {
 			<p>finally focking working mate!!</p>
 			<p>{washrooms.length} Washrooms recorded in this area</p>
 			{washrooms.map((washroom) => {
-				return <LocationWashrooms key={washroom.id} washroom={washroom}/>;
+				return (
+					<>
+						<Link className="links" key={washroom.id} to={`/washroom/${washroom.id}`}>
+							<LocationWashrooms key={washroom.id} washroom={washroom} />
+						</Link>
+					</>
+				);
 			})}
 		</>
 	);
