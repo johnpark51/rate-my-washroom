@@ -17,6 +17,7 @@ export default function Point({ position }) {
 		<>
 			<AdvancedMarker position={position} onClick={() => setOpen(true)}>
 				<span className="poop-emoji">&#128169;</span>
+				{/* <span className="poop-emoji">&#128701;</span> */}
 			</AdvancedMarker>
 			{open && (
 				<InfoWindow position={position} onCloseClick={() => setOpen(false)}>

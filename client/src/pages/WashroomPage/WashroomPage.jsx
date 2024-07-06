@@ -103,7 +103,7 @@ export default function WashroomPage() {
 			) : (
 				<p className="demo-red">Family Friendly - diaper changing spot</p>
 			)}
-			<h3>This washroom has an average rating of </h3>
+			<h3>This washroom has an average rating of:</h3>
 			<Star rating={reviews.averageRating} />
 			<h3>Washroom cleanliness: </h3>
 			<Star rating={cleanliness} />
@@ -130,12 +130,12 @@ export default function WashroomPage() {
 				};
 				const formattedDate = date.toLocaleDateString("en-US", options);
 				return (
-					<>
+					<section className="washroom-reviews">
 						<h3>{review.name}</h3>
-						<p>{review.content}</p>
 						<p>{formattedDate}</p>
 						<Star rating={review.rating} />
-					</>
+						<p>{review.content}</p>
+					</section>
 				);
 			})}
 		</>

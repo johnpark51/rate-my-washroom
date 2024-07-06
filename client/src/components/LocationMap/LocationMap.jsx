@@ -8,6 +8,7 @@ export default function LocationMap({ washrooms, zoom, locationDetails }) {
 		let latFloat = parseFloat(washroom.lat)
 		let lngFloat = parseFloat(washroom.lng)
 		return {
+			id: washroom.id,
 			address: washroom.address,
 			lat: latFloat,
 			lng: lngFloat,
@@ -18,7 +19,7 @@ export default function LocationMap({ washrooms, zoom, locationDetails }) {
 		return <p>Loading...</p>;
 	}
 
-	// console.log(locationPosition)
+	console.log(washrooms)
 
 	return (
 		<APIProvider apiKey={"AIzaSyBFDj6opA7KGa4RfLButOzAcaqbCqJ1JmA"}>

@@ -22,22 +22,26 @@ function LocationCard({ location }) {
 		getLocationWashrooms();
 	}, []);
 
-    if (!washrooms) {
-        return <h1>Loading...</h1>
-    }
+	if (!washrooms) {
+		return <h1>Loading...</h1>;
+	}
 
 	return (
-		<div className="location-card">
-			<div className="location-card__img-container">
-				<img className="location-card__img" src={image} alt={name}/>
-			</div>
-			<div className="location-card__name-container">
-				<div>
-					<h2 className="location-card__name">{name}</h2>
-					<h4 className="location-card__city">{city}</h4>
+		<div className="location-card__container">
+			<section className="location-card">
+				<div className="location-card__img-container">
+					<img className="location-card__img" src={image} alt={name} />
 				</div>
-                <h4 className="location-card__washrooms">{washrooms.length} washrooms</h4>
-			</div>
+				<div className="location-card__name-container">
+					<div>
+						<h2 className="location-card__name">{name}</h2>
+						<h4 className="location-card__city">{city}</h4>
+					</div>
+					<h4 className="location-card__washrooms">
+						{washrooms.length} washrooms
+					</h4>
+				</div>
+			</section>
 		</div>
 	);
 }

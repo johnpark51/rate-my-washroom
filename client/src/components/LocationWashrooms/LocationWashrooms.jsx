@@ -26,7 +26,6 @@ export default function LocationWashrooms({ washroom }) {
 	if (!washroomDetails || !washroom) {
 		return <p>Loading ...</p>;
 	}
-
 	return (
 		<section className="location-washrooms">
 			<h3>{location}</h3>

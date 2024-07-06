@@ -34,6 +34,9 @@
 .star {
     cursor: pointer;
     width: 1rem;
+    margin: 0;
+    padding: 0;
+    height: 20px;
     &-input {
         display:none;
     }

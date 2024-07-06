@@ -8,12 +8,14 @@
 	overflow: hidden;
 	cursor: pointer;
 	min-width: 8rem;
+	max-width: 8rem;
     height: 8rem;
     margin-right: 0.5rem;
 	@include tablet {
         min-width: 1rem;
 		width: 21rem;
 		height: 16rem;
+		max-width: none;
 	}
 	@include desktop {
 		width: 24rem;

@@ -50,6 +50,14 @@ export default function LocationPage() {
 			<p>{description}</p>
 			<p>finally focking working mate!!</p>
 			<p>{washrooms.length} Washrooms recorded in this area</p>
+			<label>Choose a filter:</label>
+			<select>
+				<option>Open to public</option>
+				<option>Wheelchair Accessible</option>
+				<option>Really clean?</option>
+				<option>Gender Neutral</option>
+				<option>Family Friendly</option>
+			</select>
 			{washrooms.map((washroom) => {
 				return (
 					<>
