@@ -3,6 +3,7 @@ import "./About.scss";
 function About() {
 	return (
 		<section className="about">
+			<h2 className="about__header">Our Story</h2>
 			<div className="about__sections">
 				<div className="about__text mobile">
 					<h2 className="about__headers text-right">Discover Our Purpose</h2>
@@ -34,10 +35,10 @@ function About() {
 			<div className="about__sections">
 				<div className="about__text">
 					<h2 className="about__headers">
-						Write a Review, or Post a new Washroom Discovery
+						Write a Review
 					</h2>
 					<p className="about__description">
-						Share your honest review of a restroom you've used to enhance the
+						With direct inspiration from RateMyProf, we want to provide a platform where you can share your honest review of a restroom you've used to enhance the
 						experience for others, or disclose a hidden restroom to benefit the
 						community.
 					</p>

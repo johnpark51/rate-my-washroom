@@ -1,5 +1,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/typography" as *;
 
 .header {
     @include flex(column, null, center);
@@ -10,9 +11,15 @@
     @include tablet {
         @include flex(row, space-between, center);
     }
+    @include desktop {
+        padding: 1.5rem 6rem;
+    }
+    &__title {
+        // color: $blue;
+    }
 
     &__washroom {
-        color: $green;
+        color: $blue;
     }
 
     &__right {

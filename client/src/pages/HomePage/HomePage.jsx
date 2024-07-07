@@ -53,11 +53,11 @@ function HomePage() {
 		<>
 			<main>
 				<HomePageHero washrooms={washrooms} />
-				<LocationList locations={locations} />
-				<About />
 				{reviews.map((review, index) => {
 					return <HomeReviews key={index} review={review}/>
 				})}
+				<LocationList locations={locations} />
+				<About />
 				<WashroomList washrooms={washrooms}/>
 			</main>
 		</>

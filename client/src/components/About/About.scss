@@ -18,6 +18,9 @@
     @include desktop {
         width: 70%;
     }
+	&__header {
+		font-size: 3rem;
+	}
 	&__sections {
 		display: flex;
 		flex-direction: column;
