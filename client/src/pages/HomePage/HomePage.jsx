@@ -7,6 +7,7 @@ import About from "../../components/About/About";
 import MapComponent from "../../components/MapComponent/MapComponent";
 import HomeReviews from "../../components/HomeReviews/HomeReviews";
 import WashroomList from "../../components/WashroomList/WashroomList";
+import HomeReviewsSection from "../../components/HomeReviewsSection/HomeReviewsSection";
 
 function HomePage() {
 	const [locations, setLocations] = useState([]);
@@ -36,7 +37,7 @@ function HomePage() {
 			const response = await axios.get(`${baseURL}/api/reviews`);
 			const reviewArray = response.data
 			const reversedReviews = reviewArray.reverse();
-			const latestReviews = reversedReviews.slice(0, 5)
+			const latestReviews = reversedReviews.slice(0, 15)
 			setReviews(latestReviews);
 		} catch (error) {
 			console.error(error);
@@ -53,12 +54,10 @@ function HomePage() {
 		<>
 			<main>
 				<HomePageHero washrooms={washrooms} />
-				{reviews.map((review, index) => {
-					return <HomeReviews key={index} review={review}/>
-				})}
 				<LocationList locations={locations} />
 				<About />
-				<WashroomList washrooms={washrooms}/>
+				<HomeReviewsSection reviews={reviews}/>
+				{/* <WashroomList washrooms={washrooms}/> */}
 			</main>
 		</>
 	);

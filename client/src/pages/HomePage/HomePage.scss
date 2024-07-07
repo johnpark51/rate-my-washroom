@@ -1,5 +1,9 @@
 @use "../../styles/partials/typography" as *;
 
+body {
+    background-color: #fbfcfe;
+}
+
 .img {
     height: 120%;
     margin: 0 auto;

@@ -1,0 +1,29 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.reviews-section {
+    background-color: #fbfcfe;
+	@include desktop {
+		padding: 3rem 6rem;
+	}
+    &__container {
+        max-width: 1280px;
+        display: flex;
+    }
+    &__left {
+        width: 30%;
+    }
+    &__header {
+        margin-bottom: 2rem;
+    }
+    &__description {
+        line-height: 1.6rem;
+    }
+    &__right {
+        width: 44rem;
+        height: 16rem;
+        margin-left: auto;
+        display: flex;
+        overflow-x: scroll;
+    }
+}

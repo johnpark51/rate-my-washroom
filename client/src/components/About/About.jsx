@@ -32,7 +32,7 @@ function About() {
 					</p>
 				</div>
 			</div>
-			<div className="about__sections">
+			{/* <div className="about__sections">
 				<div className="about__text">
 					<h2 className="about__headers">
 						Write a Review
@@ -47,7 +47,7 @@ function About() {
 					className="about__img"
 					src="http://localhost:8080/images/stock1.jpg"
 				/>
-			</div>
+			</div> */}
 		</section>
 	);
 }
