@@ -3,6 +3,8 @@
 
 .reviews-section {
     background-color: #fbfcfe;
+    max-width: 1280px;
+    margin: 0 auto;
 	@include desktop {
 		padding: 3rem 6rem;
 	}

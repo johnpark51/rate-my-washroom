@@ -32,22 +32,6 @@ function About() {
 					</p>
 				</div>
 			</div>
-			{/* <div className="about__sections">
-				<div className="about__text">
-					<h2 className="about__headers">
-						Write a Review
-					</h2>
-					<p className="about__description">
-						With direct inspiration from RateMyProf, we want to provide a platform where you can share your honest review of a restroom you've used to enhance the
-						experience for others, or disclose a hidden restroom to benefit the
-						community.
-					</p>
-				</div>
-				<img
-					className="about__img"
-					src="http://localhost:8080/images/stock1.jpg"
-				/>
-			</div> */}
 		</section>
 	);
 }

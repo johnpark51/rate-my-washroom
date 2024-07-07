@@ -4,6 +4,7 @@
 .footer {
     padding: 2rem 0;
     &__container {
+        margin: 0 auto;
         max-width: 1280px;
         display: flex;
         flex-direction: column;
@@ -26,5 +27,6 @@
     &__icon {
         width: 3rem;
         height: 3rem;
+        color: $blue;
     }
 }

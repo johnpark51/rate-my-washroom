@@ -2,30 +2,35 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
+#container {
+	background-color: #f6f6f6;
+}
+
 .header {
-    @include flex(column, null, center);
-    padding: 1rem;
-    gap: 1rem;
-    max-width: 1280px;
-    margin: 0 auto;
-    @include tablet {
-        @include flex(row, space-between, center);
-    }
-    @include desktop {
-        padding: 1.5rem 6rem;
-    }
-    &__title {
-        // color: $blue;
-    }
+	@include flex(column, null, center);
+	padding: 1rem;
+	gap: 1rem;
+	max-width: 1280px;
+	margin: 0 auto;
 
-    &__washroom {
-        color: $blue;
-    }
+	@include tablet {
+		@include flex(row, space-between, center);
+	}
+	@include desktop {
+		padding: 1.5rem 6rem;
+	}
+	&__title {
+		// color: $blue;
+	}
 
-    &__right {
-        width: 100%;
-        @include tablet {
-            width: auto;
-        }
-    }
+	&__washroom {
+		color: $blue;
+	}
+
+	&__right {
+		width: 100%;
+		@include tablet {
+			width: auto;
+		}
+	}
 }

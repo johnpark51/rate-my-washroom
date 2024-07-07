@@ -1,3 +1,18 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 .search-result {
+    display: flex;
+    justify-content: space-between;
     padding: 0.5rem 1rem;
+    &:hover {
+        background-color: $light-blue;
+    }
+    &__location {
+        color: $davys-gray;
+        font-size: 0.6rem;
+    }
+    &__name {
+        font-weight: 600;
+    }
 }

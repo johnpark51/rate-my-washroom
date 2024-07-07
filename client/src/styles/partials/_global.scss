@@ -21,7 +21,8 @@
         width: auto;
     }
     &:hover {
-        background-color: $green;
+        background-color: $blue;
+        color: white;
     }
     &--login {
         background-color: white;
@@ -29,6 +30,8 @@
         border: 0;
         &:hover {
             background-color: white;
+            color: black;
+            // background-color: white;
             text-decoration: underline;
         }
     }

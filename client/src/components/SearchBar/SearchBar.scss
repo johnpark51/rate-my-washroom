@@ -18,11 +18,9 @@ input {
     width: 100%;
     font-size: 1.25rem;
     margin-left: 5px;
-}
-
-input {
+    padding: 0.5rem 1rem;
     :focus {
-        outline: none;
+        outline: $blue;
     }
 }
 

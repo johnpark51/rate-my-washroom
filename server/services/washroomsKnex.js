@@ -12,6 +12,7 @@ export const getWashrooms = async () => {
 				"locations.name",
 				"washrooms.address",
 				"washrooms.type",
+				"washrooms.location",
 				"washrooms.hours",
 				"washrooms.public_access",
 				"washrooms.wheelchair_accessible",

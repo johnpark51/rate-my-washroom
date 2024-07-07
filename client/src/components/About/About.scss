@@ -12,6 +12,10 @@
 	padding: 1rem;
 	margin: 0 auto;
 	mix-blend-mode: multiply;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 1000px;
 	@include tablet {
         padding: 2rem 1rem;
 		width: 90%;
@@ -21,7 +25,6 @@
     }
 	&__header {
 		font-size: 3rem;
-		margin-left: 1rem;
 	}
 	&__sections {
 		display: flex;

@@ -5,14 +5,12 @@
 .map-div {
     height: 3rem;
     width: 3rem;
-    margin: 0 auto;
     @include tablet {
         min-height: 20rem;
-        padding-top: 1rem;
     }
     @include desktop {
+        max-width: 30rem;
         min-height: 30rem;
-        padding-top: 2rem;
     }
 }
 
