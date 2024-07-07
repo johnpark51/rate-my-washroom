@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import "./LocationPage.scss";
 import axios from "axios";
 import LocationWashrooms from "../../components/LocationWashrooms/LocationWashrooms";
-import MapComponent from "../../components/MapComponent/MapComponent";
 import LocationMap from "../../components/LocationMap/LocationMap";
+import LocationHero from "../../components/LocationHero/LocationHero";
 
 export default function LocationPage() {
 	const [locationDetails, setLocationDetails] = useState(null);
@@ -45,8 +45,8 @@ export default function LocationPage() {
 	const { name, city, description, image, lat, lng } = locationDetails;
 
 	return (
-		<>
-			<h1>{name}</h1>
+		<main>
+			<LocationHero locationDetails={locationDetails} />
 			<p>{description}</p>
 			<p>finally focking working mate!!</p>
 			<p>{washrooms.length} Washrooms recorded in this area</p>
@@ -61,13 +61,20 @@ export default function LocationPage() {
 			{washrooms.map((washroom) => {
 				return (
 					<>
-						<Link className="links" key={washroom.id} to={`/washroom/${washroom.id}`}>
+						<Link
+							className="links"
+							key={washroom.id}
+							to={`/washroom/${washroom.id}`}>
 							<LocationWashrooms key={washroom.id} washroom={washroom} />
 						</Link>
 					</>
 				);
 			})}
-			<LocationMap locationDetails={locationDetails} washrooms={washrooms} zoom={16}/>
-		</>
+			<LocationMap
+				locationDetails={locationDetails}
+				washrooms={washrooms}
+				zoom={16}
+			/>
+		</main>
 	);
 }

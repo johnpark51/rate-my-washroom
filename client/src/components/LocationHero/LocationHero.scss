@@ -1,0 +1,38 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.location-hero {
+    height: 13rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    max-width: 1800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2rem 3rem;
+
+    @include tablet {
+        height: 25rem;
+    }
+    @include desktop {
+        height: 25rem;
+    }
+    &__header {
+        color: white;
+        font-size: 3rem;
+        font-weight: 500;
+    }
+    &__right {
+        display: flex;
+        gap: 0.5rem;
+    }
+    &__city {
+        color: white;
+        font-weight: 500;
+    }
+    &__location-icon {
+        color: white;
+    }
+}
