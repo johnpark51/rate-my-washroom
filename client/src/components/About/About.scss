@@ -21,6 +21,7 @@
     }
 	&__header {
 		font-size: 3rem;
+		margin-left: 1rem;
 	}
 	&__sections {
 		display: flex;
@@ -57,8 +58,8 @@
         font-size: 0.8rem;
         line-height: 1.2rem;
         @include tablet {
-		line-height: 1.5rem;
-			font-size: 1.4rem;
+		line-height: 1.8rem;
+			font-size: 1rem;
 		}
 	}
 }
