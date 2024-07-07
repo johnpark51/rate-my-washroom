@@ -54,9 +54,9 @@ function HomePage() {
 		<>
 			<main>
 				<HomePageHero washrooms={washrooms} />
+				<HomeReviewsSection reviews={reviews}/>
 				<LocationList locations={locations} />
 				<About />
-				<HomeReviewsSection reviews={reviews}/>
 				{/* <WashroomList washrooms={washrooms}/> */}
 			</main>
 		</>
