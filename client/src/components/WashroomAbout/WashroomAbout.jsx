@@ -1,9 +1,8 @@
 import Star from "../Star/Star";
 import "./WashroomAbout.scss";
-import { MdOutlineCleanHands } from "react-icons/md";
 import { FaSquareCheck } from "react-icons/fa6";
 
-export default function WashroomAbout({ washroomDetails, reviews }) {
+export default function WashroomAbout({ washroomDetails, reviews, setWriteReview }) {
 	const {
 		cleanliness,
 		address,
@@ -34,14 +33,16 @@ export default function WashroomAbout({ washroomDetails, reviews }) {
 					</p>
 				</div>
 				<div className="washroom-about__top-right">
-					<button className="washroom-about__button">Write a Review</button>
+					<button className="washroom-about__button" onClick={() => {
+                        setWriteReview(true)
+                    }}>Write a Review</button>
+                    <h4 className="washroom-about__type">{type}</h4>
 				</div>
 			</div>
 			<div className="washroom-about__bottom">
 				<div className="washroom-about__bottom-left">
 					<div className="washroom-about__criteria">
 						<p className="washroom-about__subheading">Cleanliness:</p>
-						{/* <MdOutlineCleanHands /> */}
 						<Star rating={cleanliness} />
 					</div>
 					<div className="washroom-about__criteria">
@@ -77,6 +78,10 @@ export default function WashroomAbout({ washroomDetails, reviews }) {
 						) : (
 							<FaSquareCheck className="icon-red" />
 						)}
+					</div>
+					<div className="washroom-about__criteria">
+						<p className="washroom-about__subheading">Hours:</p>
+						<p>{hours}</p>
 					</div>
 				</div>
 			</div>

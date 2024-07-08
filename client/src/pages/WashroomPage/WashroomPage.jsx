@@ -5,10 +5,12 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import Star from "../../components/Star/Star";
 import NewStar from "../../components/NewStar/NewStar";
 import WashroomAbout from "../../components/WashroomAbout/WashroomAbout";
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 export default function WashroomPage() {
 	const [washroomDetails, setWashroomDetails] = useState(null);
 	const [reviews, setReviews] = useState(null);
+	const [writeReview, setWriteReview] = useState(false)
 	const { washroomId } = useParams();
 	const navigate = useNavigate();
 
@@ -69,8 +71,8 @@ export default function WashroomPage() {
 
 	return (
 		<main className="washroom-page__main">
-			<button onClick={() => navigate(-1)}>go back</button>
-			<WashroomAbout washroomDetails={washroomDetails} reviews={reviews}/>
+			<button className="washroom-page__back" onClick={() => navigate(-1)}><IoIosArrowRoundBack />Go Back</button>
+			<WashroomAbout washroomDetails={washroomDetails} reviews={reviews} setWriteReview={setWriteReview}/>
 			<form onSubmit={postReview}>
 				<label>
 					name

@@ -12,29 +12,19 @@ body {
         margin: 0 auto;
         padding: 2rem;
     }
-}
-
-.demo-green {
-    color: white;
-    background-color: rgba(0, 128, 0, 0.55);
-    
-    border-radius: 20px;
-    border: 1px solid black;
-    padding: 0.5rem;
-    @include desktop {
-        width: 20rem;
-    }
-}
-
-.demo-red {
-    color: white;
-    background-color: rgba(255, 0, 0, 0.483);
-    width: 20rem;
-    border-radius: 20px;
-    border: 1px solid black;
-    padding: 0.5rem;
-    @include desktop {
-        width: 20rem;
+    &__back {
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        border: 1px solid $blue;
+        background-color: white;
+        color: $blue;
+        border-radius: 4px;
+        &:hover {
+            background-color: $blue;
+            color: white;
+        }
     }
 }
 
