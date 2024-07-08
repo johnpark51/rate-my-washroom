@@ -5,10 +5,12 @@ import axios from "axios";
 import LocationWashrooms from "../../components/LocationWashrooms/LocationWashrooms";
 import LocationMap from "../../components/LocationMap/LocationMap";
 import LocationHero from "../../components/LocationHero/LocationHero";
+import { FaLocationArrow } from "react-icons/fa";
 
 export default function LocationPage() {
 	const [locationDetails, setLocationDetails] = useState(null);
 	const [washrooms, setWashrooms] = useState(null);
+	const [selectedFilter, setSelectedFilter] = useState("");
 	const { locationId } = useParams();
 
 	const baseURL = import.meta.env.VITE_API_URL;
@@ -44,32 +46,58 @@ export default function LocationPage() {
 	}
 	const { name, city, description, image, lat, lng } = locationDetails;
 
+	const handleFilterChange = (event) => {
+		setSelectedFilter(event.target.value);
+	};
+
+	const filteredWashrooms = washrooms.filter((washroom) => {
+		if (selectedFilter === "All") {
+			return washroom;
+		} else if (selectedFilter === "Open to public") {
+			return washroom.public_access;
+		} else if (selectedFilter === "Wheelchair Accessible") {
+			return washroom.wheelchair_accessible;
+		} else if (selectedFilter === "Gender Neutral") {
+			return washroom.gender_neutral;
+		} else if (selectedFilter === "Family Friendly") {
+			return washroom.family_friendly;
+		}
+		return true;
+	});
+
 	return (
 		<main>
 			<LocationHero locationDetails={locationDetails} />
 			<section className="location-page__main">
 				<div className="location-page__left">
-					<h3>Browse {washrooms.length} washrooms in this area</h3>
-					<label>Choose a filter:</label>
-					<select>
-						<option>Open to public</option>
-						<option>Wheelchair Accessible</option>
-						<option>Really clean?</option>
-						<option>Gender Neutral</option>
-						<option>Family Friendly</option>
-					</select>
-					{washrooms.map((washroom) => {
-						return (
-							<>
-								<Link
-									className="links"
-									key={washroom.id}
-									to={`/washroom/${washroom.id}`}>
-									<LocationWashrooms key={washroom.id} washroom={washroom} />
-								</Link>
-							</>
-						);
-					})}
+					<div className="location-page__left-top">
+						<h3 className="location-page__browse">
+							Browse {washrooms.length} washrooms in this area
+						</h3>
+						<div className="location-page__filter">
+							<label className="location-page__label">Choose a filter:</label>
+							<select
+								className="location-page__select"
+								value={selectedFilter}
+								onChange={handleFilterChange}>
+								<option value="All">All</option>
+								<option value="Open to public">Open to public</option>
+								<option value="Wheelchair Accessible">
+									Wheelchair Accessible
+								</option>
+								<option value="Gender Neutral">Gender Neutral</option>
+								<option value="Family Friendly">Family Friendly</option>
+							</select>
+						</div>
+					</div>
+					{filteredWashrooms.map((washroom) => (
+						<Link
+							className="links"
+							key={washroom.id}
+							to={`/washroom/${washroom.id}`}>
+							<LocationWashrooms key={washroom.id} washroom={washroom} />
+						</Link>
+					))}
 				</div>
 				<div className="location-page__right">
 					<LocationMap
@@ -77,11 +105,12 @@ export default function LocationPage() {
 						washrooms={washrooms}
 						zoom={16}
 					/>
-					<p>{description}</p>
+					<div className="location-page__about">
+						<h3 className="location-page__about-header"><FaLocationArrow className="location-page__about-icon"/>About {name}:</h3>
+						<p className="location-page__about-description">{description}</p>
+					</div>
 				</div>
 			</section>
-			<p>finally focking working mate!!</p>
-			<p>{washrooms.length} Washrooms recorded in this area</p>
 		</main>
 	);
 }

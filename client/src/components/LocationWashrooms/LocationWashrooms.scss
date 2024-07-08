@@ -2,10 +2,31 @@
 @use "../../styles/partials/mixins" as *;
 
 .location-washrooms {
-    background-color: $light-green;
-    border: 1px solid black;
-    width: auto;
-    @include desktop {
-        width: 40%;
-    }
+	background-color: $light-green;
+    cursor: pointer;
+	min-width: 37rem;
+	padding: 1rem;
+	border-radius: 10px;
+	margin-bottom: 0.4rem;
+	background-color: white;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	display: flex;
+	justify-content: space-between;
+     @include desktop {
+		width: 40%;
+	}
+	&__toilet {
+		height: 100%;
+        width: 6rem;
+		color: $davys-gray;
+	}
+	&__rating {
+		display: flex;
+	}
+	&__address {
+		font-size: 0.8rem;
+		margin: 0.5rem 0;
+		color: $davys-gray;
+	}
 }
