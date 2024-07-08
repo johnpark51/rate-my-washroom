@@ -2,6 +2,18 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
 
+body {
+    background-color: #fbfcfe;
+}
+
+.washroom-page {
+    &__main {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+}
+
 .demo-green {
     color: white;
     background-color: rgba(0, 128, 0, 0.55);

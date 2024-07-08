@@ -1,0 +1,66 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.icon {
+    &-green {
+        color: green;
+    }
+    &-red {
+        color: red;
+    }
+}
+
+.washroom-about {
+    padding: 2rem;
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+				rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.544);
+        padding-bottom: 1rem;
+        &-left {
+        }
+        &-right {
+
+        }
+    }
+    &__address {
+        font-weight: 500;
+        
+    }
+    &__location {
+        font-weight: 700;
+        color: $davys-gray;
+        margin: 0.5rem 0;
+    }
+    &__rating {
+        &-section {
+        display: flex;
+        align-items: center;
+        }
+        &-text {
+            margin-right: 0.5rem;
+        }
+    }
+    &__bottom {
+        padding-top: 1rem;
+        display: flex;
+        &-left{
+            margin-right: 5rem;
+        }
+        &-right {
+
+        }
+    }
+    &__criteria {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.2rem;
+    }
+    &__subheading {
+        font-size: 1.2rem;
+        width: 13rem;
+    }
+}

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import Star from "../../components/Star/Star";
 import NewStar from "../../components/NewStar/NewStar";
+import WashroomAbout from "../../components/WashroomAbout/WashroomAbout";
 
 export default function WashroomPage() {
 	const [washroomDetails, setWashroomDetails] = useState(null);
@@ -65,49 +66,11 @@ export default function WashroomPage() {
 	if (!washroomDetails || !reviews) {
 		return <p>Loading...</p>;
 	}
-	const {
-		cleanliness,
-		address,
-		public_access,
-		wheelchair_accessible,
-		gender_neutral,
-		family_friendly,
-		averageRating,
-		hours,
-		type,
-	} = washroomDetails;
 
 	return (
-		<>
+		<main className="washroom-page__main">
 			<button onClick={() => navigate(-1)}>go back</button>
-			<h1>{address}</h1>
-			<h3>{type}</h3>
-			<h4>{hours}</h4>
-			{wheelchair_accessible ? (
-				<p className="demo-green">Impaired individuals can use</p>
-			) : (
-				<p className="demo-red">Impaired individuals cannot use</p>
-			)}
-			{public_access ? (
-				<p className="demo-green">Publicly Accessible</p>
-			) : (
-				<p className="demo-red">Publicly Accessible</p>
-			)}
-			{gender_neutral ? (
-				<p className="demo-green">Gender Neutral</p>
-			) : (
-				<p className="demo-red">Gender Neutral</p>
-			)}
-			{family_friendly ? (
-				<p className="demo-green">Family Friendly - diaper changing spot</p>
-			) : (
-				<p className="demo-red">Family Friendly - diaper changing spot</p>
-			)}
-			<h3>This washroom has an average rating of:</h3>
-			<Star rating={reviews.averageRating} />
-			<h3>Washroom cleanliness: </h3>
-			<Star rating={cleanliness} />
-
+			<WashroomAbout washroomDetails={washroomDetails} reviews={reviews}/>
 			<form onSubmit={postReview}>
 				<label>
 					name
@@ -138,6 +101,6 @@ export default function WashroomPage() {
 					</section>
 				);
 			})}
-		</>
+		</main>
 	);
 }

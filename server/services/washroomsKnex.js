@@ -45,6 +45,7 @@ export const getWashroomById = async (id) => {
 				"locations.id",
 				"washrooms.address",
 				"washrooms.type",
+				"washrooms.location",
 				"washrooms.hours",
 				"washrooms.public_access",
 				"washrooms.wheelchair_accessible",

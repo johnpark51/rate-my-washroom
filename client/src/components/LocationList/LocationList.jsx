@@ -2,6 +2,7 @@ import { useState } from "react";
 import LocationCard from "../LocationCard/LocationCard";
 import "./LocationList.scss";
 import { Link } from "react-router-dom";
+import { MdOutlineExpandMore, MdExpandLess } from "react-icons/md";
 
 function LocationList({ locations }) {
 	const [unlimitedLocations, setUnlimitedLocations] = useState(false);
@@ -31,6 +32,7 @@ function LocationList({ locations }) {
 					}}
 					className="location-list__button">
 					Show less
+						<MdExpandLess />
 				</button>
 			</div>
 		);
@@ -55,6 +57,7 @@ function LocationList({ locations }) {
 				}}
 				className="location-list__button">
 				Show more
+					<MdOutlineExpandMore />
 			</button>
 		</div>
 	);

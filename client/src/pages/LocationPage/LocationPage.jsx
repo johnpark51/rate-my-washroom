@@ -64,6 +64,7 @@ export default function LocationPage() {
 		}
 		return true;
 	});
+	console.log(filteredWashrooms)
 
 	return (
 		<main>
