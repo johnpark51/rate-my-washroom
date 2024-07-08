@@ -4,7 +4,7 @@ import HomeReviews from "../HomeReviews/HomeReviews";
 
 export default function HomeReviewsSection({ reviews }) {
 	return (
-		<section className="reviews-section">
+		<section className="reviews-section" id="reviews">
 			<div className="reviews-section__container">
 				<div className="reviews-section__left">
 					<h2 className="reviews-section__header">Write a Review</h2>

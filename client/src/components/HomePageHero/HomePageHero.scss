@@ -2,73 +2,87 @@
 @use "../../styles/partials/mixins" as *;
 
 .hero {
-    background-image: url("../../assets/images/washroom-grey.jpg");
-    height: 13rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0 auto;
-    max-width: 1800px;
+	background-image: url("../../assets/images/washroom-grey.jpg");
+	height: 13rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0 auto;
+	max-width: 1800px;
 
-    @include tablet {
-        height: 30rem;
-    }
-    @include desktop {
-        height: 50rem;
-    }
-    
-    &__overlay {
-        width: 80%;
-        margin: 0 auto;
-        padding-top: 10rem;
-        padding: 10rem 6rem 0 6rem;
-        @include flex(row, center, flex-start);
-        gap: 1rem;
-    }
-    &__header {
-        margin-bottom: 1rem;
-        font-weight: 600;
-        font-size: 0.9rem;
-        @include tablet {
-            font-size: 2rem;
-        }
-    }
-    &__washroom {
-        font-weight: 600;
-    }
-    &__input {
-        padding: 1rem 1.7rem;
-        height: 2rem;
-        border-radius: 20px;
-        border: 0;
-        background: url("../../assets/images/search.svg") no-repeat scroll 7px 7px;
-        background-color: white;
-        &::placeholder {
-            font-size: 0.6rem
-        }
-        @include tablet {
-            width: 17rem;
-            &::placeholder {
-                font-size: 0.8rem;
-            }
-        }
-    }
-    &__search-link {
-        margin-top: 1rem;
-        color: white;
-        font-weight: 700;
-        text-decoration: underline;
-        font-size: 0.7rem;
-        @include tablet {
-            font-size: 1rem;
-        }
-    }
-    &__search {
-        // margin-left: auto;
-        border-radius: 10px;
-        background-color: white;
-        padding: 2rem;
-        box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
-    }
+	@include tablet {
+		height: 30rem;
+	}
+	@include desktop {
+		height: 50rem;
+	}
+
+	&__overlay {
+		width: 80%;
+		margin: 0 auto;
+		@include flex(row, center, flex-start);
+		gap: 1rem;
+		display: flex;
+		flex-direction: column;
+		@include tablet {
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 1rem;
+		}
+		@include desktop {
+			padding: 10rem 6rem 0 6rem;
+			@include flex(row, center, flex-start);
+		}
+	}
+	&__header {
+		margin: 0 auto 1rem auto;
+		font-weight: 600;
+		font-size: 0.9rem;
+		@include tablet {
+			font-size: 2rem;
+		}
+	}
+	&__washroom {
+		font-weight: 600;
+	}
+	&__input {
+		padding: 1rem 1.7rem;
+		height: 2rem;
+		border-radius: 20px;
+		border: 0;
+		background: url("../../assets/images/search.svg") no-repeat scroll 7px 7px;
+		background-color: white;
+		&::placeholder {
+			font-size: 0.6rem;
+		}
+		@include tablet {
+			width: 17rem;
+			&::placeholder {
+				font-size: 0.8rem;
+			}
+		}
+	}
+	&__search-link {
+		margin-top: 1rem;
+		color: white;
+		font-weight: 700;
+		text-decoration: underline;
+		font-size: 0.7rem;
+		@include tablet {
+			font-size: 1rem;
+		}
+	}
+	&__search {
+		width: 100%;
+		padding: 1rem;
+		border-radius: 10px;
+		background-color: white;
+		margin-top: 0.5rem;
+		@include tablet {
+			padding: 2rem;
+			box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px,
+				rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+		}
+	}
 }
-

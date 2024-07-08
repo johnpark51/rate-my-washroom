@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, Link, useNavigate} from "react-router-dom";
+import { useParams, Link, useNavigate } from "react-router-dom";
 import "./LocationPage.scss";
 import axios from "axios";
 import LocationWashrooms from "../../components/LocationWashrooms/LocationWashrooms";
@@ -66,7 +66,6 @@ export default function LocationPage() {
 		}
 		return true;
 	});
-	console.log(filteredWashrooms)
 
 	return (
 		<main className="location-page">
@@ -97,14 +96,18 @@ export default function LocationPage() {
 							</select>
 						</div>
 					</div>
-					{filteredWashrooms.map((washroom) => (
-						<Link
-							className="links"
-							key={washroom.id}
-							to={`/washroom/${washroom.id}`}>
-							<LocationWashrooms key={washroom.id} washroom={washroom} />
-						</Link>
-					))}
+					{filteredWashrooms.length === 0 ? (
+						<h3 className="location-page__no-washrooms">No washrooms match the selected filter.</h3>
+					) : (
+						filteredWashrooms.map((washroom) => (
+							<Link
+								className="links"
+								key={washroom.id}
+								to={`/washroom/${washroom.id}`}>
+								<LocationWashrooms key={washroom.id} washroom={washroom} />
+							</Link>
+						))
+					)}
 				</div>
 				<div className="location-page__right">
 					<LocationMap
@@ -113,7 +116,10 @@ export default function LocationPage() {
 						zoom={16}
 					/>
 					<div className="location-page__about">
-						<h3 className="location-page__about-header"><FaLocationArrow className="location-page__about-icon"/>About {name}:</h3>
+						<h3 className="location-page__about-header">
+							<FaLocationArrow className="location-page__about-icon" />
+							About {name}:
+						</h3>
 						<p className="location-page__about-description">{description}</p>
 					</div>
 				</div>

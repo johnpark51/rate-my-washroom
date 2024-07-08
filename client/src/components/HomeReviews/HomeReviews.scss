@@ -3,27 +3,49 @@
 
 .home-reviews {
 	background-color: white;
-	height: 15rem;
-	padding: 2rem;
 	border-radius: 50px;
 	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
 		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-	min-width: 13rem;
+
 	margin-left: 2rem;
 	margin: 0.2rem 0 0 1rem;
-    &__name {
-        margin-bottom: 0.5rem;
-    }
-    &__address {
-        color: $davys-gray;
-        font-size: 0.6rem;
-    }
-    &__location {
-        margin-bottom: 0.5rem;
-    }
-    &__rating {
-    }
-    &__content {
-        margin-top: 0.5rem;
-    }
+	@include tablet {
+		padding: 1.5rem;
+		min-width: 10rem;
+		height: 11.5rem;
+	}
+	@include desktop {
+		padding: 2rem;
+		min-width: 13rem;
+		height: 15rem;
+	}
+	&__name {
+		@include tablet {
+			font-size: 0.8rem;
+		}
+		margin-bottom: 0.5rem;
+	}
+	&__address {
+		color: $davys-gray;
+		@include tablet {
+			font-size: 0.45rem;
+		}
+		@include desktop {
+			font-size: 0.6rem;
+		}
+	}
+	&__location {
+		margin-bottom: 0.5rem;
+	}
+	&__rating {
+	}
+	&__content {
+		@include tablet {
+			margin-top: 0.5rem;
+			font-size: 0.7rem;
+		}
+		@include desktop {
+			font-size: 1rem;
+		}
+	}
 }

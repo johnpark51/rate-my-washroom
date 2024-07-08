@@ -2,6 +2,7 @@ import "./Footer.scss";
 import { Link } from "react-router-dom";
 import { CiInstagram, CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
+import { HashLink } from 'react-router-hash-link';
 
 export default function Footer() {
 	return (
@@ -15,9 +16,9 @@ export default function Footer() {
 				<nav className="footer__nav">
 					<ul className="footer__ul">
 						<Link to="/" className="links"><li className="footer__li">Home</li></Link>
-						<li className="footer__li">Washrooms</li>
-						<li className="footer__li">Reviews</li>
-						<li className="footer__li">About</li>
+						<HashLink className="links" to="/#locations"><li className="footer__li">Locations</li></HashLink>
+						<HashLink className="links" to="/#reviews"><li className="footer__li">Reviews</li></HashLink>
+						<HashLink className="links" to="/#about"><li className="footer__li">About</li></HashLink>
 					</ul>
 				</nav>
 				<div className="footer__icons">

@@ -14,7 +14,7 @@ function LocationList({ locations }) {
 
 	if (unlimitedLocations) {
 		return (
-			<div className="location-list__container">
+			<div className="location-list__container" id="locations">
 				<div className="location-list">
 					{locations.map((location) => {
 						return (
@@ -39,7 +39,7 @@ function LocationList({ locations }) {
 	}
 
 	return (
-		<div className="location-list__container">
+		<div className="location-list__container" id="locations">
 			<div className="location-list">
 				{limitedLocations.map((location) => {
 					return (

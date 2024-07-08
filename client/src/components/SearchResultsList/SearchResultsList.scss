@@ -1,11 +1,18 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
 .results-list {
-    width: 30rem;
+    width: 14rem;
     background-color: white;
     display: flex;
     flex-direction: column;
     box-shadow: 0px 0px 8px #ddd;
     border-radius: 10px;
     margin-top: 1rem;
-    max-height: 10rem;
+    max-height: 6rem;
     overflow-y: scroll;
+    @include tablet {
+        width: 30rem;
+        max-height: 10rem;
+    }
 }

@@ -2,30 +2,55 @@
 @use "../../styles/partials/mixins" as *;
 
 .reviews-section {
-    background-color: #fbfcfe;
-    max-width: 1280px;
-    margin: 0 auto;
+	background-color: #fbfcfe;
+	max-width: 1280px;
+	margin: 0 auto;
+	@include tablet {
+		padding: 1rem 2rem;
+	}
 	@include desktop {
 		padding: 3rem 6rem;
 	}
-    &__container {
-        max-width: 1280px;
-        display: flex;
-    }
-    &__left {
-        width: 30%;
-    }
-    &__header {
-        margin-bottom: 2rem;
-    }
-    &__description {
-        line-height: 1.6rem;
-    }
-    &__right {
-        width: 44rem;
-        height: 16rem;
-        margin-left: auto;
-        display: flex;
-        overflow-x: scroll;
-    }
+	&__container {
+		max-width: 1280px;
+		display: flex;
+		align-items: center;
+	}
+	&__left {
+		width: 30%;
+	}
+	&__header {
+		@include tablet {
+			font-size: 1.5rem;
+			margin-bottom: 1rem;
+		}
+		@include desktop {
+			margin-bottom: 2rem;
+		}
+	}
+	&__description {
+        @include tablet {
+            font-size: 0.8rem;
+            line-height: 1.2rem;
+        }
+		@include desktop {
+			line-height: 1.6rem;
+            font-size: 1rem;
+		}
+	}
+	&__right {
+		@include tablet {
+			width: 30rem;
+			display: flex;
+			height: 12rem;
+			overflow-x: scroll;
+		}
+		@include desktop {
+			width: 44rem;
+			height: 16rem;
+			margin-left: auto;
+			display: flex;
+			overflow-x: scroll;
+		}
+	}
 }
