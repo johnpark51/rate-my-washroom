@@ -34,6 +34,7 @@ export default function SearchBar({setResults}) {
 		<div className="input-wrapper">
 			<FaSearch id="search-icon" />
 			<input
+			className="input-search"
 				placeholder="Search for a washroom"
 				value={input}
 				onChange={(e) => handleChange(e.target.value)}></input>
