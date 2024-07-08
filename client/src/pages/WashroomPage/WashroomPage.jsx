@@ -1,13 +1,12 @@
 import "./WashroomPage.scss";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
-import Star from "../../components/Star/Star";
-import NewStar from "../../components/NewStar/NewStar";
+import { useParams, useNavigate } from "react-router-dom";
 import WashroomAbout from "../../components/WashroomAbout/WashroomAbout";
 import { IoIosArrowRoundBack } from "react-icons/io";
 import WriteReview from "../../components/WriteReview/WriteReview";
 import WashroomReviews from "../../components/WashroomReviews/WashroomReviews";
+import WashroomHero from "../../components/WashroomHero/WashroomHero";
 
 export default function WashroomPage() {
 	const [washroomDetails, setWashroomDetails] = useState(null);
@@ -66,21 +65,22 @@ export default function WashroomPage() {
 		getWashroomDetails();
 		getWashroomReviews();
 	}, []);
-
+	
+	
 	if (!washroomDetails || !reviews) {
 		return <p>Loading...</p>;
 	}
-
+	
 	const reviewsArray = [...reviews.reviews];
 	const newestReviews = reviewsArray.reverse();
 
 	return (
 		<main className="washroom-page__main">
-			
 			<button className="washroom-page__back" onClick={() => navigate(-1)}>
 				<IoIosArrowRoundBack />
 				Go Back
 			</button>
+			<WashroomHero washroomDetails={washroomDetails}/>
 			<WashroomAbout
 				washroomDetails={washroomDetails}
 				reviews={reviews}

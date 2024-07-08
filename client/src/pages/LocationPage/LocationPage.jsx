@@ -1,17 +1,19 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, Link, useNavigate} from "react-router-dom";
 import "./LocationPage.scss";
 import axios from "axios";
 import LocationWashrooms from "../../components/LocationWashrooms/LocationWashrooms";
 import LocationMap from "../../components/LocationMap/LocationMap";
 import LocationHero from "../../components/LocationHero/LocationHero";
 import { FaLocationArrow } from "react-icons/fa";
+import { IoIosArrowRoundBack } from "react-icons/io";
 
 export default function LocationPage() {
 	const [locationDetails, setLocationDetails] = useState(null);
 	const [washrooms, setWashrooms] = useState(null);
 	const [selectedFilter, setSelectedFilter] = useState("");
 	const { locationId } = useParams();
+	const navigate = useNavigate();
 
 	const baseURL = import.meta.env.VITE_API_URL;
 
@@ -67,7 +69,11 @@ export default function LocationPage() {
 	console.log(filteredWashrooms)
 
 	return (
-		<main>
+		<main className="location-page">
+			<button className="location-page__back" onClick={() => navigate(-1)}>
+				<IoIosArrowRoundBack />
+				Go Back
+			</button>
 			<LocationHero locationDetails={locationDetails} />
 			<section className="location-page__main">
 				<div className="location-page__left">

@@ -21,6 +21,7 @@ body {
         background-color: white;
         color: $blue;
         border-radius: 4px;
+        cursor: pointer;
         &:hover {
             background-color: $blue;
             color: white;

@@ -14,7 +14,7 @@ export default function Footer() {
 				</Link>
 				<nav className="footer__nav">
 					<ul className="footer__ul">
-						<li className="footer__li">Home</li>
+						<Link to="/" className="links"><li className="footer__li">Home</li></Link>
 						<li className="footer__li">Washrooms</li>
 						<li className="footer__li">Reviews</li>
 						<li className="footer__li">About</li>
@@ -26,7 +26,6 @@ export default function Footer() {
 					<Link to="https://www.linkedin.com/in/john-parkk/"><CiLinkedin className="footer__icon"/></Link>
 					<Link to="https://github.com/johnpark51?tab=repositories&ocid=AIDcmmli8vlwie_SEM__k_CjwKCAjw3NyxBhBmEiwAyofDYRBONd-u0dQiwFx9PCjeadYD6tOuAhzc9kfaTQbv8TiUDO9Onv9SWxoC-RgQAvD_BwE_k_"><FaGithub className="footer__icon"/></Link>
 				</div>
-                {/* <p>All Right Reserved</p> */}
 			</div>
 		</footer>
 	);

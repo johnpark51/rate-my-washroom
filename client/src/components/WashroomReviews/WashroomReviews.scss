@@ -15,6 +15,11 @@
 	&__rating {
 		display: flex;
 		align-items: center;
+		margin: 0.5rem 0;
+	}
+	&__rating-header{
+		font-size: 0.8rem;
+		margin-right: 0.5rem;
 	}
 	&__content {
 	}
