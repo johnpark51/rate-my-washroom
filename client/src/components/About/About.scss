@@ -17,14 +17,18 @@
 	align-items: center;
 	max-width: 1000px;
 	@include tablet {
-        padding: 2rem 1rem;
+		padding: 2rem 1rem;
 		width: 90%;
 	}
-    @include desktop {
-        width: 70%;
-    }
+	@include desktop {
+		width: 70%;
+	}
 	&__header {
-		font-size: 3rem;
+		display: none;
+		@include tablet {
+			display: block;
+			font-size: 3rem;
+		}
 	}
 	&__sections {
 		display: flex;
@@ -42,40 +46,42 @@
 		}
 	}
 	&__text {
-        width: 18rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+		width: 18rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		@include tablet {
 			width: 50%;
 		}
 	}
 	&__headers {
 		margin-bottom: 1rem;
-        font-size: 1rem;
+		font-size: 1rem;
 		@include tablet {
 			font-size: 1.4rem;
 		}
 	}
 	&__description {
-        font-size: 0.8rem;
-        line-height: 1.2rem;
-        @include tablet {
-		line-height: 1.8rem;
+		font-size: 0.6rem;
+		line-height: 1.2rem;
+		width: 80%;
+		@include tablet {
+			line-height: 1.8rem;
 			font-size: 1rem;
+			width: auto;
 		}
 	}
 }
 
 .mobile {
-    @include tablet {
-        display: none;
-    }
+	@include tablet {
+		display: none;
+	}
 }
 
 .tablet {
-    display: none;
-    @include tablet {
-        display: block;
-    }
+	display: none;
+	@include tablet {
+		display: block;
+	}
 }

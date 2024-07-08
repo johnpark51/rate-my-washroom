@@ -97,7 +97,9 @@ export default function LocationPage() {
 						</div>
 					</div>
 					{filteredWashrooms.length === 0 ? (
-						<h3 className="location-page__no-washrooms">No washrooms match the selected filter.</h3>
+						<h3 className="location-page__no-washrooms">
+							No washrooms match the selected filter.
+						</h3>
 					) : (
 						filteredWashrooms.map((washroom) => (
 							<Link

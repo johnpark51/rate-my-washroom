@@ -33,10 +33,10 @@ export default function LocationWashrooms({ washroom }) {
 				<h3>{location}</h3>
 				<p className="location-washrooms__address">{address}</p>
 				<div className="location-washrooms__rating">
-					<p>Average Rating:</p>
+					<p className="location-washrooms__average">Average Rating:</p>
 					<Star rating={washroomDetails.averageRating} />
 				</div>
-				<p>This washroom has {washroomDetails.reviews.length} reviews</p>
+				<p className="location-washrooms__length">This washroom has {washroomDetails.reviews.length} reviews</p>
 			</div>
 			<PiToiletBold className="location-washrooms__toilet" />
 		</section>

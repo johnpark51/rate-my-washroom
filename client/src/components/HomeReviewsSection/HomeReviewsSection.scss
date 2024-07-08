@@ -14,12 +14,27 @@
 	&__container {
 		max-width: 1280px;
 		display: flex;
+		flex-direction: column;
 		align-items: center;
+		@include tablet {
+			flex-direction: row;
+		}
 	}
 	&__left {
-		width: 30%;
+		padding: 1rem;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include tablet {
+			padding: 0;
+			width: 30%;
+			align-items: flex-start;
+		}
 	}
 	&__header {
+		margin-bottom: 0.5rem;
+		font-size: 1.2rem;
 		@include tablet {
 			font-size: 1.5rem;
 			margin-bottom: 1rem;
@@ -29,28 +44,35 @@
 		}
 	}
 	&__description {
-        @include tablet {
-            font-size: 0.8rem;
-            line-height: 1.2rem;
-        }
+		font-size: 0.6rem;
+		line-height: 1.1rem;
+		width: 14rem;
+		@include tablet {
+			font-size: 0.8rem;
+			line-height: 1.2rem;
+			width: auto;
+		}
 		@include desktop {
 			line-height: 1.6rem;
-            font-size: 1rem;
+			font-size: 1rem;
 		}
 	}
 	&__right {
+		display: flex;
+		overflow-x: scroll;
+		width: 100%;
 		@include tablet {
+		max-height: none;
 			width: 30rem;
 			display: flex;
 			height: 12rem;
-			overflow-x: scroll;
 		}
 		@include desktop {
 			width: 44rem;
 			height: 16rem;
 			margin-left: auto;
 			display: flex;
-			overflow-x: scroll;
+			// overflow-x: scroll;
 		}
 	}
 }

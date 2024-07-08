@@ -27,6 +27,7 @@
         outline: 2px solid $blue;
     }
     @include tablet {
+        padding: 1rem 2rem;
         width: 100%;
         font-size: 1.25rem;
     }

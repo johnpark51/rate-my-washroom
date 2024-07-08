@@ -2,9 +2,7 @@
 @use "../../styles/partials/mixins" as *;
 
 .location-washrooms {
-	background-color: $light-green;
 	cursor: pointer;
-	min-width: 37rem;
 	padding: 1rem;
 	border-radius: 10px;
 	margin-bottom: 0.4rem;
@@ -16,6 +14,9 @@
 	&:hover {
 		transform: scale(1.02);
 	}
+	@include tablet {
+		min-width: 37rem;
+	}
 	@include desktop {
 		width: 40%;
 	}
@@ -26,10 +27,23 @@
 	}
 	&__rating {
 		display: flex;
+		align-items: center;
+	}
+	&__average {
+		font-size: 0.7rem;
+		@include tablet {
+			font-size: 1rem;
+		}
 	}
 	&__address {
 		font-size: 0.8rem;
 		margin: 0.5rem 0;
 		color: $davys-gray;
+	}
+	&__length {
+		font-size: 0.8rem;
+		@include tablet {
+			font-size: 1rem;
+		}
 	}
 }

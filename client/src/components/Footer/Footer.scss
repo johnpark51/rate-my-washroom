@@ -2,31 +2,37 @@
 @use "../../styles/partials/mixins" as *;
 
 .footer {
-    padding: 2rem 0;
-    &__container {
-        margin: 0 auto;
-        max-width: 1280px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-    &__washroom {
-        color: $blue;
-    }
-    &__ul {
-        display: flex;
-        list-style: none;
-        gap: 2rem;
-    }
-    &__icons {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-    &__icon {
-        width: 3rem;
-        height: 3rem;
-        color: $blue;
-    }
+	padding: 2rem 0;
+	&__container {
+		margin: 0 auto;
+		max-width: 1280px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+	}
+	&__washroom {
+		color: $blue;
+	}
+	&__ul {
+		display: flex;
+		list-style: none;
+		gap: 1rem;
+		@include tablet {
+			gap: 2rem;
+		}
+	}
+	&__icons {
+		display: flex;
+		align-items: center;
+		gap: 0.2rem;
+		@include tablet {
+			gap: 0.5rem;
+		}
+	}
+	&__icon {
+		width: 3rem;
+		height: 3rem;
+		color: $blue;
+	}
 }
