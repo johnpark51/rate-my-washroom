@@ -465,9 +465,9 @@ export default [
     },
     {
         id: 30,
-        address: "Kimbourne Park United Church, Toronto, ON",
+        address: "200 Wolverleigh Blvd, Toronto, ON",
         type: "Church Restroom",
-        location: "200 Wolverleigh Blvd",
+        location: "Inside Kimbourne Park United Church",
         hours: "12pm-12am",
         public_access: true,
         wheelchair_accessible: false,

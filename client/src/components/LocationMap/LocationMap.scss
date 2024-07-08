@@ -2,10 +2,8 @@
 @use "../../styles/partials/mixins" as *;
 
 .map-div {
-    height: 20vh;
-    width: 50%;
-    margin: 0 auto;
+    min-width: 40rem;
     @include desktop {
-        height: 23vh;
+        height: 35rem;
     }
 }

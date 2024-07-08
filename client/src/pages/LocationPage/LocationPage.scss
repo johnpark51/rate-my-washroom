@@ -5,3 +5,16 @@
 body {
     background-color: #fbfcfe;
 }
+
+.location-page {
+    &__main {
+        display: flex;
+        width: 100%;
+    }
+    &__left {
+        width: 50%;
+    }
+    &__right {
+        max-width: 50%;
+    }
+}

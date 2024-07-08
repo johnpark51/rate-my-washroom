@@ -47,34 +47,41 @@ export default function LocationPage() {
 	return (
 		<main>
 			<LocationHero locationDetails={locationDetails} />
-			<p>{description}</p>
+			<section className="location-page__main">
+				<div className="location-page__left">
+					<h3>Browse {washrooms.length} washrooms in this area</h3>
+					<label>Choose a filter:</label>
+					<select>
+						<option>Open to public</option>
+						<option>Wheelchair Accessible</option>
+						<option>Really clean?</option>
+						<option>Gender Neutral</option>
+						<option>Family Friendly</option>
+					</select>
+					{washrooms.map((washroom) => {
+						return (
+							<>
+								<Link
+									className="links"
+									key={washroom.id}
+									to={`/washroom/${washroom.id}`}>
+									<LocationWashrooms key={washroom.id} washroom={washroom} />
+								</Link>
+							</>
+						);
+					})}
+				</div>
+				<div className="location-page__right">
+					<LocationMap
+						locationDetails={locationDetails}
+						washrooms={washrooms}
+						zoom={16}
+					/>
+					<p>{description}</p>
+				</div>
+			</section>
 			<p>finally focking working mate!!</p>
 			<p>{washrooms.length} Washrooms recorded in this area</p>
-			<label>Choose a filter:</label>
-			<select>
-				<option>Open to public</option>
-				<option>Wheelchair Accessible</option>
-				<option>Really clean?</option>
-				<option>Gender Neutral</option>
-				<option>Family Friendly</option>
-			</select>
-			{washrooms.map((washroom) => {
-				return (
-					<>
-						<Link
-							className="links"
-							key={washroom.id}
-							to={`/washroom/${washroom.id}`}>
-							<LocationWashrooms key={washroom.id} washroom={washroom} />
-						</Link>
-					</>
-				);
-			})}
-			<LocationMap
-				locationDetails={locationDetails}
-				washrooms={washrooms}
-				zoom={16}
-			/>
 		</main>
 	);
 }

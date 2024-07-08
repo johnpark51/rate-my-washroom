@@ -2,7 +2,7 @@ import "./LocationHero.scss";
 import { FaLocationDot } from "react-icons/fa6";
 
 export default function LocationHero({ locationDetails }) {
-	const { name, city, description, image, lat, lng } = locationDetails;
+	const { name, city, image } = locationDetails;
 	return (
 		<section
 			className="location-hero"
