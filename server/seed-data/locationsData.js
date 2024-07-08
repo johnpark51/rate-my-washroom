@@ -13,7 +13,7 @@ export default [
         name: "Yorkville",
         city: "Toronto",
         description: "Yorkville is Toronto's chic and upscale neighborhood, renowned for its designer boutiques, luxury hotels, and world-class dining. Once a bohemian enclave in the 1960s, Yorkville today blends historic Victorian homes with modern condominiums and trendy cafes. The area is also known for its vibrant arts scene, with galleries showcasing both local and international artists. Yorkville's charm lies in its fusion of elegance, culture, and urban sophistication.",
-        image: "https://tirbnb.com/wp-content/uploads/2020/03/yorkville.jpg",
+        image: "https://wahi.com/wp-content/uploads/dam/atlas/article-images/neighbourhood-spotlight/toronto-v2/yorkville/yorkville-hero.jpg/_jcr_content/renditions/cq5dam.web.1280.1280.jpeg",
         lat: "43.671054",
         lng: "-79.391399"
     },
