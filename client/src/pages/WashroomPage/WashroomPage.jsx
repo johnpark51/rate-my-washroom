@@ -6,11 +6,13 @@ import Star from "../../components/Star/Star";
 import NewStar from "../../components/NewStar/NewStar";
 import WashroomAbout from "../../components/WashroomAbout/WashroomAbout";
 import { IoIosArrowRoundBack } from "react-icons/io";
+import WriteReview from "../../components/WriteReview/WriteReview";
+import WashroomReviews from "../../components/WashroomReviews/WashroomReviews";
 
 export default function WashroomPage() {
 	const [washroomDetails, setWashroomDetails] = useState(null);
 	const [reviews, setReviews] = useState(null);
-	const [writeReview, setWriteReview] = useState(false)
+	const [writeReview, setWriteReview] = useState(false);
 	const { washroomId } = useParams();
 	const navigate = useNavigate();
 
@@ -69,40 +71,38 @@ export default function WashroomPage() {
 		return <p>Loading...</p>;
 	}
 
+	const reviewsArray = [...reviews.reviews];
+	const newestReviews = reviewsArray.reverse();
+
 	return (
 		<main className="washroom-page__main">
-			<button className="washroom-page__back" onClick={() => navigate(-1)}><IoIosArrowRoundBack />Go Back</button>
-			<WashroomAbout washroomDetails={washroomDetails} reviews={reviews} setWriteReview={setWriteReview}/>
-			<form onSubmit={postReview}>
-				<label>
-					name
-					<input type="text" name="name"></input>
-				</label>
-				<label>
-					content
-					<input type="textarea" name="content"></input>
-				</label>
-				<NewStar />
-				<button type="submit">Submit</button>
-			</form>
-
-			{reviews.reviews.map((review) => {
-				const date = new Date(review.timestamp);
-				const options = {
-					year: "numeric",
-					month: "short",
-					day: "numeric",
-				};
-				const formattedDate = date.toLocaleDateString("en-US", options);
-				return (
-					<section className="washroom-reviews">
-						<h3>{review.name}</h3>
-						<p>{formattedDate}</p>
-						<Star rating={review.rating} />
-						<p>{review.content}</p>
-					</section>
-				);
-			})}
+			
+			<button className="washroom-page__back" onClick={() => navigate(-1)}>
+				<IoIosArrowRoundBack />
+				Go Back
+			</button>
+			<WashroomAbout
+				washroomDetails={washroomDetails}
+				reviews={reviews}
+				setWriteReview={setWriteReview}
+			/>
+			<div className="washroom-page__bottom">
+				<div className="washroom-page__bottom-left">
+					{newestReviews.map((review) => {
+						const date = new Date(review.timestamp);
+						const options = {
+							year: "numeric",
+							month: "short",
+							day: "numeric",
+						};
+						const formattedDate = date.toLocaleDateString("en-US", options);
+						return (
+							<WashroomReviews formattedDate={formattedDate} review={review} />
+						);
+					})}
+				</div>
+				<WriteReview postReview={postReview} writeReview={writeReview} />
+			</div>
 		</main>
 	);
 }

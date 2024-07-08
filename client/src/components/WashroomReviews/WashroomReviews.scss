@@ -1,0 +1,23 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.washroom-review {
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	&__left {
+		width: 80%;
+	}
+	&__rating {
+		display: flex;
+		align-items: center;
+	}
+	&__content {
+	}
+	&__date {
+	}
+}

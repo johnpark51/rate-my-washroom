@@ -35,6 +35,9 @@
 		border-radius: 4px;
 		color: $blue;
 		padding: 0.5rem 1rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
 		&:hover {
 			background-color: $blue;
 			color: white;
@@ -61,7 +64,7 @@
 		padding-top: 1rem;
 		display: flex;
 		&-left {
-			margin-right: 5rem;
+			margin-right: 12rem;
 		}
 		&-right {
 		}

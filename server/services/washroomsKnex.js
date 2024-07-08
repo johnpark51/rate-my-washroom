@@ -43,6 +43,7 @@ export const getWashroomById = async (id) => {
 			.select(
 				"washrooms.id",
 				"locations.id",
+				"locations.image",
 				"washrooms.address",
 				"washrooms.type",
 				"washrooms.location",

@@ -1,6 +1,7 @@
 import Star from "../Star/Star";
 import "./WashroomAbout.scss";
 import { FaSquareCheck } from "react-icons/fa6";
+import { RiPencilFill } from "react-icons/ri";
 
 export default function WashroomAbout({ washroomDetails, reviews, setWriteReview }) {
 	const {
@@ -35,7 +36,7 @@ export default function WashroomAbout({ washroomDetails, reviews, setWriteReview
 				<div className="washroom-about__top-right">
 					<button className="washroom-about__button" onClick={() => {
                         setWriteReview(true)
-                    }}>Write a Review</button>
+                    }}>Write a Review<RiPencilFill /></button>
                     <h4 className="washroom-about__type">{type}</h4>
 				</div>
 			</div>
