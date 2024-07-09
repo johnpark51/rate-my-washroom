@@ -3,13 +3,15 @@
 
 .reviews-section {
 	background-color: #fbfcfe;
-	max-width: 1280px;
+	max-width: 320px;
 	margin: 0 auto;
 	@include tablet {
+		max-width: 768px;
 		padding: 1rem 2rem;
 	}
 	@include desktop {
 		padding: 3rem 6rem;
+		max-width: 1280px;
 	}
 	&__container {
 		max-width: 1280px;

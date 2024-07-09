@@ -18,7 +18,7 @@ export default function Footer() {
 						<Link to="/" className="links"><li className="footer__li">Home</li></Link>
 						<Link className="links" to="/washrooms"><li className="footer__li">Washrooms</li></Link>
 						<Link className="links" to="/reviews"><li className="footer__li">Reviews</li></Link>
-						<HashLink className="links" to="/#about"><li className="footer__li">About</li></HashLink>
+						<Link className="links" to="/about"><li className="footer__li">About</li></Link>
 					</ul>
 				</nav>
 				<div className="footer__icons">

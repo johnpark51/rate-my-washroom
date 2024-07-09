@@ -11,7 +11,7 @@ export default function HomeReviewsSection({ reviews }) {
 					<p className="reviews-section__description">
 						With direct inspiration from RateMyProf, we want to provide a
 						platform where you can share your honest review of a restroom you've
-						used to enhance the experience for others, or disclose a hidden
+						used to enhance the experience for others, or steer users away from a
 						restroom to benefit the community.
 					</p>
 				</div>

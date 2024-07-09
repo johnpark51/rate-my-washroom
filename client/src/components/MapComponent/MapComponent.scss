@@ -3,15 +3,21 @@
 
 
 .map-div {
-    max-height: 4.5rem;
-    width: 100%;
+    position: absolute;
+    top: 15.5rem;
+    width: 80%;
+    height: 4.5rem;
+    
     @include tablet {
-        min-height: 16rem;
-        width: 34rem;
+        width: 36.5rem;
+        height: 16rem;
+        top: 17rem;
     }
     @include desktop {
-        max-width: 30rem;
-        min-height: 30rem;
+        position: relative;
+        top: 0;
+        min-width: 33rem;
+        min-height: 32rem;
     }
 }
 

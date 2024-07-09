@@ -23,7 +23,7 @@ export default function LocationMap({ washrooms, zoom, locationDetails }) {
 
 	return (
 		<APIProvider apiKey={"AIzaSyBFDj6opA7KGa4RfLButOzAcaqbCqJ1JmA"}>
-			<div className="map-div">
+			<div className="location-map-div">
 				<Map defaultZoom={zoom} defaultCenter={markerData[0]} mapId={"8e6688f3b9182873"}>
 					{markerData.map((position) => {
 						return <Point position={position} />;

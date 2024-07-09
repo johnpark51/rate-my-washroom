@@ -7,7 +7,7 @@
     display: flex;
     overflow-x: scroll;
 	background-color: #fbfcfe;
-	max-width: 1280px;
+	max-width: 320px;
 	@include tablet {
         flex-wrap: wrap;
         padding: 2rem 1rem;
@@ -15,9 +15,11 @@
         justify-content: center;
         align-items: center;
         gap: 1rem;
+		max-width: 768px;
 	}
 	@include desktop {
 		padding: 1rem;
+		max-width: 1280px;
 	}
 	&__container {
 		display: flex;

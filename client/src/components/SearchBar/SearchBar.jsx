@@ -1,10 +1,10 @@
 import "./SearchBar.scss";
 
-import { FaSearch } from "react-icons/fa";
 import { useState } from "react";
 import axios from "axios";
+import { FaSearch } from "react-icons/fa";
 
-export default function SearchBar({setResults}) {
+export default function SearchBar({ setResults }) {
 	const [input, setInput] = useState("");
 	const baseURL = import.meta.env.VITE_API_URL;
 
@@ -32,12 +32,15 @@ export default function SearchBar({setResults}) {
 
 	return (
 		<div className="input-wrapper">
-			<FaSearch id="search-icon" />
+			<div className="search-icon">
+				<FaSearch />
+			</div>
 			<input
-			className="input-search"
+				className="input-search"
 				placeholder="Search for a washroom"
 				value={input}
-				onChange={(e) => handleChange(e.target.value)}></input>
+				onChange={(e) => handleChange(e.target.value)}
+			/>
 		</div>
 	);
 }
