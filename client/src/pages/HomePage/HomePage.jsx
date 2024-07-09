@@ -4,9 +4,6 @@ import "./HomePage.scss";
 import axios from "axios";
 import LocationList from "../../components/LocationList/LocationList";
 import About from "../../components/About/About";
-import MapComponent from "../../components/MapComponent/MapComponent";
-import HomeReviews from "../../components/HomeReviews/HomeReviews";
-import WashroomList from "../../components/WashroomList/WashroomList";
 import HomeReviewsSection from "../../components/HomeReviewsSection/HomeReviewsSection";
 
 function HomePage() {
@@ -35,9 +32,9 @@ function HomePage() {
 	const getReviews = async () => {
 		try {
 			const response = await axios.get(`${baseURL}/api/reviews`);
-			const reviewArray = response.data
+			const reviewArray = response.data;
 			const reversedReviews = reviewArray.reverse();
-			const latestReviews = reversedReviews.slice(0, 15)
+			const latestReviews = reversedReviews.slice(0, 15);
 			setReviews(latestReviews);
 		} catch (error) {
 			console.error(error);
@@ -51,14 +48,12 @@ function HomePage() {
 	}, []);
 
 	return (
-		<>
-			<main>
-				<HomePageHero washrooms={washrooms} />
-				<HomeReviewsSection reviews={reviews}/>
-				<LocationList locations={locations} />
-				<About />
-			</main>
-		</>
+		<main>
+			<HomePageHero washrooms={washrooms} />
+			<HomeReviewsSection reviews={reviews} />
+			<LocationList locations={locations} />
+			<About />
+		</main>
 	);
 }
 

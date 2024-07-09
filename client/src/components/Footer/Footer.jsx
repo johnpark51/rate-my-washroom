@@ -16,7 +16,7 @@ export default function Footer() {
 				<nav className="footer__nav">
 					<ul className="footer__ul">
 						<Link to="/" className="links"><li className="footer__li">Home</li></Link>
-						<HashLink className="links" to="/#locations"><li className="footer__li">Locations</li></HashLink>
+						<Link className="links" to="/washrooms"><li className="footer__li">Washrooms</li></Link>
 						<HashLink className="links" to="/#reviews"><li className="footer__li">Reviews</li></HashLink>
 						<HashLink className="links" to="/#about"><li className="footer__li">About</li></HashLink>
 					</ul>

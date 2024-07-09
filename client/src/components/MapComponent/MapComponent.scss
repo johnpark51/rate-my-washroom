@@ -3,7 +3,7 @@
 
 
 .map-div {
-    height: 4.5rem;
+    max-height: 4.5rem;
     width: 100%;
     @include tablet {
         min-height: 16rem;
