@@ -1,5 +1,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
 
 .home-reviews {
 	background-color: white;
@@ -20,13 +21,15 @@
 		min-width: 13rem;
 		height: 15rem;
 	}
+
 	&__name {
 		font-size: 0.7rem;
+		margin-bottom: 0.5rem;
 		@include tablet {
 			font-size: 0.8rem;
 		}
-		margin-bottom: 0.5rem;
 	}
+
 	&__address {
 		color: $davys-gray;
 		font-size: 0.4rem;
@@ -37,11 +40,11 @@
 			font-size: 0.6rem;
 		}
 	}
+
 	&__location {
 		margin-bottom: 0.5rem;
 	}
-	&__rating {
-	}
+
 	&__content {
 		font-size: 0.5rem;
 		@include tablet {
