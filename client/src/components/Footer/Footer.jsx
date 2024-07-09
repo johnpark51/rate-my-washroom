@@ -1,9 +1,10 @@
+/* STYLES */
 import "./Footer.scss";
 
-/*REACT ROUTER*/
+/* REACT ROUTER */
 import { Link } from "react-router-dom";
 
-/*ICONS*/
+/* ICONS */
 import { CiInstagram, CiLinkedin } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 

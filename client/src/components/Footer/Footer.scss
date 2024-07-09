@@ -6,10 +6,8 @@
 	padding: 2rem 0;
 	margin: 0 auto;
 	max-width: 1280px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	gap: 1rem;
+	@include flex(column, flex-start, center);
 	&__ul {
 		display: flex;
 		list-style: none;

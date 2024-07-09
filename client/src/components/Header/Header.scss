@@ -1,6 +1,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
+@use "../../styles/partials/global" as *;
 
 .header {
 	@include flex(column, null, center);
@@ -15,16 +16,17 @@
 	@include desktop {
 		padding: 1.5rem 6rem;
 	}
-	&__title {
-		// color: $blue;
-	}
-
-	&__washroom {
-		color: $blue;
-	}
 
 	&__right {
 		width: 100%;
+		@include tablet {
+			width: auto;
+		}
+	}
+	&__button {
+		padding: 0.6rem 1rem;
+		width: 50%;
+		font-family: "Ubuntu";
 		@include tablet {
 			width: auto;
 		}
