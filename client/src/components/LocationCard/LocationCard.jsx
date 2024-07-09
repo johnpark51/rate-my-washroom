@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+/* STYLES */
 import "./LocationCard.scss";
+
+/* FUNCTIONALITY */
+import { useEffect, useState } from "react";
 import axios from "axios";
 
-function LocationCard({ location }) {
+export default function LocationCard({ location }) {
 	const { name, image, city, id } = location;
-	const [washrooms, setWashrooms] = useState(null);
+	const [washrooms, setWashrooms] = useState([]);
 	const baseURL = import.meta.env.VITE_API_URL;
 
 	const getLocationWashrooms = async () => {
@@ -45,4 +48,3 @@ function LocationCard({ location }) {
 		</div>
 	);
 }
-export default LocationCard;
