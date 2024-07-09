@@ -11,12 +11,12 @@ function Header() {
 				</h1>
 			</Link>
 			<nav className="header__right">
-				{/* <Link className="links" to="/about"> */}
-					<button className="button button--login">Login</button>
-				{/* </Link> */}
-				{/* <Link className="links" to="/"> */}
-					<button className="button button--signup">Sign Up</button>
-				{/* </Link> */}
+				<Link className="links" to="/about">
+					<button className="button button--login">About</button>
+				</Link>
+				<Link className="links" to="/">
+					<button className="button button--signup">Home</button>
+				</Link>
 			</nav>
 		</header>
 	);

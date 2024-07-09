@@ -7,6 +7,7 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import WriteReview from "../../components/WriteReview/WriteReview";
 import WashroomReviews from "../../components/WashroomReviews/WashroomReviews";
 import WashroomHero from "../../components/WashroomHero/WashroomHero";
+import { RiPencilFill } from "react-icons/ri";
 
 export default function WashroomPage() {
 	const [washroomDetails, setWashroomDetails] = useState(null);
@@ -59,20 +60,23 @@ export default function WashroomPage() {
 				rating: e.target.rating.value,
 			};
 			axios.post(`${baseURL}/api/reviews`, newReview);
-		} catch (error) {}
+			console.log(newReview);
+		} catch (error) {
+			console.error(error);
+		}
 	};
 	useEffect(() => {
 		getWashroomDetails();
 		getWashroomReviews();
 	}, []);
-	
-	
+
 	if (!washroomDetails || !reviews) {
 		return <p>Loading...</p>;
 	}
-	
+
 	const reviewsArray = [...reviews.reviews];
 	const newestReviews = reviewsArray.reverse();
+	console.log(washroomDetails.id);
 
 	return (
 		<main className="washroom-page__main">
@@ -80,29 +84,49 @@ export default function WashroomPage() {
 				<IoIosArrowRoundBack />
 				Go Back
 			</button>
-			<WashroomHero washroomDetails={washroomDetails}/>
+			<WashroomHero washroomDetails={washroomDetails} />
 			<WashroomAbout
 				washroomDetails={washroomDetails}
 				reviews={reviews}
 				setWriteReview={setWriteReview}
 			/>
 			<div className="washroom-page__bottom">
-			<WriteReview postReview={postReview} writeReview={writeReview}  className="mobile"/>
 				<div className="washroom-page__bottom-left">
-					{newestReviews.map((review) => {
-						const date = new Date(review.timestamp);
-						const options = {
-							year: "numeric",
-							month: "short",
-							day: "numeric",
-						};
-						const formattedDate = date.toLocaleDateString("en-US", options);
-						return (
-							<WashroomReviews formattedDate={formattedDate} review={review} />
-						);
-					})}
+					{newestReviews.length === 0 ? (
+						<>
+							<h3 className="washroom-page__no-washrooms">
+								There are no reviews for this washroom. Be the first.
+							</h3>
+							<button
+								className="washroom-about__button"
+								onClick={() => {
+									setWriteReview(true);
+								}}>
+								Write a Review
+								<RiPencilFill />
+							</button>
+						</>
+					) : (
+						newestReviews.map((review) => {
+							const date = new Date(review.timestamp);
+							const options = {
+								year: "numeric",
+								month: "short",
+								day: "numeric",
+							};
+							const formattedDate = date.toLocaleDateString("en-US", options);
+
+							return (
+								<WashroomReviews
+									key={review.id}
+									formattedDate={formattedDate}
+									review={review}
+								/>
+							);
+						})
+					)}
 				</div>
-				{/* <WriteReview postReview={postReview} writeReview={writeReview}  className="tablet"/> */}
+				<WriteReview postReview={postReview} writeReview={writeReview} />
 			</div>
 		</main>
 	);

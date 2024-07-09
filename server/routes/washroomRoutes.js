@@ -4,20 +4,20 @@ import {
     fetchOne,
     getWashroomReviews
 } from "../controllers/washroomController.js"
-const router = express.Router();
+const washroomRouter = express.Router();
 
-router
+washroomRouter
   .route("/")
   .get(getWashrooms);
 
-/* WAREHOUSE BY ID */
-router
+/* WASHROOM BY ID */
+washroomRouter
   .route("/:id")
   .get(fetchOne);
 
 /* LOCATIONS WASHROOMS BY ID */
-router
+washroomRouter
   .route("/:id/reviews")
   .get(getWashroomReviews);
 
-export default router;
+export default washroomRouter;

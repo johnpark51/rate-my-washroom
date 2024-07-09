@@ -42,7 +42,6 @@ export const getWashroomById = async (id) => {
 			.join("locations", "locations.id", "washrooms.location_id")
 			.select(
 				"washrooms.id",
-				"locations.id",
 				"locations.image",
 				"locations.name",
 				"washrooms.address",

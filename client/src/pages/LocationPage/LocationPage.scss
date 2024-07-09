@@ -11,7 +11,7 @@ body {
 	margin: 0 auto;
 	padding: 1rem;
 	@include tablet {
-		padding: 2rem;
+		padding: 0 2rem 2rem 2rem;
 	}
 	&__main {
 		display: flex;

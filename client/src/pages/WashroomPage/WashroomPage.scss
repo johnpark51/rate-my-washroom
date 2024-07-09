@@ -4,7 +4,7 @@
 @use "../../styles/partials/global" as *;
 
 body {
-    background-color: #fbfcfe;
+    background-color: $body;
 }
 
 .washroom-page {
@@ -42,13 +42,5 @@ body {
             width: 50%;
         }
     }
-}
-
-.washroom-reviews {
-    background-color: $beige;
-    width: 50vh;
-    border: 1px solid black;
-    @include desktop{
-        width: 30rem;
-    }
+    
 }
