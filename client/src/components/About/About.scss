@@ -1,11 +1,6 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
-
-.text-right {
-	@include tablet {
-		text-align: right;
-	}
-}
+@use "../../styles/partials/global" as *;
 
 .about {
 	width: 100%;
@@ -70,18 +65,5 @@
 			font-size: 1rem;
 			width: auto;
 		}
-	}
-}
-
-.mobile {
-	@include tablet {
-		display: none;
-	}
-}
-
-.tablet {
-	display: none;
-	@include tablet {
-		display: block;
 	}
 }

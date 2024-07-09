@@ -1,13 +1,13 @@
 import "./About.scss";
 
-function About() {
+export default function About() {
 	return (
-		<section className="about" id="about">
+		<section className="about">
 			<h2 className="about__header">Our Story</h2>
 			<div className="about__sections">
 				<div className="about__text mobile">
-					<h2 className="about__headers text-right">Discover Our Purpose</h2>
-					<p className="about__description text-right">
+					<h2 className="about__headers">Discover Our Purpose</h2>
+					<p className="about__description">
 						While working as an Uber Eats driver, I faced challenges finding
 						public washrooms that were both accessible and convenient. Rate My
 						Washrooms is a website designed to help anyone alleviate the stress
@@ -35,4 +35,3 @@ function About() {
 		</section>
 	);
 }
-export default About;

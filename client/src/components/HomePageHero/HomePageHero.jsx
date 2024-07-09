@@ -11,7 +11,7 @@ function HomePageHero({ washrooms }) {
 
 	return (
 		<div id="container">
-			<section className="hero">
+			<section className="hero" style={{ backgroundImage: 'url("http://localhost:8080/images/washroom-hero.jpg")'}}>
 				<div className="hero__overlay">
 					<div className="hero__search">
 						<h2 className="hero__header">Find the right washroom for you</h2>

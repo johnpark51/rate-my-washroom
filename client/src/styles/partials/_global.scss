@@ -51,3 +51,22 @@
 .poop-emoji {
     font-size: 1.5rem;
 }
+
+.mobile {
+	@include tablet {
+		display: none;
+	}
+}
+
+.tablet {
+	display: none;
+	@include tablet {
+		display: block;
+	}
+}
+
+.text-right {
+	@include tablet {
+		text-align: right;
+	}
+}
