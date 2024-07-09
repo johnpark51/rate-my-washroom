@@ -1,19 +1,15 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
 
 .footer {
 	padding: 2rem 0;
-	&__container {
-		margin: 0 auto;
-		max-width: 1280px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 1rem;
-	}
-	&__washroom {
-		color: $blue;
-	}
+	margin: 0 auto;
+	max-width: 1280px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1rem;
 	&__ul {
 		display: flex;
 		list-style: none;
