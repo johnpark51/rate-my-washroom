@@ -6,6 +6,7 @@ import LocationPage from './pages/LocationPage/LocationPage';
 import WashroomPage from './pages/WashroomPage/WashroomPage';
 import Footer from './components/Footer/Footer';
 import WashroomListPage from './pages/WashroomListPage/WashroomListPage';
+import ReviewsPage from './pages/ReviewsPage/ReviewsPage';
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/location/:locationId" element={<LocationPage />}></Route>
         <Route path="/washroom/:washroomId" element={<WashroomPage />}></Route>
         <Route path="/washrooms" element={<WashroomListPage />}></Route>
+        <Route path="/reviews" element={<ReviewsPage />}></Route>
       </Routes>
       <Footer />
     </BrowserRouter>

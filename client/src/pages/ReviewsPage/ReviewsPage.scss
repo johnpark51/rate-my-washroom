@@ -1,0 +1,19 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.reviews-page {
+	&__main {
+		padding: 1rem;
+		@include tablet {
+			padding: 2rem;
+		}
+	}
+	&__header {
+		font-weight: 500;
+		margin-bottom: 1.5rem;
+        font-size: 2rem;
+		@include tablet {
+			font-size: 3rem;
+		}
+	}
+}
