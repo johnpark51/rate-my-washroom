@@ -9,6 +9,10 @@
 	padding: 1rem;
 	display: flex;
 	justify-content: space-between;
+	min-width: 16rem;
+	@include tablet {
+		min-width: none;
+	}
 	&__left {
 		width: 80%;
 	}
@@ -24,5 +28,14 @@
 	&__content {
 	}
 	&__date {
+	font-size: 0.6rem;
+	width: 4rem;
+		@include tablet {
+		width: auto;
+			font-size: 0.65rem;
+		}
+		@include desktop {
+			font-size: 1rem;
+		}
 	}
 }

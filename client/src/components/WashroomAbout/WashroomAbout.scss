@@ -18,9 +18,13 @@
 	border-radius: 10px;
 	&__top {
 		display: flex;
-		justify-content: space-between;
+		flex-direction: column;
 		border-bottom: 1px solid rgba(128, 128, 128, 0.544);
 		padding-bottom: 1rem;
+		@include tablet {
+			flex-direction: row;
+			justify-content: space-between;
+		}
 		&-left {
 		}
 		&-right {
@@ -39,6 +43,13 @@
 		align-items: center;
 		gap: 0.5rem;
 		cursor: pointer;
+		width: 10rem;
+		margin: 1rem 0;
+
+		@include tablet {
+			margin: 0;
+			width: auto;
+		}
 		&:hover {
 			background-color: $blue;
 			color: white;
@@ -58,14 +69,28 @@
 			align-items: center;
 		}
 		&-text {
-			margin-right: 0.5rem;
+			font-size: 0.8rem;
+			@include tablet {
+				margin-right: 0.5rem;
+				font-size: 1rem;
+			}
 		}
 	}
 	&__bottom {
 		padding-top: 1rem;
 		display: flex;
+		flex-direction: column;
+		@include tablet {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		@include desktop {
+			justify-content: flex-start;
+		}
 		&-left {
-			margin-right: 12rem;
+			@include desktop {
+				margin-right: 12rem;
+			}
 		}
 		&-right {
 		}
@@ -73,15 +98,20 @@
 	&__criteria {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		margin-bottom: 0.2rem;
 	}
 	&__subheading {
-		font-size: 1.2rem;
-		width: 13rem;
+		@include tablet {
+			font-size: 1.2rem;
+			width: 13rem;
+		}
 	}
 	&__type {
 		color: $davys-gray;
-		margin-top: auto;
-		margin-left: auto;
+		@include tablet {
+			margin-top: auto;
+			margin-left: auto;
+		}
 	}
 }
