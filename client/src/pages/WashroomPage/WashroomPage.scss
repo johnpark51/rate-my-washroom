@@ -1,6 +1,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/typography" as *;
+@use "../../styles/partials/global" as *;
 
 body {
     background-color: #fbfcfe;
@@ -29,6 +30,10 @@ body {
     }
     &__bottom {
         display: flex;
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
+        }
         &-left {
             margin-top: 1rem;
             display: flex;

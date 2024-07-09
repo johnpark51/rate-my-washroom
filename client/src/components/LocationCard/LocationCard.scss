@@ -11,6 +11,10 @@
 	max-width: 8rem;
     height: 8rem;
     margin-right: 0.5rem;
+	&:hover {
+		background-color: $light-blue;
+		color: white;
+	}
 	@include tablet {
         min-width: 1rem;
 		width: 21rem;

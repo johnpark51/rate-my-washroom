@@ -87,6 +87,7 @@ export default function WashroomPage() {
 				setWriteReview={setWriteReview}
 			/>
 			<div className="washroom-page__bottom">
+			<WriteReview postReview={postReview} writeReview={writeReview}  className="mobile"/>
 				<div className="washroom-page__bottom-left">
 					{newestReviews.map((review) => {
 						const date = new Date(review.timestamp);
@@ -101,7 +102,7 @@ export default function WashroomPage() {
 						);
 					})}
 				</div>
-				<WriteReview postReview={postReview} writeReview={writeReview} />
+				{/* <WriteReview postReview={postReview} writeReview={writeReview}  className="tablet"/> */}
 			</div>
 		</main>
 	);
