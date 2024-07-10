@@ -13,12 +13,12 @@ While working for Uber Eats for a bit, I found it difficult to find the right pl
 ### User Profile
 
 - Individuals in unfamiliar areas needing to handle their business
-    - Delivery drivers looking for an accessible washroom
-    - Tourists while exploring a new city 
-    - Individuals that want to save the location of a washroom they found enjoyable
-    - Those that want to help people avoid dirty, dangerous, and inaccessible washrooms for any other applicable reason
-    - In an urgent situation looking for the closest washroom
-    - Special considerations may include those with special needs for their washroom (example: physically impaired individuals needing to access washrooms without the usage of stairs)
+  - Delivery drivers looking for an accessible washroom
+  - Tourists while exploring a new city
+  - Individuals that want to save the location of a washroom they found enjoyable
+  - Those that want to help people avoid dirty, dangerous, and inaccessible washrooms for any other applicable reason
+  - In an urgent situation looking for the closest washroom
+  - Special considerations may include those with special needs for their washroom (example: physically impaired individuals needing to access washrooms without the usage of stairs)
 
 ### Features
 
@@ -26,7 +26,6 @@ While working for Uber Eats for a bit, I found it difficult to find the right pl
 - As a user, I want navigation tips to be able to access these washrooms with ease
 - As a user, I want to be able to review washrooms, providing helpful information to other potential users of these washrooms
 - As a user, I want to view a list of all washrooms in a certain area that meet my criteria/preferences (cleanliness, accessibility, size, urinal, handicapped friendly, temperature etc.)
-- As a user, I want to see the washrooms I've visited in the past and how much I enjoyed them
 
 ## Implementation
 
@@ -35,64 +34,64 @@ While working for Uber Eats for a bit, I found it difficult to find the right pl
 - React
 - MySQL
 - Express
-- Client libraries: 
-    - react
-    - react-router
-    - react-router-dom
-    - axios
-    - sass
-    - CORS
-    - Dotenv
+- Client libraries:
+  - react
+  - react-router
+  - react-router-dom
+  - axios
+  - sass
+  - CORS
+  - Dotenv
+  - react-icons
 - Server libraries:
-    - Knex
-    - Express
-    - CORS
-    - Dotenv
-    - fs
-    - UUID
+  - Knex
+  - Express
+  - CORS
+  - Dotenv
+  - fs
+  - UUID
+  - mysql2
 
 ### APIs
 
-Potential: https://opendata.vancouver.ca/explore/dataset/public-washrooms/api/
+Google Maps Javascript API
 
 ### Sitemap
 
 - Home Page
 - List of washrooms
-    - Map of washrooms nearby
-- View + Rate Washroom
-- Register 
-- Login
-- Personal washrooms
+  - Map of washrooms nearby
+- Washroom Washroom
+- Location Page
 
 ### Mockups
 
 #### Home Page
+
 ![](/mockups/home.jpg)
 
 #### Register/Login Page
+
 ![](/mockups/register:login.jpg)
 
 #### Washroom Details Page
+
 ![](/mockups/individual-washroom.jpg)
 
 #### Location Washrooms Page
+
 ![](/mockups/view-location-washrooms.jpg)
 
 ### Data
 
-User table: 
-- ID
-- Username
-- Email 
-- Password
-
 Washrooms:
+
 - ID
 - Washroom Name
 - Location
 
-Washroom Reviews: 
+Washroom Reviews:
+
 - ID
 - User ID
 - Washroom ID
@@ -100,227 +99,127 @@ Washroom Reviews:
 
 ### Endpoints
 
-**GET /washrooms**
+**GET api/washrooms**
 
-- Get washrooms, with an optional "visited" if the user is logged in or not
+- Get washrooms
 
 Parameters:
-- longitude: User-provided location as a number
-- latitude: User-provided location as a number
-- token (optional): JWT used to add "visited" boolean
 
 Response:
+
 ```
 [
          {
-            "name": "Adanac Park",
-            "address": "1025 Boundary Road",
-            "type": "Public Toilet in Park",
-            "location": "East side, fieldhouse",
-            "summer_hours": "Dawn to Dusk",
-            "winter_hours": "Dawn to Dusk",
-            "wheel_access": "No",
-            "maintainer": "Parks & Recreation",
-            "note": "Caretaker on site",
-            "geom": {
-                "type": "Feature",
-                "geometry": {
-                    "coordinates": [
-                        -123.024071960319,
-                        49.2758809677686
-                    ],
-                    "type": "Point"
-                },
-                "properties": {}
-            },
-            "geo_local_area": "Hastings-Sunrise",
-            "primaryind": "1",
-            "geo_point_2d": {
-                "lon": -123.024071960319,
-                "lat": 49.2758809677686
-            }
-        },
+        "id": 1,
+        "name": "Union",
+        "address": "65 Front St W, Toronto, ON",
+        "type": "Public restroom",
+        "location": "Next to Uncle Tetsu in food court",
+        "hours": "8am-10pm",
+        "public_access": 1,
+        "wheelchair_accessible": 0,
+        "cleanliness": 5,
+        "location_id": 1,
+        "likes": 8,
+        "gender_neutral": 0,
+        "family_friendly": 1,
+        "lat": "43.646830",
+        "lng": "-79.378520"
+    },
     ...
 ]
 ```
 
-**GET /washrooms/:id**
+**GET api/washrooms/:id**
 
-- Get washroom by id, with an optional "userRating" if the user is logged in or not
+- Get washroom by id
 
 Parameters:
+
 - id: Washroom id as number
-- token (optional):  JWT used to add user rating
 
 Response:
+
 ```
 [
          {
-            "name": "Adanac Park",
-            "address": "1025 Boundary Road",
-            "type": "Public Toilet in Park",
-            "location": "East side, fieldhouse",
-            "summer_hours": "Dawn to Dusk",
-            "winter_hours": "Dawn to Dusk",
-            "wheel_access": "No",
-            "maintainer": "Parks & Recreation",
-            "note": "Caretaker on site",
-            "geom": {
-                "type": "Feature",
-                "geometry": {
-                    "coordinates": [
-                        -123.024071960319,
-                        49.2758809677686
-                    ],
-                    "type": "Point"
-                },
-                "properties": {}
-            },
-            "geo_local_area": "Hastings-Sunrise",
-            "primaryind": "1",
-            "geo_point_2d": {
-                "lon": -123.024071960319,
-                "lat": 49.2758809677686
-            }
-        },
+        "id": 1,
+        "name": "Union",
+        "address": "65 Front St W, Toronto, ON",
+        "type": "Public restroom",
+        "location": "Next to Uncle Tetsu in food court",
+        "hours": "8am-10pm",
+        "public_access": 1,
+        "wheelchair_accessible": 0,
+        "cleanliness": 5,
+        "location_id": 1,
+        "likes": 8,
+        "gender_neutral": 0,
+        "family_friendly": 1,
+        "lat": "43.646830",
+        "lng": "-79.378520"
+    },
     ...
 ]
+
 ```
 
-**POST /washrooms/:id/rating**
+**GET api/locations**
 
-- Logged in user can add their rating of a café
-
-Parameters:
-- id: Washroom id
-- token: JWT of the logged in user
-- rating: Number Rating out of 5 in 0.5 increments
+- Get Locations
 
 Response:
+
 ```
-[
-         {
-            "name": "Adanac Park",
-            "address": "1025 Boundary Road",
-            "type": "Public Toilet in Park",
-            "location": "East side, fieldhouse",
-            "summer_hours": "Dawn to Dusk",
-            "winter_hours": "Dawn to Dusk",
-            "wheel_access": "No",
-            "maintainer": "Parks & Recreation",
-            "note": "Caretaker on site",
-            "geom": {
-                "type": "Feature",
-                "geometry": {
-                    "coordinates": [
-                        -123.024071960319,
-                        49.2758809677686
-                    ],
-                    "type": "Point"
-                },
-                "properties": {}
-            },
-            "geo_local_area": "Hastings-Sunrise",
-            "primaryind": "1",
-            "geo_point_2d": {
-                "lon": -123.024071960319,
-                "lat": 49.2758809677686
-            }
-        },
-    ...
-]
+ {
+        "id": 1,
+        "name": "Union",
+        "city": "Toronto",
+        "description": "Union Station, located in the heart of Toronto's Financial District, is not only the city's primary transportation hub but also a historical landmark. Built in 1927, its Beaux-Arts architecture and grand concourse evoke a sense of old-world charm. Beyond its role in transit, Union Station is a bustling center for shopping, dining, and cultural events, serving as a gateway to Toronto's waterfront attractions such as the CN Tower and Harbourfront Centre.",
+        "image": "https://images.squarespace-cdn.com/content/v1/632d2657021c85460fa766cb/1674832170225-VJ1IHEML0CQQ5VY3NKZN/Interior+6.jpg",
+        "lat": "43.645022",
+        "lng": "-79.380150",
+        "created_at": "2024-07-10T02:49:29.000Z",
+        "updated_at": "2024-07-10T02:49:29.000Z"
+}
 ```
+**GET api/locations/:id**
 
-**PUT /washrooms/:id/rating**
+- Get location by id
 
-- Logged in user can update their rating of a washroom
+Parameters: 
+- id: location id as a number
 
-Parameters:
-- id: Washroom id
-- token: JWT of the logged in user
-- rating: Number Rating out of 5 in 0.5 increments
-
-Response:
+Response: 
 ```
-[
-         {
-            "name": "Adanac Park",
-            "address": "1025 Boundary Road",
-            "type": "Public Toilet in Park",
-            "location": "East side, fieldhouse",
-            "summer_hours": "Dawn to Dusk",
-            "winter_hours": "Dawn to Dusk",
-            "wheel_access": "No",
-            "maintainer": "Parks & Recreation",
-            "note": "Caretaker on site",
-            "geom": {
-                "type": "Feature",
-                "geometry": {
-                    "coordinates": [
-                        -123.024071960319,
-                        49.2758809677686
-                    ],
-                    "type": "Point"
-                },
-                "properties": {}
-            },
-            "geo_local_area": "Hastings-Sunrise",
-            "primaryind": "1",
-            "geo_point_2d": {
-                "lon": -123.024071960319,
-                "lat": 49.2758809677686
-            }
-        },
-    ...
-]
-```
-
-**POST /users/register**
-
-- Add a user account
-
-Parameters:
-
-- email: User's email
-- password: User's provided password
-
-Response:
-```
-{
-    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
+ {
+        "id": 1,
+        "name": "Union",
+        "city": "Toronto",
+        "description": "Union Station, located in the heart of Toronto's Financial District, is not only the city's primary transportation hub but also a historical landmark. Built in 1927, its Beaux-Arts architecture and grand concourse evoke a sense of old-world charm. Beyond its role in transit, Union Station is a bustling center for shopping, dining, and cultural events, serving as a gateway to Toronto's waterfront attractions such as the CN Tower and Harbourfront Centre.",
+        "image": "https://images.squarespace-cdn.com/content/v1/632d2657021c85460fa766cb/1674832170225-VJ1IHEML0CQQ5VY3NKZN/Interior+6.jpg",
+        "lat": "43.645022",
+        "lng": "-79.380150",
+        "created_at": "2024-07-10T02:49:29.000Z",
+        "updated_at": "2024-07-10T02:49:29.000Z"
 }
 ```
 
-**POST /users/login**
+**GET /reviews**
 
-- Login a user
 
-Parameters:
-- email: User's email
-- password: User's provided password
 
-Response:
-```
-{
-    "token": "seyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6I..."
-}
-```
 
-### Auth
-
-- JWT Authorization & Authentication
-    - Added as an additional feature after primary features have been implemented
-    - Before added, all API requests made with same user id
-    - Store JWT in the browser storage and remove when user is logged out
-    - Plan to use state to display different components to users whether they are logged in or not
 
 ## Roadmap
 
 - Create client
-    - React app using create vite (javascript) including routes and mock-pages
+
+  - React app using create vite (javascript) including routes and mock-pages
 
 - Create server
-    - Express folder with simple routing and appropriate responses
+
+  - Express folder with simple routing and appropriate responses
 
 - Use Vancouver web API to gather information regarding public washrooms in Vancouver
 
@@ -333,29 +232,35 @@ Response:
 - Feature: Home page
 
 - Feature: List washrooms for an area
-    - Create frontend page for list of washrooms including a form that indicates where you are. 
-    - Store given location in sessionStorage
-    - Make axios GET request to API /washrooms endpoint - create appropriate backend endpoint
+
+  - Create frontend page for list of washrooms including a form that indicates where you are.
+  - Store given location in sessionStorage
+  - Make axios GET request to API /washrooms endpoint - create appropriate backend endpoint
 
 - Feature: View washroom
-    - Create individual washroom page, displaying necesssary information
-    -  Make axios GET request to API /washrooms/:id endpoint - create appropriate backend endpoint
+
+  - Create individual washroom page, displaying necesssary information
+  - Make axios GET request to API /washrooms/:id endpoint - create appropriate backend endpoint
 
 - Feature: Rate washroom
-    - Create form with inputs that rate individual aspects of the wasroom
-    - Make axios POST request to API /ratings - create appropriate backend endpoint
+
+  - Create form with inputs that rate individual aspects of the wasroom
+  - Make axios POST request to API /ratings - create appropriate backend endpoint
 
 - Feature: Implement JWT tokens
-    - Server: Update expected requests / responses on protected endpoints
-    - Client: Store JWT in local storage, include JWT on axios calls
 
-- Feature: Create account 
-    - Create register account page/modal 
-    - Make axios POST request to users/register endpoint
+  - Server: Update expected requests / responses on protected endpoints
+  - Client: Store JWT in local storage, include JWT on axios calls
+
+- Feature: Create account
+
+  - Create register account page/modal
+  - Make axios POST request to users/register endpoint
 
 - Feature: Login to account
-    - Create account login page/modal 
-    - Make axios POST request to users/login endpoint
+
+  - Create account login page/modal
+  - Make axios POST request to users/login endpoint
 
 - Testing & last-minute bug fixes
 
@@ -364,7 +269,8 @@ Response:
 ## Nice-to-haves
 
 - Implement Google Places / Maps
-    - View more details about a washroom
-    - Visual radius functionality
+  - View more details about a washroom
+  - Visual radius functionality
 - Forgot password component/functionality
 - Badges for accounts that have given trusty and numerous reviews - possible component that displays more information about them (favourite washroom could be funny(?))
+```
