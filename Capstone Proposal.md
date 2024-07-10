@@ -84,18 +84,39 @@ Google Maps Javascript API
 
 ### Data
 
+Locations:
+
+- ID
+- Name
+- City
+- Description
+- Image
+- Latitude
+- Longitude
+
 Washrooms:
 
 - ID
-- Washroom Name
+- Address
+- Type
 - Location
+- Hours
+- Public Access
+- Wheelchair Accessible
+- Cleanliness
+- Location_ID
+- Gender Neutral
+- Family Friendly
+- Latitude
+- Longitude
 
 Washroom Reviews:
 
 - ID
-- User ID
+- Name
+- Content
 - Washroom ID
-- Rating
+- Timestamp
 
 ### Endpoints
 
@@ -205,10 +226,91 @@ Response:
 }
 ```
 
-**GET /reviews**
+**GET /api/locations/:id/washrooms**
+- Get washrooms for certain location
 
+Parameters: 
+- id: location id
 
+Response: 
+[
+         {
+        "id": 1,
+        "name": "Union",
+        "address": "65 Front St W, Toronto, ON",
+        "type": "Public restroom",
+        "location": "Next to Uncle Tetsu in food court",
+        "hours": "8am-10pm",
+        "public_access": 1,
+        "wheelchair_accessible": 0,
+        "cleanliness": 5,
+        "location_id": 1,
+        "likes": 8,
+        "gender_neutral": 0,
+        "family_friendly": 1,
+        "lat": "43.646830",
+        "lng": "-79.378520"
+    },
+    ...
+]
 
+**GET /api/reviews**
+
+- Get reviews
+
+Response:
+```
+{
+        "id": 1,
+        "name": "John Doe",
+        "content": "Customer service was very friendly in assisting me to where the washroom was, even though I wasn't a customer. Toilet paper was 3 ply and washroom was very clean. Great experience",
+        "washroom_id": 1,
+        "timestamp": "2024-01-01T13:30:00.000Z",
+        "rating": 4,
+        "address": "65 Front St W, Toronto, ON",
+        "location": "Next to Uncle Tetsu in food court"
+    }
+```
+**GET /api/washrooms/:id/reviews**
+
+- Get reviews by washroom id
+
+Parameter:
+- id: Washroom id as a number
+
+Response:
+```
+{
+        "id": 1,
+        "name": "John Doe",
+        "content": "Customer service was very friendly in assisting me to where the washroom was, even though I wasn't a customer. Toilet paper was 3 ply and washroom was very clean. Great experience",
+        "washroom_id": 1,
+        "timestamp": "2024-01-01T13:30:00.000Z",
+        "rating": 4,
+        "address": "65 Front St W, Toronto, ON",
+        "location": "Next to Uncle Tetsu in food court"
+    }
+```
+
+**POST /api/washrooms/:id/reviews**
+- Posts reviews for a washroom
+
+Parameter:
+- id: washroom id
+
+Response:
+```
+{
+        "id": 1,
+        "name": "John Doe",
+        "content": "Customer service was very friendly in assisting me to where the washroom was, even though I wasn't a customer. Toilet paper was 3 ply and washroom was very clean. Great experience",
+        "washroom_id": 1,
+        "timestamp": "2024-01-01T13:30:00.000Z",
+        "rating": 4,
+        "address": "65 Front St W, Toronto, ON",
+        "location": "Next to Uncle Tetsu in food court"
+    }
+```
 
 
 ## Roadmap
