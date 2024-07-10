@@ -33,7 +33,7 @@ export default function MapComponent({washrooms, zoom}) {
 			<div className="map-div">
 				<Map defaultZoom={zoom} defaultCenter={torontoPosition} mapId={"8e6688f3b9182873"}>
 				{markerData.map((position) => {
-					return <Point position={position}/>
+					return <Point key={position.id} position={position}/>
 				})}
 				</Map>
 			</div>
