@@ -1,7 +1,12 @@
-import { useEffect, useState } from "react";
-import HomePageHero from "../../components/HomePageHero/HomePageHero";
+/* STYLES */
 import "./HomePage.scss";
+
+/* FUNCTIONALITY */
+import { useEffect, useState } from "react";
 import axios from "axios";
+
+/* COMPONENTS */
+import HomePageHero from "../../components/HomePageHero/HomePageHero";
 import LocationList from "../../components/LocationList/LocationList";
 import About from "../../components/About/About";
 import HomeReviewsSection from "../../components/HomeReviewsSection/HomeReviewsSection";

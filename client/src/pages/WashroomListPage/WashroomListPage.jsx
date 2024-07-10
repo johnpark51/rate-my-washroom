@@ -1,8 +1,13 @@
+/* STYLES */
 import "./WashroomListPage.scss";
+
+/* FUNCTIONALITY + REACT ROUTER */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import LocationWashrooms from "../../components/LocationWashrooms/LocationWashrooms";
 import axios from "axios";
+
+/* COMPONENTS */
+import LocationWashrooms from "../../components/LocationWashrooms/LocationWashrooms";
 
 export default function WashroomListPage() {
 	const [washrooms, setWashrooms] = useState([]);

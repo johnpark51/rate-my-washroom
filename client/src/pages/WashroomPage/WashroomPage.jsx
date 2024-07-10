@@ -1,12 +1,17 @@
+/* STYLES */
 import "./WashroomPage.scss";
+
+/* FUNCTIONALITY + REACT ROUTER */
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+
+/* COMPONENTS + ICONS */
 import WashroomAbout from "../../components/WashroomAbout/WashroomAbout";
-import { IoIosArrowRoundBack } from "react-icons/io";
 import WriteReview from "../../components/WriteReview/WriteReview";
 import WashroomReviews from "../../components/WashroomReviews/WashroomReviews";
 import WashroomHero from "../../components/WashroomHero/WashroomHero";
+import { IoIosArrowRoundBack } from "react-icons/io";
 import { RiPencilFill } from "react-icons/ri";
 
 export default function WashroomPage() {
@@ -76,11 +81,12 @@ export default function WashroomPage() {
 
 	const reviewsArray = [...reviews.reviews];
 	const newestReviews = reviewsArray.reverse();
-	console.log(washroomDetails.id);
 
 	return (
 		<main className="washroom-page__main">
-			<button className="washroom-page__back" onClick={() => navigate(-1)}>
+			<button
+				className="button washroom-page__back"
+				onClick={() => navigate(-1)}>
 				<IoIosArrowRoundBack />
 				Go Back
 			</button>
@@ -94,9 +100,9 @@ export default function WashroomPage() {
 				<div className="washroom-page__bottom-left">
 					{newestReviews.length === 0 ? (
 						<>
-							<h3 className="washroom-page__no-washrooms">
+							<h2 className="washroom-page__no-washrooms">
 								There are no reviews for this washroom. Be the first.
-							</h3>
+							</h2>
 							<button
 								className="button washroom-about__button"
 								onClick={() => {

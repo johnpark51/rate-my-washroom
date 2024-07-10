@@ -1,18 +1,23 @@
+/* STYLES */
 import "./App.scss";
+
+/* REACT ROUTER */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+/* COMPONENTS */
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+
+/* PAGES */
 import HomePage from "./pages/HomePage/HomePage";
 import LocationPage from "./pages/LocationPage/LocationPage";
 import WashroomPage from "./pages/WashroomPage/WashroomPage";
-import Footer from "./components/Footer/Footer";
 import WashroomListPage from "./pages/WashroomListPage/WashroomListPage";
 import ReviewsPage from "./pages/ReviewsPage/ReviewsPage";
 import AboutPage from "./pages/AboutPage/AboutPage";
-import { useState } from "react";
-import axios from "axios";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 
-function App() {
-
+export default function App() {
 	return (
 		<BrowserRouter>
 			<Header />
@@ -23,10 +28,9 @@ function App() {
 				<Route path="/washrooms" element={<WashroomListPage />}></Route>
 				<Route path="/reviews" element={<ReviewsPage />}></Route>
 				<Route path="/about" element={<AboutPage />}></Route>
+				<Route path="*" element={<NotFoundPage />}></Route>
 			</Routes>
 			<Footer />
 		</BrowserRouter>
 	);
 }
-
-export default App;

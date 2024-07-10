@@ -1,8 +1,13 @@
+/* STYLES */
 import "./ReviewsPage.scss";
+
+/* FUNCTIONALITY + REACT ROUTER */
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import WashroomReviews from "../../components/WashroomReviews/WashroomReviews"
 import axios from "axios";
+
+/* COMPONENTS */
+import WashroomReviews from "../../components/WashroomReviews/WashroomReviews"
 
 export default function ReviewsPage() {
 	const [reviews, setReviews] = useState([]);

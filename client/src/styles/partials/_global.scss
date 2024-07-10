@@ -2,6 +2,10 @@
 @use "./mixins" as *;
 @use "./typography" as *;
 
+body {
+    background-color: $body;
+}
+
 .links {
 	text-decoration: none;
 	color: black;

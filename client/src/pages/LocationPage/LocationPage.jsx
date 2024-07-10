@@ -1,7 +1,12 @@
+/* STYLES */
+import "./LocationPage.scss";
+
+/* FUNCTIONALITY + REACT ROUTER */
 import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import "./LocationPage.scss";
 import axios from "axios";
+
+/* COMPONENTS * ICONS */
 import LocationWashrooms from "../../components/LocationWashrooms/LocationWashrooms";
 import LocationMap from "../../components/LocationMap/LocationMap";
 import LocationHero from "../../components/LocationHero/LocationHero";
@@ -46,7 +51,7 @@ export default function LocationPage() {
 	if (!locationDetails || !washrooms) {
 		return <p>Loading...</p>;
 	}
-	const { name, city, description, image, lat, lng } = locationDetails;
+	const { name, description } = locationDetails;
 
 	const handleFilterChange = (event) => {
 		setSelectedFilter(event.target.value);
@@ -69,7 +74,7 @@ export default function LocationPage() {
 
 	return (
 		<main className="location-page">
-			<button className="location-page__back" onClick={() => navigate(-1)}>
+			<button className="button location-page__back" onClick={() => navigate(-1)}>
 				<IoIosArrowRoundBack />
 				Go Back
 			</button>
