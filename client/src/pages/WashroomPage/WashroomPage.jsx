@@ -98,7 +98,7 @@ export default function WashroomPage() {
 								There are no reviews for this washroom. Be the first.
 							</h3>
 							<button
-								className="washroom-about__button"
+								className="button washroom-about__button"
 								onClick={() => {
 									setWriteReview(true);
 								}}>

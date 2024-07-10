@@ -1,11 +1,9 @@
-import "./Star.scss";
-
-//icons
+/* ICONS */
 import { FaStar } from "react-icons/fa";
 
 export default function Star({ rating }) {
 	if (!rating) {
-		return <p><b>This washroom has no ratings</b></p>
+		return <h3>This washroom has no ratings</h3>;
 	}
 
 	return (

@@ -1,9 +1,18 @@
-import Star from "../Star/Star";
+/* STYLES */
 import "./WashroomAbout.scss";
+
+/* COMPONENTS */
+import Star from "../Star/Star";
+
+/* ICONS */
 import { FaSquareCheck } from "react-icons/fa6";
 import { RiPencilFill } from "react-icons/ri";
 
-export default function WashroomAbout({ washroomDetails, reviews, setWriteReview }) {
+export default function WashroomAbout({
+	washroomDetails,
+	reviews,
+	setWriteReview,
+}) {
 	const {
 		cleanliness,
 		address,
@@ -34,10 +43,15 @@ export default function WashroomAbout({ washroomDetails, reviews, setWriteReview
 					</p>
 				</div>
 				<div className="washroom-about__top-right">
-					<button className="washroom-about__button" onClick={() => {
-                        setWriteReview(true)
-                    }}>Write a Review<RiPencilFill /></button>
-                    <h4 className="washroom-about__type">{type}</h4>
+					<button
+						className="button washroom-about__button"
+						onClick={() => {
+							setWriteReview(true);
+						}}>
+						Write a Review
+						<RiPencilFill />
+					</button>
+					<h4 className="washroom-about__type">{type}</h4>
 				</div>
 			</div>
 			<div className="washroom-about__bottom">
@@ -55,7 +69,9 @@ export default function WashroomAbout({ washroomDetails, reviews, setWriteReview
 						)}
 					</div>
 					<div className="washroom-about__criteria">
-						<p className="washroom-about__subheading">Wheelchair Accessible: </p>
+						<p className="washroom-about__subheading">
+							Wheelchair Accessible:{" "}
+						</p>
 						{wheelchair_accessible ? (
 							<FaSquareCheck className="icon-green" />
 						) : (

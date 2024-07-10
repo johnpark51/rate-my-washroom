@@ -1,43 +1,24 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
-
-.icon {
-	&-green {
-		color: green;
-	}
-	&-red {
-		color: red;
-	}
-}
+@use "../../styles/partials/global" as *;
 
 .washroom-about {
 	padding: 2rem;
 	background-color: white;
-	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	box-shadow: $box-shadow;
 	border-radius: 10px;
 	&__top {
-		display: flex;
-		flex-direction: column;
+		@include flex(column, flex-start, flex-start);
 		border-bottom: 1px solid rgba(128, 128, 128, 0.544);
 		padding-bottom: 1rem;
 		@include tablet {
-			flex-direction: row;
-			justify-content: space-between;
-		}
-		&-left {
+			@include flex(row, space-between, flex-start);
 		}
 		&-right {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
+			@include flex(column, space-between, space-between);
 		}
 	}
 	&__button {
-		background-color: white;
-		border: 1px solid $blue;
-		border-radius: 4px;
-		color: $blue;
 		padding: 0.5rem 1rem;
 		display: flex;
 		align-items: center;
@@ -45,14 +26,9 @@
 		cursor: pointer;
 		width: 10rem;
 		margin: 1rem 0;
-
 		@include tablet {
 			margin: 0;
 			width: 9.5rem;
-		}
-		&:hover {
-			background-color: $blue;
-			color: white;
 		}
 	}
 	&__address {
@@ -92,26 +68,24 @@
 				margin-right: 12rem;
 			}
 		}
-		&-right {
-		}
 	}
 	&__criteria {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
+		@include flex(row, space-between, center);
 		margin-bottom: 0.2rem;
 	}
 	&__subheading {
 		@include tablet {
-			font-size: 1.2rem;
 			width: 13rem;
+			font-size: 1.2rem;
 		}
 	}
 	&__type {
 		color: $davys-gray;
 		@include tablet {
-			margin-top: auto;
 			margin-left: auto;
+		}
+		@include desktop {
+			margin-top: 4rem;
 		}
 	}
 }
