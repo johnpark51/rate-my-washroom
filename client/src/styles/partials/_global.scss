@@ -67,3 +67,24 @@
 .logo-blue {
 	color: $blue;
 }
+
+.hero {
+	height: 13rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 0 auto;
+	max-width: 1280px;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	padding: 1rem;
+
+	@include tablet {
+		height: 25rem;
+		padding: 2rem 3rem;
+	}
+	@include desktop {
+		height: 30rem;
+	}
+}
