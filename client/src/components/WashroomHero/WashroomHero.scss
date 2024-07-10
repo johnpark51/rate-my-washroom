@@ -1,32 +1,23 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
 
 .washroom-hero {
-    height: 13rem;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    margin: 0 auto 1rem auto;
-    max-width: 1800px;
-    display: flex;
-    align-items: flex-end;
-    padding: 2rem 3rem;
+	margin: 0 auto 1rem auto;
+	@include flex(row, flex-start, flex-end);
 
-    @include tablet {
-        height: 25rem;
-    }
-    @include desktop {
-        height: 30rem;
-    }
-    &__header {
-        color: white;
-        font-size: 3rem;
-        font-weight: 500;
-    }
-    &__location-icon {
-        color: white;
-        width: 3rem;
-        height: 3rem;
-        margin-right: 1rem;
-    }
+	&__text {
+		@include flex(row, flex-start, center);
+	}
+	&__header {
+		color: white;
+		font-size: 3rem;
+		font-weight: 500;
+	}
+	&__location-icon {
+		color: white;
+		width: 3rem;
+		height: 3rem;
+		margin-right: 1rem;
+	}
 }
