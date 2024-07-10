@@ -1,8 +1,15 @@
-import { useEffect, useState } from "react";
+/* STYLES */
 import "./LocationWashrooms.scss";
+
+/* FUNCTIONALITY */
+import { useEffect, useState } from "react";
 import axios from "axios";
-import Star from "../Star/Star";
+
+/* ICONS */
 import { PiToiletBold } from "react-icons/pi";
+
+/* COMPONENTS */
+import Star from "../Star/Star";
 
 export default function LocationWashrooms({ washroom }) {
 	const { address, location, id } = washroom;
@@ -10,7 +17,7 @@ export default function LocationWashrooms({ washroom }) {
 
 	const baseURL = import.meta.env.VITE_API_URL;
 
-	const getWashroomDetails = async () => {
+	const getWashroomReviews = async () => {
 		try {
 			const response = await axios.get(
 				`${baseURL}/api/washrooms/${id}/reviews`
@@ -21,7 +28,7 @@ export default function LocationWashrooms({ washroom }) {
 		}
 	};
 	useEffect(() => {
-		getWashroomDetails();
+		getWashroomReviews();
 	}, []);
 
 	if (!washroomDetails || !washroom) {
