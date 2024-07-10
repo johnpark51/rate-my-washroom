@@ -1,7 +1,11 @@
+/* STYLES */
 import "./SearchBar.scss";
 
+/* FUNCTIONALITY */
 import { useState } from "react";
 import axios from "axios";
+
+/* ICONS */
 import { FaSearch } from "react-icons/fa";
 
 export default function SearchBar({ setResults }) {
@@ -31,7 +35,7 @@ export default function SearchBar({ setResults }) {
 	};
 
 	return (
-		<div className="input-wrapper">
+		<section className="input-wrapper">
 			<div className="search-icon">
 				<FaSearch />
 			</div>
@@ -41,6 +45,6 @@ export default function SearchBar({ setResults }) {
 				value={input}
 				onChange={(e) => handleChange(e.target.value)}
 			/>
-		</div>
+		</section>
 	);
 }

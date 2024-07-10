@@ -90,7 +90,9 @@
 	}
 
     &--home {
+        padding: 0.5rem;
         @include tablet {
+            padding: 1rem;
             height: 30rem;
         }
         @include desktop {

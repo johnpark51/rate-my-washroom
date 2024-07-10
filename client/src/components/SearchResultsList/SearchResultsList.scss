@@ -1,18 +1,20 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
 
 .results-list {
-    width: 14rem;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0px 0px 8px #ddd;
-    border-radius: 10px;
-    margin-top: 1rem;
-    max-height: 5.5rem;
-    overflow-y: scroll;
-    @include tablet {
-        width: 30rem;
-        max-height: 10rem;
-    }
+	width: 13rem;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0px 0px 8px #ddd;
+	border-radius: 10px;
+	margin-top: 1rem;
+	max-height: 5.5rem;
+	overflow-y: scroll;
+	margin-left: auto;
+	@include tablet {
+		width: 29rem;
+		max-height: 10rem;
+	}
 }

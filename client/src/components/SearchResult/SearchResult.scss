@@ -1,35 +1,33 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
 
 .search-result {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.2rem 0.5rem;
-    flex-direction: column;
-    border-bottom: 0.5px solid $davys-gray;
-    &:hover {
-        background-color: $light-blue;
-    }
-    @include tablet {
-        flex-direction: row;
-        padding: 0.5rem 1rem;
-    }
-    &__address {
-        font-size: 0.7rem;
-        @include tablet {
-
-            font-size: 1rem;
-        }
-    }
-    &__location {
-        color: $davys-gray;
-        font-size: 0.6rem;
-    }
-    &__name {
-        font-weight: 600;
-        font-size: 0.7rem;
-        @include tablet {
-            font-size: 1rem;
-        }
-    }
+	@include flex(column, space-between, flex-start);
+	padding: 0.2rem 0.5rem;
+	border-bottom: 0.5px solid $davys-gray;
+	&:hover {
+		background-color: $light-blue;
+	}
+	@include tablet {
+		flex-direction: row;
+		padding: 0.5rem 1rem;
+	}
+	&__address {
+		font-size: 0.7rem;
+		@include tablet {
+			font-size: 1rem;
+		}
+	}
+	&__location {
+		color: $davys-gray;
+		font-size: 0.6rem;
+	}
+	&__name {
+		font-weight: 600;
+		font-size: 0.7rem;
+		@include tablet {
+			font-size: 1rem;
+		}
+	}
 }
