@@ -14,7 +14,7 @@ export default function HomePageHero({ washrooms }) {
 
 	return (
 		<section
-			className="hero"
+			className="hero hero--home"
 			style={{
 				backgroundImage:
 					'url("http://localhost:8080/images/washroom-hero.jpg")',

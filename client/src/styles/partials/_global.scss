@@ -14,6 +14,7 @@
 	border: 1px solid $blue;
 	border-radius: 4px;
 	cursor: pointer;
+    font-family: "Ubuntu";
 
 	&:hover {
 		background-color: $blue;
@@ -87,4 +88,13 @@
 	@include desktop {
 		height: 30rem;
 	}
+
+    &--home {
+        @include tablet {
+            height: 30rem;
+        }
+        @include desktop {
+            height: 50rem;
+        }
+    }
 }
