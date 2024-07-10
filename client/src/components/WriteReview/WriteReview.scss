@@ -32,6 +32,8 @@
 		@include tablet {
 			width: 49%;
 			height: 26rem;
+			margin-right: 0;
+			margin-left: 2rem;
 		}
 	}
 	&__section {

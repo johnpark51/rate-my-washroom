@@ -1,10 +1,16 @@
+/* STYLES */
 import "./NewStar.scss";
+
+/* ICONS */
 import { FaStar } from "react-icons/fa";
+
+/* FUNCTIONALITY */
 import { useState } from "react";
 
 export default function NewStar() {
 	const [rating, setRating] = useState(null);
 	const [hover, setHover] = useState(null);
+
 	return (
 		<>
 			<p className="rating-text">Rating {rating}/5 stars: </p>
