@@ -1,9 +1,13 @@
-import { useState } from "react";
+/* STYLES */
 import "./MapComponent.scss";
+
+/* GOOGLE MAPS PACKAGE */
 import {
 	APIProvider,
 	Map
 } from "@vis.gl/react-google-maps";
+
+/* COMPONENTS */
 import Point from "../Point/Point";
 
 export default function MapComponent({washrooms, zoom}) {
