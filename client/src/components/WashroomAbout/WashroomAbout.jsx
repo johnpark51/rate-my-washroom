@@ -23,6 +23,8 @@ export default function WashroomAbout({
 		family_friendly,
 		hours,
 		type,
+		lat,
+		lng,
 	} = washroomDetails;
 
 	return (
@@ -99,6 +101,16 @@ export default function WashroomAbout({
 					<div className="washroom-about__criteria">
 						<p className="washroom-about__subheading">Hours:</p>
 						<p>{hours}</p>
+					</div>
+				</div>
+				<div className="washroom-about__coordinates">
+					<div className="washroom-about__criteria washroom-about__criteria--coordinates">
+						<p className="washroom-about__subheading washroom-about__subheading--coordinates">Latitude</p>
+						<p>{lat}</p>
+					</div>
+					<div className="washroom-about__criteria washroom-about__criteria--coordinates">
+						<p className="washroom-about__subheading washroom-about__subheading--coordinates">Longitude</p>
+						<p>{lng}</p>
 					</div>
 				</div>
 			</div>

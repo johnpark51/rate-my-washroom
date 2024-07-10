@@ -72,11 +72,26 @@
 	&__criteria {
 		@include flex(row, space-between, center);
 		margin-bottom: 0.2rem;
+		&--coordinates {
+			@include tablet {
+				@include flex(column, flex-start, flex-start)
+			}
+			@include desktop {
+				@include flex(row, space-between, center);
+			}
+		}
 	}
 	&__subheading {
 		@include tablet {
 			width: 13rem;
 			font-size: 1.2rem;
+			&--coordinates {
+				width: auto;
+				@include desktop {
+					width: 13rem;
+					font-size: 1.2rem;
+				}
+			}
 		}
 	}
 	&__type {
@@ -86,6 +101,11 @@
 		}
 		@include desktop {
 			margin-top: 4rem;
+		}
+	}
+	&__coordinates {
+		@include desktop {
+			margin-left: auto;
 		}
 	}
 }
