@@ -1,8 +1,12 @@
-import Star from "../Star/Star";
+/* STYLES */
 import "./WashroomReviews.scss";
+
+/* COMPONENTS */
+import Star from "../Star/Star";
 
 export default function WashroomReviews({ review, formattedDate }) {
 	const { name, content, rating } = review;
+	
 	if (!review) {
 		return <p>Loading...</p>
 	}

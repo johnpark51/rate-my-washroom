@@ -1,14 +1,13 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/global" as *;
 
 .washroom-review {
 	border-radius: 10px;
 	background-color: white;
-	box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-		rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+	box-shadow: $box-shadow;
 	padding: 1rem;
-	display: flex;
-	justify-content: space-between;
+	@include flex(row, space-between, flex-start);
 	min-width: 16rem;
 	@include tablet {
 		min-width: none;
@@ -21,17 +20,15 @@
 		align-items: center;
 		margin: 0.5rem 0;
 	}
-	&__rating-header{
+	&__rating-header {
 		font-size: 0.8rem;
 		margin-right: 0.5rem;
 	}
-	&__content {
-	}
 	&__date {
-	font-size: 0.6rem;
-	width: 4rem;
+		font-size: 0.6rem;
+		width: 4rem;
 		@include tablet {
-		width: auto;
+			width: auto;
 			font-size: 0.65rem;
 		}
 		@include desktop {

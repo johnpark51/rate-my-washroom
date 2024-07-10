@@ -1,10 +1,14 @@
+/* STYLES */
 import "./WriteReview.scss";
+
+/* COMPONENTS */
 import NewStar from "../NewStar/NewStar";
 
 export default function WriteReview({ postReview, writeReview }) {
 	if (!writeReview) {
 		return null;
 	}
+
 	return (
 		<form className="write-review__form fade-in" onSubmit={postReview}>
 			<h2>Write a Review for your Peers</h2>
@@ -27,7 +31,7 @@ export default function WriteReview({ postReview, writeReview }) {
 			<div className="write-review__star">
 				<NewStar className="write-review__star" />
 			</div>
-			<button type="submit" className="write-review__submit">
+			<button type="submit" className="button write-review__submit">
 				Submit
 			</button>
 		</form>
