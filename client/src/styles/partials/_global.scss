@@ -113,3 +113,19 @@ body {
 		color: red;
 	}
 }
+
+@keyframes slide-up {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+.slide-up-enter {
+	animation: slide-up $slide-duration ease-out;
+}
+
+.slide-up-leave {
+	animation: slide-up $slide-duration ease-in reverse;
+}

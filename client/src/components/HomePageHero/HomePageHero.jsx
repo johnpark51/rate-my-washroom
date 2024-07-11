@@ -20,7 +20,7 @@ export default function HomePageHero({ washrooms }) {
 					'url("http://localhost:8080/images/washroom-hero.jpg")',
 			}}>
 			<div className="hero__overlay">
-				<div className="hero__search">
+				<div className="hero__search slide-up-enter">
 					<h2 className="hero__header">Find the right washroom for you</h2>
 					<SearchBar setResults={setResults} />
 					<SearchResultsList results={results} />
