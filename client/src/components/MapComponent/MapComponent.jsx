@@ -29,7 +29,7 @@ export default function MapComponent({washrooms, zoom}) {
 	}
 
 	return (
-		<APIProvider apiKey={"AIzaSyBFDj6opA7KGa4RfLButOzAcaqbCqJ1JmA"}>
+		<APIProvider apiKey={"AIzaSyBFDj6opA7KGa4RfLButOzAcaqbCqJ1JmA"} language="en">
 			<div className="map-div">
 				<Map defaultZoom={zoom} defaultCenter={torontoPosition} mapId={"8e6688f3b9182873"}>
 				{markerData.map((position) => {

@@ -41,7 +41,7 @@ export default function SearchBar({ setResults }) {
 			</div>
 			<input
 				className="input-search"
-				placeholder="Search for a washroom"
+				placeholder="Search for a washroom address"
 				value={input}
 				onChange={(e) => handleChange(e.target.value)}
 			/>

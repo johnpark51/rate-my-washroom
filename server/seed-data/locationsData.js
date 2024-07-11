@@ -112,7 +112,7 @@ export default [
         name: "Distillery District",
         city: "Toronto",
         description: "The Distillery District is a pedestrian-only neighborhood and national historic site known for its preserved 19th-century industrial architecture and cobblestone streets. Once home to the Gooderham and Worts Distillery, it now houses art galleries, boutiques, cafes, and restaurants. The district is a cultural hub, hosting events like the Toronto International Film Festival and Christmas Market. Its unique blend of history, art, and entertainment makes the Distillery District a must-visit destination in Toronto.",
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtnubnYj474sq2kvBjZb94T0pOIdunCEFa-Q&s",
+        image: "https://media.cntraveler.com/photos/616480d36a69c761590b271a/16:9/w_2560,c_limit/Distillery%20District-57.jpg",
         lat: "43.650730",
         lng: "-79.358850"
     },

@@ -2,6 +2,7 @@ import {
 	getWashroomById as getWashroomByIdService,
 	getWashrooms as getWashroomsService,
 	getWashroomReviews as getWashroomReviewsService,
+	postWashroom as postWashroomService,
 } from "../services/washroomsKnex.js";
 
 /*GET ALL WASHROOMS*/
@@ -33,3 +34,14 @@ export const getWashroomReviews = async (req, res) => {
 		res.status(500).json({ message: error.message });
 	}
 };
+
+/* POST WASHROOM */
+export const postWashroom = async (req, res) => {
+	try {
+	  const result = await postWashroomService(req.body);
+	  return res.status(201).json(result);
+	} catch (error) {
+	  res.status(500).json({ message: error.message });
+	}
+  };
+  

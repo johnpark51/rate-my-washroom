@@ -83,9 +83,9 @@ export const getWashroomReviews = async (id) => {
 		});
 
 		let totalRating = 0;
-		reviews.forEach(review => {
+		reviews.forEach((review) => {
 			totalRating += review.rating;
-		})
+		});
 		const averageRating = totalRating / reviews.length;
 		const roundedRating = Math.round(averageRating);
 		const finalRating = Math.min(Math.max(roundedRating, 1), 5);
@@ -94,9 +94,38 @@ export const getWashroomReviews = async (id) => {
 		// return result;
 		const response = {
 			reviews: reviews,
-			averageRating: finalRating
-		}
+			averageRating: finalRating,
+		};
 		return response;
+	} catch (error) {
+		throw new Error(error);
+	}
+};
+
+/* ADD NEW WASHROOM */
+export const postWashroom = async (washroom) => {
+	try {
+		const washroomIds = await knex("washrooms").insert(washroom);
+		const washroomArray = await knex("warehouses").where({
+			id: washroomIds[0],
+		});
+		const returnWashroom = washroomArray[0];
+		return {
+			id: returnWashroom.id,
+			address: returnWashroom.address,
+			type: returnWashroom.type,
+			location: returnWashroom.location,
+			hours: returnWashroom.hours,
+			public_access: returnWashroom.public_access,
+			wheelchair_accessible: returnWashroom.wheelchair_accessible,
+			cleanliness: returnWashroom.cleanliness,
+			location_id: returnWashroom.location_id,
+			likes: returnWashroom.likes,
+			gender_neutral: returnWashroom.gender_neutral,
+			family_friendly: returnWashroom.family_friendly,
+			lat: returnWashroom.lat,
+			lng: returnWashroom.lng,
+		};
 	} catch (error) {
 		throw new Error(error);
 	}

@@ -2,13 +2,16 @@ import express from "express";
 import {
     getWashrooms,
     fetchOne,
-    getWashroomReviews
+    getWashroomReviews,
+    postWashroom
 } from "../controllers/washroomController.js"
 const washroomRouter = express.Router();
 
+/* BASE */
 washroomRouter
   .route("/")
-  .get(getWashrooms);
+  .get(getWashrooms)
+  .post(postWashroom)
 
 /* WASHROOM BY ID */
 washroomRouter

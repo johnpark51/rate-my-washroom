@@ -13,12 +13,17 @@ import LocationHero from "../../components/LocationHero/LocationHero";
 import { FaLocationArrow } from "react-icons/fa";
 import { IoIosArrowRoundBack } from "react-icons/io";
 
+/* ADD WASHROOM MODAL */
+import Modal from "react-modal";
+import AddWashroomModal from "../../components/AddWashroomModal/AddWashroomModal";
+
 export default function LocationPage() {
 	const [locationDetails, setLocationDetails] = useState(null);
 	const [washrooms, setWashrooms] = useState(null);
 	const [selectedFilter, setSelectedFilter] = useState("");
 	const { locationId } = useParams();
 	const navigate = useNavigate();
+	const [openModal, setOpenModal] = useState(false);
 
 	const baseURL = import.meta.env.VITE_API_URL;
 
@@ -72,9 +77,15 @@ export default function LocationPage() {
 		return true;
 	});
 
+	const addNewWashroom = (newWashroom) => {
+		setWashrooms((prevWashrooms) => [...prevWashrooms, newWashroom]);
+	};
+
 	return (
 		<main className="location-page">
-			<button className="button location-page__back" onClick={() => navigate(-1)}>
+			<button
+				className="button location-page__back"
+				onClick={() => navigate(-1)}>
 				<IoIosArrowRoundBack />
 				Go Back
 			</button>
@@ -115,6 +126,16 @@ export default function LocationPage() {
 							</Link>
 						))
 					)}
+					<button className="button add-washroom__button" onClick={() => setOpenModal(true)}>
+						Add New Washroom
+					</button>
+					<AddWashroomModal
+						isOpen={openModal}
+						ariaHideApp={false}
+						closeModal={() => setOpenModal(false)}
+						locationId={locationId}
+						addNewWashroom={addNewWashroom}
+					/>
 				</div>
 				<div className="location-page__right">
 					<LocationMap
