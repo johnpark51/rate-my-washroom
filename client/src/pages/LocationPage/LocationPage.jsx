@@ -126,6 +126,7 @@ export default function LocationPage() {
 							</Link>
 						))
 					)}
+					<h3 className="location-page__add-header">Can't find the washroom you want to review?</h3>
 					<button className="button add-washroom__button" onClick={() => setOpenModal(true)}>
 						Add New Washroom
 					</button>

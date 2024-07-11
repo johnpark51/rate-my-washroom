@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Modal from "react-modal";
 import axios from "axios";
+import "./AddWashroomModal.scss";
 
 const AddWashroomModal = ({
 	isOpen,
@@ -11,7 +12,7 @@ const AddWashroomModal = ({
 	const [newWashroom, setNewWashroom] = useState({
 		id: null,
 		address: "",
-		type: "Public restroom",
+		type: "",
 		location: "",
 		hours: "",
 		public_access: false,
@@ -52,92 +53,136 @@ const AddWashroomModal = ({
 			onRequestClose={closeModal}
 			contentLabel="Add Washroom Modal"
 			className="modal"
-            ariaHideApp={false}
+			ariaHideApp={false}
 			overlayClassName="modal-overlay">
-			<h2>Add New Washroom</h2>
-			<form onSubmit={handleSubmit}>
-				<label>
-					Address:
-					<input
-						type="text"
-						name="address"
-						value={newWashroom.address}
-						onChange={handleInputChange}
-					/>
-				</label>
-				<label>
-					Location:
-					<input
-						type="text"
-						name="location"
-						value={newWashroom.location}
-						onChange={handleInputChange}
-					/>
-				</label>
-				<label>
-					Hours:
-					<input
-						type="text"
-						name="hours"
-						value={newWashroom.hours}
-						onChange={handleInputChange}
-					/>
-				</label>
-				<label>
-					Public Access:
-					<input
-						type="checkbox"
-						name="public_access"
-						checked={newWashroom.public_access}
-						onChange={handleInputChange}
-					/>
-				</label>
-				<label>
-					Wheelchair Accessible:
-					<input
-						type="checkbox"
-						name="wheelchair_accessible"
-						checked={newWashroom.wheelchair_accessible}
-						onChange={handleInputChange}
-					/>
-				</label>
-				<label>
-					Gender Neutral:
-					<input
-						type="checkbox"
-						name="gender_neutral"
-						checked={newWashroom.gender_neutral}
-						onChange={handleInputChange}
-					/>
-				</label>
-				<label>
-					Family Friendly:
-					<input
-						type="checkbox"
-						name="family_friendly"
-						checked={newWashroom.family_friendly}
-						onChange={handleInputChange}
-					/>
-				</label>
-				<label>
-					Latitude:
-					<input
-						type="text"
-						name="lat"
-						value={newWashroom.lat}
-						onChange={handleInputChange}
-					/>
-				</label>
-				<label>
-					Longitude:
-					<input
-						type="text"
-						name="lng"
-						value={newWashroom.lng}
-						onChange={handleInputChange}
-					/>
-				</label>
-				<button type="submit">Add Washroom</button>
+			<form onSubmit={handleSubmit} className={`modal__form ${isOpen ? 'slide-up-enter' : 'slide-up-leave'}`}>
+				<h2>Add a New Washroom</h2>
+				<div className="modal__left">
+					<div className="modal__label-input">
+						<label className="modal__label">Address:</label>
+						<input
+                            placeholder="ex: 65 Front St W, Toronto, ON"
+							className="modal__input"
+							type="text"
+							name="address"
+							value={newWashroom.address}
+							onChange={handleInputChange}
+						/>
+					</div>
+					<div className="modal__label-input">
+						<label className="modal__label">Location:</label>
+						<input
+                            placeholder="ex: South Side entrance to York GO Station"
+							className="modal__input"
+							type="text"
+							name="location"
+							value={newWashroom.location}
+							onChange={handleInputChange}
+						/>
+					</div>
+					<div className="modal__label-input">
+						<label className="modal__label">Type:</label>
+						<input
+                            placeholder="ex: Public restroom"
+							className="modal__input"
+							type="text"
+							name="type"
+							value={newWashroom.type}
+							onChange={handleInputChange}
+						/>
+					</div>
+					<div className="modal__label-input">
+						<label className="modal__label">Hours:</label>
+						<input
+                            placeholder="ex: 8am - 5pm"
+							className="modal__input"
+							type="text"
+							name="hours"
+							value={newWashroom.hours}
+							onChange={handleInputChange}
+						/>
+					</div>
+					<div className="modal__label-input">
+						<label className="modal__label">Latitude:</label>
+						<input
+                            placeholder="43.646830"
+							className="modal__input"
+							type="text"
+							name="lat"
+							value={newWashroom.lat}
+							onChange={handleInputChange}
+						/>
+					</div>
+					<div className="modal__label-input">
+						<label className="modal__label">Longitude:</label>
+						<input
+                            placeholder="-79.378520"
+							className="modal__input"
+							type="text"
+							name="lng"
+							value={newWashroom.lng}
+							onChange={handleInputChange}
+						/>
+					</div>
+				</div>
+				<div className="modal__booleans">
+					<div className="modal__label-input">
+						<label className="modal__label">Public Access:</label>
+						<input
+                            placeholder="Please input correct value"
+							// className="modal__input"
+							type="checkbox"
+							name="public_access"
+							checked={newWashroom.public_access}
+							onChange={handleInputChange}
+						/>
+					</div>
+					<div className="modal__label-input">
+						<label className="modal__label">Wheelchair Accessible:</label>
+						<input
+                            placeholder="Please input correct value"
+							// className="modal__input"
+							type="checkbox"
+							name="wheelchair_accessible"
+							checked={newWashroom.wheelchair_accessible}
+							onChange={handleInputChange}
+						/>
+					</div>
+					<div className="modal__label-input">
+						<label className="modal__label">Gender Neutral:</label>
+						<input
+                            placeholder="Please input correct value"
+							// className="modal__input"
+							type="checkbox"
+							name="gender_neutral"
+							checked={newWashroom.gender_neutral}
+							onChange={handleInputChange}
+						/>
+					</div>
+					<div className="modal__label-input">
+						<label className="modal__label">Family Friendly:</label>
+						<input
+                            placeholder="Please input correct value"
+							// className="modal__input"
+							type="checkbox"
+							name="family_friendly"
+							checked={newWashroom.family_friendly}
+							onChange={handleInputChange}
+						/>
+					</div>
+				</div>
+				<div className="modal__buttons">
+					<button
+						className="button modal__button"
+						onClick={() => {
+							closeModal();
+						}}>
+						Cancel
+					</button>
+					<button className="button modal__button" type="submit">
+						Add Washroom
+					</button>
+				</div>
 			</form>
 		</Modal>
 	);
