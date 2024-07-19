@@ -11,10 +11,14 @@
 	border-radius: 10px;
 	margin-top: 1rem;
 	max-height: 5.5rem;
+
 	overflow-y: scroll;
 	margin-left: auto;
 	@include tablet {
 		width: 29rem;
 		max-height: 10rem;
+	}
+	@include desktop {
+		margin-right: 2.5rem;
 	}
 }
