@@ -13,7 +13,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.646830",
-        lng: "-79.378520"
+        lng: "-79.378520",
+        sample: true
     },
     {
         id: 2,
@@ -29,7 +30,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.646324",
-        lng: "-79.378305"
+        lng: "-79.378305",
+        sample: true
     },
     {
         id: 3,
@@ -45,7 +47,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.646659",
-        lng: "-79.378521"
+        lng: "-79.378521",
+        sample: true
     },
     {
         id: 4,
@@ -61,7 +64,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.643935",
-        lng: "-79.378030"
+        lng: "-79.378030",
+        sample: true
     },
     {
         id: 5,
@@ -77,7 +81,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.646624",
-        lng: "-79.378505"
+        lng: "-79.378505",
+        sample: true
     },
     {
         id: 6,
@@ -93,7 +98,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.646924",
-        lng: "-79.378105"
+        lng: "-79.378105",
+        sample: true
     },
     {
         id: 7,
@@ -109,7 +115,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.646230",
-        lng: "-79.378920"
+        lng: "-79.378920",
+        sample: true
     },
     {
         id: 8,
@@ -125,7 +132,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.646430",
-        lng: "-79.378220"
+        lng: "-79.378220",
+        sample: true
     },
     {
         id: 9,
@@ -141,7 +149,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.670472",
-        lng: "-79.391464"
+        lng: "-79.391464",
+        sample: true
     },
     {
         id: 10,
@@ -157,7 +166,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.669735",
-        lng: "-79.393684"
+        lng: "-79.393684",
+        sample: true
     },
     {
         id: 11,
@@ -173,7 +183,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.670520",
-        lng: "-79.391660"
+        lng: "-79.391660",
+        sample: true
     },
     {
         id: 12,
@@ -189,7 +200,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.670240",
-        lng: "-79.393960"
+        lng: "-79.393960",
+        sample: true
     },
     {
         id: 13,
@@ -205,7 +217,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.670625",
-        lng: "-79.392475"
+        lng: "-79.392475",
+        sample: true
     },
     {
         id: 14,
@@ -221,7 +234,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.670815",
-        lng: "-79.392320"
+        lng: "-79.392320",
+        sample: true
     },
     {
         id: 15,
@@ -237,7 +251,8 @@ export default [
         gender_neutral: false,
         family_friendly: false,
         lat: "43.670950",
-        lng: "-79.392250"
+        lng: "-79.392250",
+        sample: true
     },
     {
         id: 16,
@@ -253,7 +268,8 @@ export default [
         gender_neutral: false,
         family_friendly: false,
         lat: "43.670065",
-        lng: "-79.410295"
+        lng: "-79.410295",
+        sample: true
     },
     {
         id: 17,
@@ -269,7 +285,8 @@ export default [
         gender_neutral: false,
         family_friendly: false,
         lat: "43.671000",
-        lng: "-79.391700"
+        lng: "-79.391700",
+        sample: true
     },
     {
         id: 18,
@@ -285,7 +302,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.654225",
-        lng: "-79.400625"
+        lng: "-79.400625",
+        sample: true
     },
 	{
         id: 19,
@@ -301,7 +319,8 @@ export default [
         gender_neutral: false,
         family_friendly: false,
         lat: "43.652810",
-        lng: "-79.403600"
+        lng: "-79.403600",
+        sample: true
     },
     {
         id: 20,
@@ -317,7 +336,8 @@ export default [
         gender_neutral: false,
         family_friendly: false,
         lat: "43.652510",
-        lng: "-79.403900"
+        lng: "-79.403900",
+        sample: true
     },
     {
         id: 21,
@@ -333,7 +353,8 @@ export default [
         gender_neutral: false,
         family_friendly: false,
         lat: "43.652210",
-        lng: "-79.403300"
+        lng: "-79.403300",
+        sample: true
     },
     {
         id: 22,
@@ -349,7 +370,8 @@ export default [
         gender_neutral: false,
         family_friendly: false,
         lat: "43.655580",
-        lng: "-79.402610"
+        lng: "-79.402610",
+        sample: true
     },
     {
         id: 23,
@@ -365,7 +387,8 @@ export default [
         gender_neutral: false,
         family_friendly: false,
         lat: "43.654210",
-        lng: "-79.400280"
+        lng: "-79.400280",
+        sample: true
     },
     {
         id: 24,
@@ -381,7 +404,8 @@ export default [
         gender_neutral: false,
         family_friendly: false,
         lat: "43.654960",
-        lng: "-79.400690"
+        lng: "-79.400690",
+        sample: true
     },
     {
         id: 25,
@@ -397,7 +421,8 @@ export default [
         gender_neutral: false,
         family_friendly: false,
         lat: "43.654170",
-        lng: "-79.401330"
+        lng: "-79.401330",
+        sample: true
     },
     {
         id: 26,
@@ -413,7 +438,8 @@ export default [
         gender_neutral: false,
         family_friendly: false,
         lat: "43.696820",
-        lng: "-79.314470"
+        lng: "-79.314470",
+        sample: true
     },
     {
         id: 27,
@@ -429,7 +455,8 @@ export default [
         gender_neutral: false,
         family_friendly: false,
         lat: "43.700930",
-        lng: "-79.313440"
+        lng: "-79.313440",
+        sample: true
     },
     {
         id: 28,
@@ -445,7 +472,8 @@ export default [
         gender_neutral: false,
         family_friendly: false,
         lat: "43.694800",
-        lng: "-79.318660"
+        lng: "-79.318660",
+        sample: true
     },
     {
         id: 29,
@@ -461,7 +489,8 @@ export default [
         gender_neutral: false,
         family_friendly: false,
         lat: "43.693390",
-        lng: "-79.319890"
+        lng: "-79.319890",
+        sample: true
     },
     {
         id: 30,
@@ -477,7 +506,8 @@ export default [
         gender_neutral: true,
         family_friendly: false,
         lat: "43.692860",
-        lng: "-79.315580"
+        lng: "-79.315580",
+        sample: true
     },
     {
         id: 31,
@@ -493,7 +523,8 @@ export default [
         gender_neutral: true,
         family_friendly: false,
         lat: "43.700000",
-        lng: "-79.312390"
+        lng: "-79.312390",
+        sample: true
     },
     {
         id: 32,
@@ -509,7 +540,8 @@ export default [
         gender_neutral: true,
         family_friendly: true,
         lat: "43.647960",
-        lng: "-79.413170"
+        lng: "-79.413170",
+        sample: true
     },
     {
         id: 33,
@@ -525,7 +557,8 @@ export default [
         gender_neutral: true,
         family_friendly: true,
         lat: "43.647660",
-        lng: "-79.413470"
+        lng: "-79.413470",
+        sample: true
     },
     {
         id: 34,
@@ -541,7 +574,8 @@ export default [
         gender_neutral: true,
         family_friendly: true,
         lat: "43.647360",
-        lng: "-79.412870"
+        lng: "-79.412870",
+        sample: true
     },
     {
         id: 35,
@@ -557,7 +591,8 @@ export default [
         gender_neutral: true,
         family_friendly: true,
         lat: "43.647060",
-        lng: "-79.413770"
+        lng: "-79.413770",
+        sample: true
     },
     {
         id: 36,
@@ -573,7 +608,8 @@ export default [
         gender_neutral: true,
         family_friendly: true,
         lat: "43.646760",
-        lng: "-79.412570"
+        lng: "-79.412570",
+        sample: true
     },
     {
         id: 37,
@@ -589,7 +625,8 @@ export default [
         gender_neutral: true,
         family_friendly: true,
         lat: "43.651360",
-        lng: "-79.404040"
+        lng: "-79.404040",
+        sample: true
     },
     {
         id: 38,
@@ -605,7 +642,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.652990",
-        lng: "-79.404020"
+        lng: "-79.404020",
+        sample: true
     },
     {
         id: 39,
@@ -621,7 +659,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.652390",
-        lng: "-79.403240"
+        lng: "-79.403240",
+        sample: true
     },
     {
         id: 40,
@@ -637,7 +676,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.647300",
-        lng: "-79.413410"
+        lng: "-79.413410",
+        sample: true
     },
     {
         id: 41,
@@ -653,7 +693,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.655130",
-        lng: "-79.415010"
+        lng: "-79.415010",
+        sample: true
     },
     {
         id: 42,
@@ -669,7 +710,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.654410",
-        lng: "-79.418130"
+        lng: "-79.418130",
+        sample: true
     },
     {
         id: 43,
@@ -685,7 +727,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.655290",
-        lng: "-79.414680"
+        lng: "-79.414680",
+        sample: true
     },
     {
         id: 44,
@@ -701,7 +744,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.655040",
-        lng: "-79.414890"
+        lng: "-79.414890",
+        sample: true
     },
     {
         id: 45,
@@ -717,7 +761,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.650700",
-        lng: "-79.418080"
+        lng: "-79.418080",
+        sample: true
     },
     {
         id: 46,
@@ -733,7 +778,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.650930",
-        lng: "-79.463750"
+        lng: "-79.463750",
+        sample: true
     },
     {
         id: 47,
@@ -749,7 +795,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.651520",
-        lng: "-79.463750"
+        lng: "-79.463750",
+        sample: true
     },
     {
         id: 48,
@@ -765,7 +812,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.650780",
-        lng: "-79.357150"
+        lng: "-79.357150",
+        sample: true
     },
     {
         id: 49,
@@ -781,7 +829,8 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.650630",
-        lng: "-79.358310"
+        lng: "-79.358310",
+        sample: true
     },
     {
         id: 50,
@@ -797,6 +846,7 @@ export default [
         gender_neutral: false,
         family_friendly: true,
         lat: "43.650630",
-        lng: "-79.358200"
+        lng: "-79.358200",
+        sample: true
     }
 ];

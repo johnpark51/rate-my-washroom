@@ -25,6 +25,7 @@ export default function WashroomAbout({
 		type,
 		lat,
 		lng,
+		sample,
 	} = washroomDetails;
 
 	return (
@@ -53,7 +54,12 @@ export default function WashroomAbout({
 						Write a Review
 						<RiPencilFill />
 					</button>
-					<h4 className="washroom-about__type">{type}</h4>
+					{sample ? (
+						<p className="sample-green">Sample Washroom</p>
+					) : (
+						<p className="sample-red">Sample Washroom</p>
+					)}
+					{/* <h4 className="washroom-about__type">{type}</h4> */}
 				</div>
 			</div>
 			<div className="washroom-about__bottom">
@@ -105,12 +111,25 @@ export default function WashroomAbout({
 				</div>
 				<div className="washroom-about__coordinates">
 					<div className="washroom-about__criteria washroom-about__criteria--coordinates">
-						<p className="washroom-about__subheading washroom-about__subheading--coordinates">Latitude</p>
+						<p className="washroom-about__subheading washroom-about__subheading--coordinates">
+							Latitude
+						</p>
 						<p>{lat}</p>
 					</div>
 					<div className="washroom-about__criteria washroom-about__criteria--coordinates">
-						<p className="washroom-about__subheading washroom-about__subheading--coordinates">Longitude</p>
+						<p className="washroom-about__subheading washroom-about__subheading--coordinates">
+							Longitude
+						</p>
 						<p>{lng}</p>
+					</div>
+					<div className="washroom-about__criteria washroom-about__criteria--coordinates">
+						<p className="washroom-about__subheading washroom-about__subheading--coordinates">Type</p>
+						{/* {sample ? (
+							<p className="sample-green">Sample Washroom</p>
+						) : (
+							<p className="sample-red">Sample Washroom</p>
+						)} */}
+						<h4 className="washroom-about__type">{type}</h4>
 					</div>
 				</div>
 			</div>

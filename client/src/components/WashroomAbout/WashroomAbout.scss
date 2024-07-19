@@ -74,7 +74,7 @@
 		margin-bottom: 0.2rem;
 		&--coordinates {
 			@include tablet {
-				@include flex(column, flex-start, flex-start)
+				@include flex(column, flex-start, flex-start);
 			}
 			@include desktop {
 				@include flex(row, space-between, center);
@@ -96,16 +96,27 @@
 	}
 	&__type {
 		color: $davys-gray;
-		@include tablet {
-			margin-left: auto;
-		}
-		@include desktop {
-			margin-top: 4rem;
-		}
 	}
 	&__coordinates {
 		@include desktop {
 			margin-left: auto;
 		}
+	}
+}
+
+.sample {
+	&-green {
+		width: auto;
+		color: #d1ffbd;
+		background-color: green;
+		border: 0;
+		padding: 0.2rem 0.5rem;
+		border-radius: 10px;
+		@include tablet {
+			margin-top: 3rem;
+		}
+	}
+	&-red {
+		display: none;
 	}
 }

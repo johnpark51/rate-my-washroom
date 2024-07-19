@@ -22,7 +22,8 @@ export const getWashrooms = async () => {
 				"washrooms.gender_neutral",
 				"washrooms.family_friendly",
 				"washrooms.lat",
-				"washrooms.lng"
+				"washrooms.lng",
+				"washrooms.sample"
 			)
 			.from("washrooms");
 		if (!washrooms) {
@@ -56,7 +57,8 @@ export const getWashroomById = async (id) => {
 				"washrooms.gender_neutral",
 				"washrooms.family_friendly",
 				"washrooms.lat",
-				"washrooms.lng"
+				"washrooms.lng",
+				"washrooms.sample"
 			)
 			.first();
 		if (!one) {
@@ -90,8 +92,6 @@ export const getWashroomReviews = async (id) => {
 		const roundedRating = Math.round(averageRating);
 		const finalRating = Math.min(Math.max(roundedRating, 1), 5);
 
-		// const result = reviews;
-		// return result;
 		const response = {
 			reviews: reviews,
 			averageRating: finalRating,
@@ -125,6 +125,7 @@ export const postWashroom = async (washroom) => {
 			family_friendly: returnWashroom.family_friendly,
 			lat: returnWashroom.lat,
 			lng: returnWashroom.lng,
+			sample: returnWashroom.sample,
 		};
 	} catch (error) {
 		throw new Error(error);

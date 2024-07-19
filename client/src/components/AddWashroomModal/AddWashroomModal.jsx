@@ -24,6 +24,7 @@ const AddWashroomModal = ({
 		family_friendly: false,
 		lat: "",
 		lng: "",
+		sample: false,
 	});
 
 	const handleInputChange = (event) => {
@@ -40,7 +41,7 @@ const AddWashroomModal = ({
 				`${import.meta.env.VITE_API_URL}/api/washrooms`,
 				newWashroom
 			);
-			addNewWashroom(response.data); // Assuming addNewWashroom function updates state with the new washroom
+			addNewWashroom(response.data); 
 			closeModal();
 		} catch (error) {
 			console.error(error);
@@ -130,7 +131,6 @@ const AddWashroomModal = ({
 						<label className="modal__label">Public Access:</label>
 						<input
                             placeholder="Please input correct value"
-							// className="modal__input"
 							type="checkbox"
 							name="public_access"
 							checked={newWashroom.public_access}
@@ -141,7 +141,6 @@ const AddWashroomModal = ({
 						<label className="modal__label">Wheelchair Accessible:</label>
 						<input
                             placeholder="Please input correct value"
-							// className="modal__input"
 							type="checkbox"
 							name="wheelchair_accessible"
 							checked={newWashroom.wheelchair_accessible}
@@ -152,7 +151,6 @@ const AddWashroomModal = ({
 						<label className="modal__label">Gender Neutral:</label>
 						<input
                             placeholder="Please input correct value"
-							// className="modal__input"
 							type="checkbox"
 							name="gender_neutral"
 							checked={newWashroom.gender_neutral}
@@ -163,7 +161,6 @@ const AddWashroomModal = ({
 						<label className="modal__label">Family Friendly:</label>
 						<input
                             placeholder="Please input correct value"
-							// className="modal__input"
 							type="checkbox"
 							name="family_friendly"
 							checked={newWashroom.family_friendly}
