@@ -21,7 +21,7 @@ export default function HomePageHero({ washrooms }) {
 			}}>
 			<div className="hero__overlay">
 				<div className="hero__search slide-up-enter">
-					<h2 className="hero__header">Find the right washroom for you</h2>
+					<h2 className="hero__header">Find the perfect washroom for you</h2>
 					<SearchBar setResults={setResults} />
 					<SearchResultsList results={results} />
 				</div>
